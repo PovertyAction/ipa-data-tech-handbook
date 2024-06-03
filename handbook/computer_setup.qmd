@@ -1,0 +1,281 @@
+---
+title: "Computer Setup"
+execute:
+    eval: false
+---
+
+Refer to the Global Help Desk for general guidance on IPA software and account
+access.
+
+This page is meant to help guide you in setting up your laptop with common software
+used by data and technology teams at IPA. Most software covered in this page have
+their own page in this handbook. We encourage you to refer to for usage of each
+software. And please contribute to those pages so that others at IPA (including
+your future self) are able to learn about what works well for interacting with
+data at IPA.
+
+## Package Manager
+
+A package manager helps to standardize how you install and update software on
+your computer. Generally, you want to use a package manager to install any programs
+that are used globally on your computer. By "globally", we mean that it is a program
+that is used across many projects and computing environments.
+
+If using a Windows computer with Windows 10 or later, we encourage you to use the
+Windows Package Manager, [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/).
+
+::: {.callout-caution collapse="true"}
+## Checking to see if you have winget
+
+- Open Windows Powershell (See [PowerShell 101](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started) if new to Windows PowerShell)
+
+- Check to see if you have `winget` installed:
+![Winget Version](images/software/winget-version.png)
+
+- If you do not see a version number for `winget`. Follow the Microsoft instructions
+  to [Install winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
+
+:::
+
+On MacOS, it is recommended that you use [Homebrew](https://brew.sh/) as
+a package manager. On Linux you can use Homebrew or [Snap](https://snapcraft.io/).
+This may be relevant if you are working in the [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/) (WSL).
+
+The following command line examples can be use to install the majority of the
+software covered in this Handbook. Note that there are some exceptions to software
+available via a package manager. For example, Stata needs to be installed via
+the [installation packages](https://ipastorage.app.box.com/folder/129276324764?v=install-stata) provided by IPA on Box.
+
+::: {.panel-tabset group="os"}
+
+## Windows
+
+```{bash}
+# Install a single program (e.g. GitHub for command line)
+winget install GitHub.cli
+
+# Install multiple programs (Just, Rye for Python)
+winget install Casey.Just Rye.Rye
+
+# Some additional programs that may be helpful to install globally
+
+# Windows Terminal
+winget install Microsoft.WindowsTerminal
+
+# Microsoft PowerToys
+winget install Microsoft.PowerToys
+
+# GitHub CLI for interacting with GitHub from the command line
+winget install GitHub.GithubDesktop
+
+# Install Quarto
+winget install Posit.Quarto
+
+```
+
+## Linux
+```{bash}
+# Install a single program (e.g. GitHub for command line)
+brew install gh
+
+# Install multiple programs (Just, Rye for Python)
+brew install just rye
+
+# Some additional programs that may be helpful to install globally
+
+# Visual Studio Code
+# See installation instructions here: https://code.visualstudio.com/docs/setup/linux
+sudo snap install code --classic
+
+# Install Quarto
+# download and install from https://quarto.org/docs/get-started/
+# for example for verison v1.4.554, run:
+curl -sfL https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.554/quarto-v1.4.554-linux-amd64.deb  | sudo apt install ./quarto-v1.4.554-linux-amd64.deb
+```
+
+## MacOS
+```{bash}
+# Install a single program (e.g. GitHub for command line)
+brew install gh
+
+# Install multiple programs (Just, Rye for Python)
+brew install just rye
+
+# Some additional programs that may be helpful to install globally
+
+# Visual Studio Code
+brew install --cask visual-studio-code
+
+# GitHub GithubDesktop
+brew install  --cask github
+
+# Install Quarto
+brew install --cask quarto
+```
+
+
+:::
+
+If using Windows 10 or 11, we recommend `winget`. However, if you do not have
+Windows 10+, you can achieve a similar package management experience with either
+[chocolatey](https://chocolatey.org/) or [scoop](https://scoop.sh/).
+
+## Terminal
+
+In Windows, we recommend using the [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/).
+However, there are several other options for terminals. Select what you feel most
+comfortable with. The same is true for MacOS and Linux where there are many Terminal
+options to select from.
+
+## Shell
+
+You are free to choose whichever shell works best for your workflow and style.
+Here are the common shell options for Windows users:
+
+### bash
+
+::: {.panel-tabset group="os"}
+
+## Windows
+
+Git Bash is included with the [Git for Windows](https://gitforwindows.org/) installation.
+
+```{bash}
+# Install git for Windows
+winget install Git.Git
+```
+
+## MacOS
+Bash comes pre-installed with MacOS, but run the following if it is not available:
+
+```{bash}
+brew install bash
+```
+
+## Linux
+Bash comes pre-installed with Linux, but run the following if it is not available:
+
+```{bash}
+brew install bash
+```
+
+:::
+
+
+### Nushell
+
+[Nushell](https://www.nushell.sh/) is a cross operating system shell with a data
+pipeline focus.
+
+::: {.panel-tabset group="os"}
+
+## Windows
+```{bash}
+# Install Nushell
+winget install Nushell.Nushell
+```
+
+## MacOS
+```{bash}
+# Install Nushell
+brew install nu
+```
+
+## Linux
+```{bash}
+# Install Nushell
+brew install nu
+```
+
+:::
+
+If using VS Code, it's highly recommended that you install the [Nushell Extension](https://marketplace.visualstudio.com/items?itemName=TheNuProjectContributors.vscode-nushell-lang).
+
+### Windows PowerShell
+
+[Windows PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview)
+is often the default shell on Windows.
+
+::: {.panel-tabset group="os"}
+
+## Windows
+```{bash}
+# install or upgrade PowerShell
+winget install --id Microsoft.PowerShell -e
+```
+
+## MacOS
+
+```{bash}
+brew install powershell/tap/powershell
+```
+
+## Linux
+
+See [installation instructions](https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu)
+
+:::
+
+
+Optionally, you can install [Starship](https://starship.rs/) for shell prompt customization.
+
+
+::: {.panel-tabset group="os"}
+
+## Windows
+
+```{bash}
+# Install Scoop
+irm get.scoop.sh -outfile 'scoop_install.ps1'
+powershell -File scoop_install.ps1
+scoop update --all
+
+# install Nerd Fonts of your choice, e.g. CascadiaMono-NF, https://www.nerdfonts.com/
+scoop bucket add nerd-fonts
+scoop install nerd-fonts/CascadiaMono-NF
+
+# install Starship
+winget install Starship.Starship
+```
+
+## MacOS
+
+```{bash}
+# install Nerd Fonts of your choice, e.g. CascadiaMono-NF, https://www.nerdfonts.com/
+brew install --cask font-cascadia-mono-nf
+
+# install Starship
+brew install starship
+```
+
+## Linux
+
+```{bash}
+# Download Nerd Fonts of your choice, e.g. CascadiaMono-NF, https://www.nerdfonts.com/
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaCode.zip
+# install Nerd Fonts
+mkdir -p ~/.local/share/fonts/
+unzip CascadiaCode.zip -d ~/.local/share/fonts/CascadiaCode
+fc-cache -f -v
+
+# install Starship
+brew install starship
+```
+
+:::
+
+Follow the starship [installation instructions](https://starship.rs/#quick-install) for using starship with your preferred shell, for example, if using Nushell, run:
+
+```{bash}
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+```
+
+You can set the Starship configuration to your liking in a `~/.config/starship.toml`
+file. For example you could use the `jetpack` preset configuration by running:
+
+```{bash}
+# starship configuration
+mkdir ~/.config
+starship preset jetpack -o ~/.config/starship.toml
+```

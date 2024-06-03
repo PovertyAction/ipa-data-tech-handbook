@@ -1,0 +1,36 @@
+[project]
+name = "ipa-data-tech-handbook"
+version = "0.1.0"
+description = "Handbook for IPA Data and Technology"
+
+dependencies = [
+    "jupyterlab>=4.2.1",
+    "jupytext>=1.16.2",
+    "jupysql>=0.10.10",
+    "duckdb-engine>=0.13.0",
+    "stata-setup>=0.1.3",
+    "sqlfluff>=3.0.7",
+    "seaborn>=0.13.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dse_handbook"]
+
+[tool.rye]
+managed = true
+
+[tool.jupysql.SqlMagic]
+feedback = 0
+autopandas = false
+autopolars = false
+autolimit = 0
+displaylimit = 10
