@@ -46,7 +46,7 @@ just get-started
 source .venv/Scripts/activate
 
 # if using NuShell
-source .venv/Scripts/activate.nu
+overlay use .venv/Scripts/activate.nu
 ```
 
 This will make sure that you have the latest version of Just, as well as [Rye](https://rye.astral.sh/guide/)
