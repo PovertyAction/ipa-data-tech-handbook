@@ -1,2 +1,2 @@
-# dse_handbook
-IPA Data Science and Engineering Handbook
+# ipa_data_handbook
+IPA Data Science, Engineering, and Technology Handbook
