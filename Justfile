@@ -1,5 +1,8 @@
 # Set the shell to use
-# set shell := ["git-bash", "-c"]
+# set shell := ["nu", "-c"]
+
+# Set shell for Windows:
+set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 # Display system information
 system-info:
