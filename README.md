@@ -22,8 +22,8 @@ This repository uses a Justfile for collecting common command line actions that
 we run to set up the computing environment and build the assets of the handbook.
 Note that you should also have Git installed
 
-To get started, make sure you have Just installed on your computer by running the
-following from the command line of your shell:
+To get started, make sure you have Just installed on your computer
+by running the following from the command line:
 
 ```bash
 # On Windows (requires winget)
@@ -33,7 +33,7 @@ winget install Casey.Just
 brew install just
 ```
 
-After installing Just, run the following from the root folder of this repository:
+After installing Just and Nushell, run the following from the root folder of this repository:
 
 ```bash
 just get-started
@@ -42,11 +42,11 @@ just get-started
 # if using Windows Powershell:
 .venv/Scripts/activate.ps1
 
-# if using Bash (e.g. Git Bash)
-source .venv/Scripts/activate
-
-# if using NuShell
+# if using Nushell
 overlay use .venv/Scripts/activate.nu
+
+# if using Bash
+source .venv/Scripts/activate
 ```
 
 This will make sure that you have the latest version of Just, as well as [Rye](https://rye.astral.sh/guide/)
