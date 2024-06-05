@@ -1,8 +1,10 @@
+<!--
 ---
 title: "Computer Setup"
 execute:
     eval: false
 ---
+-->
 
 > [!TIP]
 > Refer to the IPA Global Help Desk for general guidance on IPA software and account
