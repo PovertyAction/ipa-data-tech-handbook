@@ -1,8 +1,12 @@
 # Set the shell to use
 # set shell := ["nu", "-c"]
 
-# Set shell for Windows:
+# Set shell for Windows
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
+
+# Set path to virtual environment's python
+python_dir := ".venv/Scripts"
+python := python_dir + if os_family() == "windows" { "/python.exe" } else { "/python3" }
 
 # Display system information
 system-info:
@@ -17,6 +21,7 @@ get-started: pre-install venv
 # sync python virtual environment with requirements.lock
 venv:
     rye sync
+    rye run pre-commit install
 
 # Preview the handbook
 preview-docs:
@@ -35,7 +40,16 @@ fmt-py:
 
 # Lint sql scripts
 lint-sql:
-    sqlfluff fix --dialect duckdb
+    rye run sqlfluff fix --dialect duckdb
+
+# Format markdown and config files
+fmt-markdown:
+    rye run mdformat .
+
+fmt-check-markdown:
+    rye run mdformat --check .
+
+fmt-all: lint-py fmt-py lint-sql fmt-markdown
 
 [windows]
 pre-install:

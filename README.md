@@ -2,7 +2,7 @@
 
 Welcome to IPA's Handbook for Data Science, Engineering, and Technology!
 
-> [!WARNING]
+> \[!WARNING\]
 > This handbook is an early work in progress. Feedback, suggestions and contributions
 > are appreciated! Please create an Issue or submit a pull request if there is anything
 > you'd like to see changed or added.
@@ -49,8 +49,10 @@ overlay use .venv/Scripts/activate.nu
 source .venv/Scripts/activate
 ```
 
-This will make sure that you have the latest version of Just, as well as [Rye](https://rye.astral.sh/guide/)
-(installer for Python) and [Quarto](https://quarto.org/docs/guide/) (for writing and compiling scientific and technical documents). Additionally
+This will make sure that you have the latest version of Just, as well as
+[Rye](https://rye.astral.sh/guide/) (installer for Python) and
+[Quarto](https://quarto.org/docs/guide/) (for writing and compiling scientific
+and technical documents).
 
 - We use Just in order to make it easier for all IPA users to be productive with
   data and technology systems. The goal of using a Justfile is to help make the
