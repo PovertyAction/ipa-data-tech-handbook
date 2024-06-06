@@ -1,14 +1,8 @@
-<!--
 ---
 title: "Computer Setup"
 execute:
     eval: false
 ---
--->
-
-> [!TIP]
-> Refer to the IPA Global Help Desk for general guidance on IPA software and account
-access.
 
 This page is meant to help guide you in setting up your laptop with common software
 used by data and technology teams at IPA. Most software covered in this page have
@@ -16,6 +10,13 @@ their own page in this handbook. We encourage you to refer to for usage of each
 software. And please contribute to those pages so that others at IPA (including
 your future self) are able to learn about what works well for interacting with
 data at IPA.
+
+> [!TIP]
+> Refer to the [IPA Global Help Desk](https://poverty-action.my.site.com/) for general guidance on IPA software and account access.
+
+The information below is for getting started with core software that IPA uses for
+editing, reviewing, and deploying code for software development, data engineering,
+analytical solutions, and data infrastructure.
 
 ## Package Manager
 
@@ -31,15 +32,17 @@ Windows Package Manager, [winget](https://learn.microsoft.com/en-us/windows/pack
 [chocolatey](https://chocolatey.org/) or [scoop](https://scoop.sh/).
 
 <details>
-<summary>Checking to see if you have winget</summary>
+<summary>Check to see if you have winget</summary>
 
   1. Open Windows Powershell (See [PowerShell 101](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started) if new to Windows PowerShell)
   1. Check to see if you have `winget` installed:
-![Winget Version](images/software/winget-version.png)
+![Winget Version](./assets/images/software/winget-version.png)
   1. If you do not see a version number for `winget`. Follow the Microsoft instructions
   to [Install winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
 
 </details>
+
+#### Install packages on Windows
 
 ```bash
 # Install a single program (e.g. GitHub for command line)
@@ -47,24 +50,6 @@ winget install GitHub.cli
 
 # Install multiple programs (Just, Rye for Python)
 winget install Casey.Just Rye.Rye
-
-# Some additional programs that may be helpful to install globally
-
-# Visual Studio code
-winget install Microsoft.VisualStudioCode
-
-# Windows Terminal
-winget install Microsoft.WindowsTerminal
-
-# Microsoft PowerToys
-winget install Microsoft.PowerToys
-
-# GitHub CLI for interacting with GitHub from the command line
-winget install GitHub.GithubDesktop
-
-# Install Quarto
-winget install Posit.Quarto
-
 ```
 
 ### MacOS/Linux
@@ -73,58 +58,45 @@ On MacOS, it is recommended that you use [Homebrew](https://brew.sh/) as
 a package manager. On Linux you can use Homebrew or [Snap](https://snapcraft.io/).
 This may be relevant if you are working in the [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/) (WSL).
 
-The following command line examples can be use to install the majority of the
+#### Install packages on Linux
+
+<details>
+<summary>Expand for <b>Linux</b> package management examples</summary>
+
+```bash
+# Install a single program (e.g. GitHub for command line)
+brew install gh
+
+# Install multiple programs (Just, Rye for Python)
+brew install just rye
+```
+
+</details>
+
+#### Install packages on MacOS
+
+<details>
+<summary>Expand for <b>MacOS</b> package management examples</summary>
+
+```bash
+# Install a single program (e.g. GitHub for command line)
+brew install gh
+
+# Install multiple programs (Just, Rye for Python)
+brew install just rye
+```
+
+</details>
+
+## Additional Software Installation
+
+The preceding package manager examples can be used to install the majority of the
 software covered in this Handbook. Note that there are some exceptions to software
-available via a package manager. For example, Stata needs to be installed via
-the [installation packages](https://ipastorage.app.box.com/folder/129276324764?v=install-stata) provided by IPA on Box.
+available via a package manager. For example, `Stata` needs to be installed by first
+downloading the `.exe` for Windows, `.dmg` for MacOS, or  `.tar.gz` for Linux.
 
-<details>
-<summary>Package management on Linux</summary>
-
-```bash
-# Install a single program (e.g. GitHub for command line)
-brew install gh
-
-# Install multiple programs (Just, Rye for Python)
-brew install just rye
-
-# Some additional programs that may be helpful to install globally
-
-# Visual Studio Code
-# See installation instructions here: https://code.visualstudio.com/docs/setup/linux
-sudo snap install code --classic
-
-# Install Quarto
-# download and install from https://quarto.org/docs/get-started/
-# for example for verison v1.4.554, run:
-curl -sfL https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.554/quarto-v1.4.554-linux-amd64.deb  | sudo apt install ./quarto-v1.4.554-linux-amd64.deb
-```
-
-</details>
-
-<details>
-<summary>Package management on MacOS</summary>
-
-```bash
-# Install a single program (e.g. GitHub for command line)
-brew install gh
-
-# Install multiple programs (Just, Rye for Python)
-brew install just rye
-
-# Some additional programs that may be helpful to install globally
-
-# Visual Studio Code
-brew install --cask visual-studio-code
-
-# GitHub GithubDesktop
-brew install  --cask github
-
-# Install Quarto
-brew install --cask quarto
-```
-
-</details>
+>[!TIP]
+> Get the required Stata version prodived by IPA on the Box [installation packages](https://ipastorage.app.box.com/folder/129276324764?v=install-stata).
 
 ## Terminal
 
@@ -133,12 +105,22 @@ However, there are several other options for terminals. Select what you feel mos
 comfortable with. The same is true for MacOS and Linux where there are many Terminal
 options to select from.
 
+```bash
+# Windows Terminal
+winget install Microsoft.WindowsTerminal
+```
+
+```bash
+# Microsoft PowerToys
+winget install Microsoft.PowerToys
+```
+
 ## Shell
 
 You are free to choose whichever shell works best for your workflow and style.
-Here are the common shell options for Windows users:
+Here are the common shell options you may want to consider:
 
-### bash
+### Bash
 
 Git Bash is included with the [Git for Windows](https://gitforwindows.org/) installation. Bash comes pre-installed with MacOS and Linux, but run the following if it is not available:
 
@@ -148,4 +130,119 @@ winget install Git.Git
 
 # MacOS/Linux, if not avialable
 brew install bash
+```
+
+### Nushell
+
+[Nushell](https://www.nushell.sh/) is a cross operating system shell with a data
+pipeline focus.
+
+```bash
+# Windows
+winget install Nushell.Nushell
+
+# MacOS/Linux
+brew install nu
+```
+
+### Windows PowerShell
+
+[Windows PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview)
+is often the default shell on Windows.
+
+```bash
+# Windows (install or upgrade)
+winget install Microsoft.PowerShell
+
+# MacOS
+brew install powershell/tap/powershell
+
+# Linux
+# See docs https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu
+```
+
+Optionally, you can install [Starship](https://starship.rs/) for shell prompt customization.
+
+```bash
+# install Nerd Fonts of your choice, e.g. CascadiaMono-NF, https://www.nerdfonts.com/
+
+# Windows
+winget install Starship.Starship
+
+# MacOS/Linux
+brew install starship
+```
+
+Follow the starship [installation instructions](https://starship.rs/#quick-install) for using starship with your preferred shell, for example, if using Nushell, run:
+
+```bash
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+```
+
+You can set the Starship configuration to your liking in a `~/.config/starship.toml`
+file. For example you could use the `jetpack` preset configuration by running:
+
+```bash
+# starship configuration
+mkdir ~/.config
+starship preset jetpack -o ~/.config/starship.toml
+```
+
+
+## Git/GitHub
+
+You will need to have git installed on computer if you want to edit, test, or review
+source code and documentation locally.
+
+We recommend installing GitHub Desktop if you are new to using git or prefer a
+GUI to the command line.
+
+```bash
+# Windows
+winget install GitHub.GithubDesktop
+
+# MacOS
+brew install  --cask github
+
+## GitHub Desktop is not available on Linux
+```
+
+## Visual Studio Code
+
+You are free to chose the Integrated Development Environment (IDE) of your choice.
+However, we recommend [Visual Studio Code](https://code.visualstudio.com/) because
+integration with GitHub is built in and it provides a rich set of extensions to
+improve code quality and review.
+
+```bash
+# Windows
+winget install Microsoft.VisualStudioCode
+
+# MacOS
+brew install --cask visual-studio-code
+
+# Linux
+# Visual Studio Code
+# See installation instructions here: https://code.visualstudio.com/docs/setup/linux
+sudo snap install code --classic
+```
+
+## Quarto
+
+For technical documentation and literate programming, we recommend using [Quarto](https://quarto.org/)
+because of it's rich suite of publishing tools that integrate notebooks (e.g. `ipynb`, `.Rmd`),
+and computer scripts (e.g. `.py`, `.r`, `.md`).
+
+```bash
+# Windows
+winget install Posit.Quarto
+
+# MacOS
+brew install --cask quarto
+
+# Linux
+# download and install from https://quarto.org/docs/get-started/
+# for example for verison v1.4.554, run:
+curl -sfL https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.554/quarto-v1.4.554-linux-amd64.deb  | sudo apt install ./quarto-v1.4.554-linux-amd64.deb
 ```
