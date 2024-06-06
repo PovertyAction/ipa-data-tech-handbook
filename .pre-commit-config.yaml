@@ -16,16 +16,6 @@ repos:
     hooks:
       - id: validate-pyproject
 
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.17
-    hooks:
-      - id: mdformat
-        additional_dependencies:
-          - mdformat-pyproject
-          - mdformat-gfm
-          - mdformat-frontmatter
-          - mdformat-config
-
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.41.0
     hooks:
