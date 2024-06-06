@@ -1,0 +1,34 @@
+---
+title: "Stata"
+execute:
+    eval: false
+---
+
+## What is Stata?
+
+## How to install Stata?
+
+## Using Stata from Python
+
+[pystata](https://www.stata.com/python/pystata18/notebook/Quick%20Start0.html)
+
+```{python}
+import stata_setup
+```
+
+## Data Visualization
+
+Consider installing the `ipaplots` for the IPA graph schema in Stata.
+
+```{stata}
+#| eval: false
+net install github, from("https://haghish.github.io/github/")
+github install PovertyAction/ipaplots
+```
+
+See the [GitHub repository for ipaplots](https://github.com/PovertyAction/ipaplots)
+
+## Learning References
+
+For more information on learning and using Stata, see the [IPA-Stata-Trainings](https://github.com/PovertyAction/IPA-Stata-Trainings)
+repository on GitHub.
