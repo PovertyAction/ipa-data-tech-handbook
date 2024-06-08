@@ -2,7 +2,8 @@
 
 Welcome to IPA's Handbook for Data Science, Engineering, and Technology!
 
-> [!WARNING] This handbook is an early work in progress. Feedback, suggestions and
+> [!WARNING]
+> This handbook is an early work in progress. Feedback, suggestions and
 > contributions are appreciated! Please create an Issue or submit a pull request if
 > there is anything you'd like to see changed or added.
 
