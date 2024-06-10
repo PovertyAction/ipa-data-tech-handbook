@@ -42,10 +42,15 @@ fmt-py:
 lint-sql:
     rye run sqlfluff fix --dialect duckdb
 
-# Format markdown and config files
+# Format all markdown and config files
 fmt-markdown:
     rye run mdformat .
 
+# Format a single markdown file, "f"
+fmt-md f:
+    rye run mdformat {{f}}
+
+# Check format of all markdown files
 fmt-check-markdown:
     rye run mdformat --check .
 

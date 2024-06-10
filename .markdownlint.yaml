@@ -1,3 +1,5 @@
+# docs: https://github.com/DavidAnson/markdownlint/blob/v0.32.1/README.md
+
 # default to true for all rules
 default: true
 
