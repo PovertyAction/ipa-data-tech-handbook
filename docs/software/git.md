@@ -4,16 +4,155 @@ title: Git
 
 ## What is Git?
 
+Git is a distributed version control system that allows you to track changes in your
+codebase. It is widely used in software development to manage code changes and
+collaborate with other people working on or learning from the shared codebase.
+
 ## How to install Git?
 
 Install [Git for Windows](https://gitforwindows.org/) via `winget`. Git comes
 pre-installed with MacOS and Linux, if you can't find it, try installing with Homebrew.
 
-```bash
-# Install git for Windows
-winget install Git.Git
-```
+| Platform | Commands                 |
+| -------- | ------------------------ |
+| Windows  | `winget install Git.Git` |
+| MacOS    | `git --version`          |
+| Linux    | `git --version`          |
 
 ## Using Git
 
+Git can be confusing and overwhelming. We recommend starting with a graphical user
+interface (GUI) to help you understand the basics of Git. GitHub Desktop is a good
+option or, if you use VS Code, you can use the built-in Git functionality (See
+[VS Code documentation](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)).
+
+Here are the basic commands you need to know to get started with Git:
+
+### `git init`
+
+Create a new Git repository
+
+```bash
+git init
+```
+
+### `git clone`
+
+Clone a repository into a new directory For example, to clone the IPA handbook
+repository:
+
+```bash
+# If using HTTPS
+git clone https://github.com/PovertyAction/ipa-data-tech-handbook.git
+
+# If using SSH
+git clone git@github.com:PovertyAction/ipa-data-tech-handbook.git
+```
+
+### `git checkout`
+
+Branches are used to develop new code or modify existing code such that the "main" code
+is not affected until the new code is ready. To create a new branch, use:
+
+```bash
+git checkout -b new-branch-name
+```
+
+This checks out a new branch called `new-branch-name`. To switch back to the main
+branch, use:
+
+```bash
+git checkout main
+```
+
+To checkout a branch from the remote repository, use:
+
+```bash
+git fetch origin
+git checkout --track origin/remote-branch-name
+```
+
+To push a branch to the remote repository, use:
+
+```bash
+git push origin new-branch-name
+```
+
+To delete a branch, use:
+
+```bash
+git branch -d new-branch-name
+```
+
+List all local branches:
+
+```bash
+git branch --list
+```
+
+### `git add`
+
+Add files that have changed and are ready to be committed to the staging area. To add a
+file, `file_name.md`, use:
+
+```bash
+git add file_name.md
+```
+
+### `git commit`
+
+Commit changes to the checked out branch.
+
+Good commit messages follow the following format:
+
+```bash
+git commit -m "<type>: <description>"
+```
+
+To commit changes with a message, use:
+
+```bash
+git commit -m "feat: adding new feature to the codebase"
+```
+
+### `git push`
+
+Send changes to the remote repository. To push any commits to remote use the following:
+
+```bash
+git push origin new-branch-name
+```
+
+If you are pushing a new branch to the remote repository, use:
+
+```bash
+git push --set-upstream origin new-branch-name
+```
+
+Consider adding the
+[Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
+extension to your VS Code to help you write good commit messages.
+
+## Best Practices
+
+1. Always include a README file in your repository and keep it up to date with key
+   information that anyone who visits your repository should know for using,
+   replicating, or contributing to code in the repository.
+1. Use branches to develop new features or fix bugs. This helps to keep the main branch
+   clean and stable.
+1. Write clear and concise commit messages. A good commit message should describe what
+   changes were made and why they were made. Refer to
+   [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) for
+   good practice in writing commit messages.
+1. Push changes to the remote repository frequently. This helps to keep your codebase up
+   to date and allows others to collaborate with you.
+1. Use pull requests to propose changes to the main branch. Try to keep the pull request
+   small such that there is a manageable amount of code to review.
+
 ## Learning Resources
+
+- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+- [Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
+- [Happy Git with R](https://rogerdudler.github.io/git-guide/)
+- [Visual Git Guide](https://marklodato.github.io/visual-git-guide/index-en.html)
+- [Visualizing Git with D3](https://onlywei.github.io/explain-git-with-d3/)
