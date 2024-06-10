@@ -43,22 +43,21 @@ Some particularly helpful references in the documentation are:
 - [Editing with VS Code](https://code.visualstudio.com/docs/editor/codebasics)
 - [Git Source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 - [Python in VS Code](https://code.visualstudio.com/docs/python/python-quick-start)
--
 
 ## Recommended Extensions
 
 The core software and functionality in VS Code gives you a lot of useful tools for
 writing, editing, and collaborating. Additionally, you can add functionality through
-[Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace)
+[Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace).
 
 Some helpful extensions are the following:
 
 - [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   \- language syntax for Python programming
-- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff) -
-  Python linting and code formatting
-- [R Extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) -
-  Interacting with R from VS Code
+- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+  \- Python linting and code formatting
+- [R Extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)
+  \- Interacting with R from VS Code
 - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
   \- review and manage GitHub pull requests and issues in Visual Studio Code
 - [Jupyter Extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)

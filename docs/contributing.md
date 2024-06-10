@@ -25,12 +25,15 @@ open mind and willingness to understand the perspectives of our colleagues.
 
 ## Reading the Handbook
 
-Eventually we will have a long-term home for this document. Until then, the best ways to
-read the handbook are the following:
+The best ways to read the handbook are the following:
 
-- [Read it on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/handbook)
+- [Read it on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/docs)
 or build the handbook from source.
 - Read it locally on your computer by cloning the GitHub repository
+
+### Reading the Handbook on GitHub
+
+Navigate to
 
 ## Editing the Handbook
 
@@ -149,7 +152,7 @@ with a `localhost` server of the handbook.
 You can contribute to this Handbook in a number of ways:
 
 1. File an
-   [Issue on GitHub](https://github.com/PovertyAction/ipa_data_tech_handbook/issues/new)
+   [Issue on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new)
    with recommended additions or edits.
 1. Edit pages of the Handbook on GitHub by clicking on the "Edit this page" link on any
    page of the Handbook.

@@ -18,3 +18,5 @@ MD013: false
 MD024:
   # Allow when nested under different parents e.g. CHANGELOG.md
   siblings_only: true
+
+MD038: false
