@@ -8,6 +8,10 @@ Git is a distributed version control system that allows you to track changes in 
 codebase. It is widely used in software development to manage code changes and
 collaborate with other people working on or learning from the shared codebase.
 
+Click on the image below to watch a video with an introduction to Git for beginners:
+
+[![A brief introduction to Git for beginners](https://github.blog/wp-content/uploads/2024/05/GitHub-for-beginners.png?resize=1600%2C840)](https://youtu.be/r8jQ9hVA2qs)
+
 ## How to install Git?
 
 Install [Git for Windows](https://gitforwindows.org/) via `winget`. Git comes
@@ -25,6 +29,10 @@ Git can be confusing and overwhelming. We recommend starting with a graphical us
 interface (GUI) to help you understand the basics of Git. GitHub Desktop is a good
 option or, if you use VS Code, you can use the built-in Git functionality (See
 [VS Code documentation](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)).
+
+Click on the image below to watch a video on basic Git commands:
+
+[![Basic Git Commands](https://github.blog/wp-content/uploads/2024/05/GitHub-for-beginners.png?resize=1600%2C840)](https://youtu.be/rE2zRhZdjFU?si=8Mdt6BjH5F7truAq))
 
 Here are the basic commands you need to know to get started with Git:
 
@@ -151,6 +159,9 @@ extension to your VS Code to help you write good commit messages.
 
 ## Learning Resources
 
+- GitHub's YouTube
+  [Git for Beginners](https://www.youtube.com/playlist?list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f)
+- GitHub's [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - [Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
 - [Happy Git with R](https://rogerdudler.github.io/git-guide/)

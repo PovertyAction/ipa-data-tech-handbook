@@ -21,17 +21,11 @@ To install VS Code, download and install the latest software version from the Vi
 Studio Code [website](https://code.visualstudio.com/) or run the following from the
 command line if you have the Windows Package Manager, `winget`, installed:
 
-```bash
-# Windows
-winget install Microsoft.VisualStudioCode
-
-# Linux
-# See installation instructions here: https://code.visualstudio.com/docs/setup/linux
-sudo snap install code --classic
-
-# MacOS
-brew install --cask visual-studio-code
-```
+| Platform | Commands                                    |
+| -------- | ------------------------------------------- |
+| Windows  | `winget install Microsoft.VisualStudioCode` |
+| MacOS    | `brew install --cask visual-studio-code`    |
+| Linux    | `sudo snap install code --classic`          |
 
 ## Using VS Code
 
@@ -54,10 +48,10 @@ Some helpful extensions are the following:
 
 - [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   \- language syntax for Python programming
-- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
-  \- Python linting and code formatting
-- [R Extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)
-  \- Interacting with R from VS Code
+- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff) -
+  Python linting and code formatting
+- [R Extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) -
+  Interacting with R from VS Code
 - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
   \- review and manage GitHub pull requests and issues in Visual Studio Code
 - [Jupyter Extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
@@ -70,3 +64,5 @@ Some helpful extensions are the following:
   \- support for Markdown
 - [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
   \- support for [Mermaid](https://mermaid.js.org/intro/) diagrams in Markdown
+- [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
+  \- support for writing easy to understand commit messages

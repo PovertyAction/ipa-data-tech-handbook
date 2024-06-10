@@ -33,11 +33,13 @@ As an example, this repository uses Quarto to build the handbook.
 
 In the root of the git repository, there is a `_quarto.yml` file that contains the
 metadata used to compile the handbook. Components of the handbook are written in
-Markdown, either standard Markdown (`.md`) or Quarto Markdown (`.qmd`). The benefit
-of standard markdown is that it is more portable and works with standard Markdown
-editors (e.g. GitHub), while Quarto markdown allows for computations that are
-embedded in the document. If you want more advanced formatting or computations,
-`.qmd` may be a preferable choice. The [Quarto Documentation](https://quarto.org/docs/guide/) provides helpful guides on how to use Markdown as well as the added features that Quarto Markdown offers.
+Markdown, either standard Markdown (`.md`) or Quarto Markdown (`.qmd`). The benefit of
+standard markdown is that it is more portable and works with standard Markdown editors
+(e.g. GitHub), while Quarto markdown allows for computations that are embedded in the
+document. If you want more advanced formatting or computations, `.qmd` may be a
+preferable choice. The [Quarto Documentation](https://quarto.org/docs/guide/) provides
+helpful guides on how to use Markdown as well as the added features that Quarto Markdown
+offers.
 
 ## Learning Resources
 
