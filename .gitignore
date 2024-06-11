@@ -1,8 +1,11 @@
 /.quarto/
 /_site/
-/.ipynb_checkpoints/
+*.ipynb_checkpoints/
 /.ruff_cache/
 /.venv/
+/docs/assets/data/*.csv
+/docs/assets/data/*.parquet
+/docs/assets/data/*.dta
 
 *.deb
 requirements-dev.lock

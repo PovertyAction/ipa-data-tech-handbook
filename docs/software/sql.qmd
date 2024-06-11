@@ -1,0 +1,120 @@
+---
+title: SQL
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
+      jupytext_version: 1.16.2
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+## What is SQL?
+
+SQL (pronounced "sequel") stands for Structured Query Language. It is a standard
+language for accessing and manipulating databases. SQL is used to organize data in a
+database as well as as questions of that data.
+
+The traditional use of SQL is in relational databases, but it can also be used in other
+types of databases. In the examples below, we use [duckdb](https://duckdb.org/) which
+has become a leading option for analytical workflows across a diverse set of data
+storage types (e.g. relational databases, csv, parquet, json, etc.).
+
+## How to install SQL?
+
+To use DuckDB, you can add it to your python virtual environment using `rye`:
+
+```{.bash}
+rye add duckdb duckdb-engine
+```
+
+## Using SQL
+
+Connect to a database.
+
+```{python}
+%load_ext sql
+%sql duckdb://
+```
+
+Create a table from a CSV file.
+
+```{python}
+%%sql
+CREATE TABLE penguins AS SELECT * FROM '../assets/data/penguins.csv'
+```
+
+Inspect the columns of the table.
+
+```{python}
+%sqlcmd columns -t penguins
+```
+
+Query the table using a `SELECT` statement.
+
+```{python}
+%%sql
+SELECT *
+FROM '../assets/data/penguins.csv'
+LIMIT 3
+```
+
+Run analytical operations on the data.
+
+```{python}
+%%sql
+SELECT species, COUNT(*) AS count
+FROM '../assets/data/penguins.csv'
+GROUP BY species
+ORDER BY count DESC
+```
+
+Using `jupysql` store SQL query results as an object in a Jupyter notebook.
+
+```{python}
+%%sql species_count <<
+SELECT species, COUNT(*) AS count
+FROM '../assets/data/penguins.csv'
+GROUP BY species
+ORDER BY count DESC
+```
+
+Plot the results of the query.
+
+```{python}
+ax = %sqlplot bar --table '../assets/data/penguins.csv' --column species
+
+# customize plot (this is a matplotlib Axes object)
+_ = ax.set_title("Count of penguins by species")
+```
+
+## Coding Conventions
+
+Use [SQLFluff](https://docs.sqlfluff.com/en/stable/) to lint SQL code.
+
+Add SQLFluff to your virtual environment using `rye`:
+
+```{.bash}
+rye add sqlfluff
+```
+
+Assuming SQLFluff is installed in your virtual environment using `rye`, you can run the
+following command to lint SQL code:
+
+```{.bash}
+rye run sqlfluff fix --dialect duckdb
+```
+
+See the
+[GitLab Data Team's SQL Style Guide](https://handbook.gitlab.com/handbook/business-technology/data-team/platform/sql-style-guide/)
+
+## Learning Resources
+
+- [SELECT Star SQL](https://selectstarsql.com/)
+- [SQL Murder Mystery](https://mystery.knightlab.com/walkthrough.html)
+- [sql-workbench](https://sql-workbench.com/)
+- [DuckDB SQL Introduction](https://duckdb.org/docs/sql/introduction)

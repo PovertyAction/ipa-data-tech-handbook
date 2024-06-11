@@ -1,10 +1,12 @@
 project:
   type: website
-
+  preview:
+    port: 3434
+    browser: true
 website:
   title: "Data and Tech Handbook"
   description:  "Handbook for common, shared practices for data science and engineering at Innovations for Poverty Action."
-  favicon: ./handbook/images/IPA-primary-full-color-abbreviated.png
+  favicon: ./docs/assets/images/IPA-primary-full-color-abbreviated.png
   repo-url: https://github.com/PovertyAction/dse_handbook
   repo-actions: [edit, issue]
   bread-crumbs: false
@@ -15,18 +17,63 @@ website:
   navbar:
     background: '#155240'
     foreground: '#ffffff'
-    logo: ./handbook/images/IPA-primary-white-abbreviated.png
+    logo: ./docs/assets/images/IPA-primary-white-abbreviated.png
     collapse: true
     right:
-      - href: ./handbook/index.qmd
+      - href: ./docs/index.md
         text: Home
-      - href: ./handbook/computer_setup.qmd
-        text: Setup
+
+      - text: Guides
+        menu:
+        - href: ./docs/guides/computer_setup.md
+          text: Computer Setup
+        - href: ./docs/guides/venv.md
+          text: Virtual Environments
+        - href: ./docs/guides/code_review.md
+          text: Code Review
+        - href: ./docs/guides/pre_commit_hooks.md
+          text: pre-commit
+
+      - text: Software
+        menu:
+          - href: ./docs/software/git.md
+            text: Git
+          - href: ./docs/software/github.md
+            text: GitHub
+          - href: ./docs/software/vscode.md
+            text: VS Code
+          - href: ./docs/software/quarto.qmd
+            text: Quarto
+          - href: ./docs/software/python.qmd
+            text: Python
+          - href: ./docs/software/stata.qmd
+            text: Stata
+          - href: ./docs/software/sql.qmd
+            text: SQL
+
+      - text: Methods
+        menu:
+          - href: ./docs/methods/references.md
+            text: References
+
+      - text: Teams
+        menu:
+          - href: ./docs/teams/dse.md
+            text: DSE
+          - href: ./docs/teams/grds.md
+            text: GRDS
+          - href: ./docs/teams/mist.md
+            text: MIST
+          - href: ./docs/teams/ppi.md
+            text: PPI
+
+      - href: ./docs/contributing.md
+        text: Contributing
 
 format:
   html:
     # for sharepoint: use aspx
     # reference: https://github.com/quarto-dev/quarto-cli/discussions/3535#discussioncomment-9111419
     output-ext: html
-    css: ./handbook/assets/style_ipa.css
+    css: ./docs/assets/style_ipa.css
     toc: true

@@ -1,0 +1,98 @@
+---
+title: Python
+execute:
+  eval: true
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
+      jupytext_version: 1.16.2
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+## What is Python?
+
+Python is a high-level, general-purpose programming language that is widely used in data
+science, machine learning, and web development. It has a large standard library and a
+vibrant community that provides a wide range of libraries and tools for various
+applications. As such, Python provides a general-purpose ecosystem that can be used for
+a wide range of applications.
+
+## How to install Python?
+
+There are many ways to install Python. We recommend using Python in a virtual
+environment to avoid conflicts with other Python installations on your system.
+
+We recommend using a [rye](https://rye.astral.sh/) or [pixi](https://pixi.sh/latest/).
+Both of these tools provide a simple way to create and manage Python virtual
+environments.
+
+In both cases, you can manage the python packages that are installed in the virtual
+environment using a `pyproject.toml` file. See the pyproject.toml example in this
+repository for an example of how to manage Python packages. To add package dependencies
+to the virtual environment, using `rye`, you can run:
+
+We'll use `rye` to demonstrate how to manage a Python virtual environment. Watch the
+following video for a quick introduction to `rye`:
+
+{{< video https://youtu.be/q99TYA7LnuA >}}
+
+First, install `rye` using `winget` (Windows) or `brew` (MacOS/Linux):
+
+| Platform | Commands             |
+| -------- | -------------------- |
+| Windows  | `winget install rye` |
+| MacOS    | `brew install rye`   |
+| Linux    | `brew install rye`   |
+
+Add libraries to the virtual environment using `rye add ...`:
+
+```{python}
+# | eval: false
+> rye add jupyterlab pandas matplotlib seaborn
+```
+
+## Coding Conventions
+
+See the
+[GitLab Data Team's Python Guide](https://handbook.gitlab.com/handbook/business-technology/data-team/platform/python-guide/)
+
+## Learning Resources
+
+Download data from the a URL:
+
+```{python}
+# | eval: true
+from urllib.request import urlretrieve
+
+_ = urlretrieve(
+    "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv",
+    "../assets/data/penguins.csv",
+)
+```
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("../assets/data/penguins.csv")
+```
+
+```{python label=fig-bill-sizes, fig-cap="Bill Sizes by Species"}
+import matplotlib.pyplot as plt  # noqa: E402
+import seaborn as sns  # noqa: E402
+
+g = sns.FacetGrid(df, hue="species", height=3, aspect=1.5)
+g.map(plt.scatter, "bill_length_mm", "bill_depth_mm").add_legend()
+```
+
+## Learning Resources
+
+- [The Python Tutorial](https://docs.python.org/3.12/tutorial/index.html)
+- [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- [Efficient Python for Data Scientists](https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scientists/README.html)
+- [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
