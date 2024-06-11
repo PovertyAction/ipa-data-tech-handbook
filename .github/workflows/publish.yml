@@ -26,8 +26,7 @@ jobs:
         id: setup-rye
         uses: eifinger/setup-rye@v3
         with:
-          enable-cache: true
-          cache-prefix: ${{ matrix.python-version }}
+          enable-cache: false
 
       - name: Pin python version ${{ matrix.python-version }}
         if: steps.setup-rye.outputs.cache-hit != 'true'
@@ -36,7 +35,7 @@ jobs:
       - name: Install dependencies
         if: steps.setup-rye.outputs.cache-hit != 'true'
         run: |
-          rye sync --no-lock
+          rye sync
 
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
       # - name: Setup R

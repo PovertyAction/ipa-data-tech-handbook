@@ -8,4 +8,6 @@
 /docs/assets/data/*.dta
 
 *.deb
+requirements-dev.lock
+requirements.lock
 README.html
