@@ -4,7 +4,7 @@ title: Quarto
 
 ## What is Quarto?
 
-Quarto is a document authoring tool that allows you to create documents using markdown.
+Quarto is a document authoring tool that allows you to create documents using [markdown](https://en.wikipedia.org/wiki/Markdown).
 It is a powerful tool that allows you to create documents with a variety of formats such
 as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating
 documents that are easy to read and share.
