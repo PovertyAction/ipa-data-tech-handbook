@@ -103,12 +103,6 @@ the handbook pages:
 just get-started
 ```
 
-After installing Just run the following from the root folder of this repository:
-
-```bash
-just get-started
-```
-
 After the required software is installed, you can activate the virtual environment:
 
 | Shell      | Commands                                |
@@ -151,16 +145,16 @@ handbook.
 
 You can contribute to this Handbook in a number of ways:
 
-1. File an
+- Edit the code locally on your computer using git
+
+  ```bash
+  git clone git@github.com:PovertyAction/dse_handbook.git
+  ```
+
+- File an
    [Issue on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new)
    with recommended additions or edits.
-1. Edit pages of the Handbook on GitHub by clicking on the "Edit this page" link on any
+- Edit pages of the Handbook on GitHub by clicking on the "Edit this page" link on any
    page of the Handbook.
 
 ![Handbook](./assets/images/software/handbook-gh.png)
-
-1. Edit the code locally on your computer using git
-
-```bash
-git clone git@github.com:PovertyAction/dse_handbook.git
-```

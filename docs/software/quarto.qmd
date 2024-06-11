@@ -15,7 +15,7 @@ documents that are easy to read and share.
 | -------- | ---------------------------------------- |
 | Windows  | `winget install Posit.Quarto`            |
 | MacOS    | `brew install --cask quarto`             |
-| Linux    | See https://quarto.org/docs/get-started/ |
+| Linux    | See [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/) |
 
 ## Using Quarto
 

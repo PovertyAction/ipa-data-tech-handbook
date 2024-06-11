@@ -35,7 +35,7 @@ Windows Package Manager, [winget](https://learn.microsoft.com/en-us/windows/pack
 
   1. Open Windows Powershell (See [PowerShell 101](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started) if new to Windows PowerShell)
   1. Check to see if you have `winget` installed:
-![Winget Version](assets/images/software/winget-version.png)
+![Winget Version](../assets/images/software/winget-version.png)
   1. If you do not see a version number for `winget`. Follow the Microsoft instructions
   to [Install winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
 
@@ -65,6 +65,8 @@ brew install gh
 brew install just rye
 ```
 
+See the [Virtual Environment](./venv.md) section of the handbook for more information on using virtual environments.
+
 ### Additional Software
 
 The preceding package manager examples can be used to install the majority of the
@@ -72,7 +74,6 @@ software covered in this Handbook. Note that there are some exceptions to softwa
 available via a package manager. For example, `Stata` needs to be installed by first
 downloading the `.exe` for Windows, `.dmg` for MacOS, or  `.tar.gz` for Linux.
 
->[!TIP]
 > Get the required Stata version provided by IPA on the Box [installation packages](https://ipastorage.app.box.com/folder/129276324764?v=install-stata).
 
 ## Terminal
@@ -175,6 +176,9 @@ brew install  --cask github
 ## GitHub Desktop is not available on Linux
 ```
 
+See the [Git](../software/git.md) section of the handbook for more information on using git and the [GitHub](../software/github.md)section
+section for more information on using GitHub.
+
 ## Visual Studio Code
 
 You are free to chose the Integrated Development Environment (IDE) of your choice.
@@ -193,6 +197,8 @@ brew install --cask visual-studio-code
 sudo snap install code --classic
 ```
 
+See the [Visual Studio Code](../software/vscode.md) section of the handbook for more information on using Visual Studio Code.
+
 ## Quarto
 
 For technical documentation and literate programming, we recommend using [Quarto](https://quarto.org/)
@@ -209,3 +215,5 @@ brew install --cask quarto
 # Linux
 # download and install from https://quarto.org/docs/get-started/
 ```
+
+See the [Quarto](../software/quarto.md) section of the handbook for more information on using Quarto.

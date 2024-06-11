@@ -18,7 +18,7 @@ To get started with software covered in this handbook, read
 data analysis and software development.
 
 For instructions on how to contribute to this handbook, see
-[Contributing](./guides/contributing.md) to the Handbook.
+[Contributing](../docs/contributing.md) to the Handbook.
 
 For information about specific software, see the respective pages under the `software`
 directory.

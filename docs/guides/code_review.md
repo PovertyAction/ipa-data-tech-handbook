@@ -48,7 +48,12 @@ As an example of a pull request template, see the
 ## Code Review Process
 
 1. Create a Pull Request (PR) from a branch to the `main` branch.
-1.
+1. Add a reviewer or multiple reviewers to the PR.
+1. Reviewers will review the code and provide feedback.
+1. The author of the PR will address the feedback and make changes.
+1. The author will notify the reviewers that the changes have been made.
+1. The reviewers will review the changes and approve the PR unless there is a need for additional revisions.
+1. Once approved, the author can merge the PR into the `main` branch.
 
 ## Learning Resources
 

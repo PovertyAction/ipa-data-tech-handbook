@@ -1,6 +1,8 @@
 project:
   type: website
-
+  preview:
+    port: 3434
+    browser: true
 website:
   title: "Data and Tech Handbook"
   description:  "Handbook for common, shared practices for data science and engineering at Innovations for Poverty Action."
@@ -34,10 +36,10 @@ website:
 
       - text: Software
         menu:
-          - href: ./docs/software/github.md
-            text: GitHub
           - href: ./docs/software/git.md
             text: Git
+          - href: ./docs/software/github.md
+            text: GitHub
           - href: ./docs/software/vscode.md
             text: VS Code
           - href: ./docs/software/quarto.qmd
@@ -46,10 +48,8 @@ website:
             text: Python
           - href: ./docs/software/stata.qmd
             text: Stata
-          # - href: ./docs/software/r.qmd
-          #   text: R
-          # - href: ./docs/software/sql.qmd
-          #   text: SQL
+          - href: ./docs/software/sql.qmd
+            text: SQL
 
       - text: Methods
         menu:
