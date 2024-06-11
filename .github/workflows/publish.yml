@@ -26,7 +26,8 @@ jobs:
         id: setup-rye
         uses: eifinger/setup-rye@v3
         with:
-          enable-cache: false
+          enable-cache: true
+          cache-prefix: ${{ matrix.python-version }}
 
       - name: Pin python version ${{ matrix.python-version }}
         if: steps.setup-rye.outputs.cache-hit != 'true'
