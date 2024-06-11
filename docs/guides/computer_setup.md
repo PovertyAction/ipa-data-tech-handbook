@@ -1,17 +1,17 @@
 ---
-title: "Computer Setup"
+title: Computer Setup
 execute:
-    eval: false
+  eval: false
 ---
 
-This page is meant to help guide you in setting up your laptop with common software
-used by data and technology teams at IPA. Most software covered in this page have
-their own page in this handbook. We encourage you to refer to for usage of each
-software. And please contribute to those pages so that others at IPA (including
-your future self) are able to learn about what works well for interacting with
-data at IPA.
+This page is meant to help guide you in setting up your laptop with common software used
+by data and technology teams at IPA. Most software covered in this page have their own
+page in this handbook. We encourage you to refer to for usage of each software. And
+please contribute to those pages so that others at IPA (including your future self) are
+able to learn about what works well for interacting with data at IPA.
 
-> Refer to the [IPA Global Help Desk](https://poverty-action.my.site.com/) for general guidance on IPA software and account access.
+> Refer to the [IPA Global Help Desk](https://poverty-action.my.site.com/) for general
+> guidance on IPA software and account access.
 
 The information below is for getting started with core software that IPA uses for
 editing, reviewing, and deploying code for software development, data engineering,
@@ -19,25 +19,29 @@ analytical solutions, and data infrastructure.
 
 ## Package Manager
 
-A package manager helps to standardize how you install and update software on
-your computer. Generally, you want to use a package manager to install any programs
-that are used globally on your computer. By "globally", we mean that it is a program
-that is used across many projects and computing environments.
+A package manager helps to standardize how you install and update software on your
+computer. Generally, you want to use a package manager to install any programs that are
+used globally on your computer. By "globally", we mean that it is a program that is used
+across many projects and computing environments.
 
 ### Windows
 
 If using a Windows computer with Windows 10 or later, we encourage you to use the
-Windows Package Manager, [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/). However, if you do not have Windows 10+, you can achieve a similar package management experience with either
-[chocolatey](https://chocolatey.org/) or [scoop](https://scoop.sh/).
+Windows Package Manager,
+[winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/). However, if
+you do not have Windows 10+, you can achieve a similar package management experience
+with either [chocolatey](https://chocolatey.org/) or [scoop](https://scoop.sh/).
 
 <details>
 <summary>Check to see if you have winget</summary>
 
-  1. Open Windows Powershell (See [PowerShell 101](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started) if new to Windows PowerShell)
-  1. Check to see if you have `winget` installed:
-![Winget Version](../assets/images/software/winget-version.png)
-  1. If you do not see a version number for `winget`. Follow the Microsoft instructions
-  to [Install winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
+1. Open Windows Powershell (See
+   [PowerShell 101](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started)
+   if new to Windows PowerShell)
+1. Check to see if you have `winget` installed:
+   ![Winget Version](../assets/images/software/winget-version.png)
+1. If you do not see a version number for `winget`. Follow the Microsoft instructions to
+   [Install winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
 
 </details>
 
@@ -53,9 +57,10 @@ winget install Casey.Just Rye.Rye
 
 ### MacOS/Linux
 
-On MacOS, it is recommended that you use [Homebrew](https://brew.sh/) as
-a package manager. On Linux you can use Homebrew or [Snap](https://snapcraft.io/).
-This may be relevant if you are working in the [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/) (WSL).
+On MacOS, it is recommended that you use [Homebrew](https://brew.sh/) as a package
+manager. On Linux you can use Homebrew or [Snap](https://snapcraft.io/). This may be
+relevant if you are working in the
+[Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/) (WSL).
 
 ```bash
 # Install a single program (e.g. GitHub for command line)
@@ -65,23 +70,25 @@ brew install gh
 brew install just rye
 ```
 
-See the [Virtual Environment](./venv.md) section of the handbook for more information on using virtual environments.
+See the [Virtual Environment](./venv.md) section of the handbook for more information on
+using virtual environments.
 
 ### Additional Software
 
 The preceding package manager examples can be used to install the majority of the
 software covered in this Handbook. Note that there are some exceptions to software
 available via a package manager. For example, `Stata` needs to be installed by first
-downloading the `.exe` for Windows, `.dmg` for MacOS, or  `.tar.gz` for Linux.
+downloading the `.exe` for Windows, `.dmg` for MacOS, or `.tar.gz` for Linux.
 
-> Get the required Stata version provided by IPA on the Box [installation packages](https://ipastorage.app.box.com/folder/129276324764?v=install-stata).
+> Get the required Stata version provided by IPA on the Box
+> [installation packages](https://ipastorage.app.box.com/folder/129276324764?v=install-stata).
 
 ## Terminal
 
-In Windows, we recommend using the [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/).
-However, there are several other options for terminals. Select what you feel most
-comfortable with. The same is true for MacOS and Linux where there are many Terminal
-options to select from.
+In Windows, we recommend using the
+[Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/). However, there
+are several other options for terminals. Select what you feel most comfortable with. The
+same is true for MacOS and Linux where there are many Terminal options to select from.
 
 ```bash
 # Windows Terminal
@@ -90,12 +97,13 @@ winget install Microsoft.WindowsTerminal
 
 ## Shell
 
-You are free to choose whichever shell works best for your workflow and style.
-Here are the common shell options you may want to consider:
+You are free to choose whichever shell works best for your workflow and style. Here are
+the common shell options you may want to consider:
 
 ### Bash
 
-Bash comes pre-installed with MacOS and Linux. Git Bash is included with the [Git for Windows](https://gitforwindows.org/) installation.
+Bash comes pre-installed with MacOS and Linux. Git Bash is included with the
+[Git for Windows](https://gitforwindows.org/) installation.
 
 ```bash
 # Install git for Windows
@@ -117,8 +125,8 @@ brew install nu
 
 ### Windows PowerShell
 
-[Windows PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview)
-is often the default shell on Windows.
+[Windows PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview) is
+often the default shell on Windows.
 
 ```bash
 # Windows (install or upgrade)
@@ -131,7 +139,8 @@ brew install powershell/tap/powershell
 # docs: https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu
 ```
 
-Optionally, you can install [Starship](https://starship.rs/) for shell prompt customization.
+Optionally, you can install [Starship](https://starship.rs/) for shell prompt
+customization.
 
 ```bash
 # Windows
@@ -141,8 +150,8 @@ winget install Starship.Starship
 brew install starship
 ```
 
-Follow the starship [installation instructions](https://starship.rs/#quick-install)
-for using starship with your preferred shell, for example, if using Nushell, run:
+Follow the starship [installation instructions](https://starship.rs/#quick-install) for
+using starship with your preferred shell, for example, if using Nushell, run:
 
 ```bash
 mkdir ~/.cache/starship
@@ -163,8 +172,8 @@ starship preset jetpack -o ~/.config/starship.toml
 You will need to have git installed on computer if you want to edit, test, or review
 source code and documentation locally.
 
-We recommend installing GitHub Desktop if you are new to using git or prefer a
-GUI to the command line.
+We recommend installing GitHub Desktop if you are new to using git or prefer a GUI to
+the command line.
 
 ```bash
 # Windows
@@ -176,15 +185,16 @@ brew install  --cask github
 ## GitHub Desktop is not available on Linux
 ```
 
-See the [Git](../software/git.md) section of the handbook for more information on using git and the [GitHub](../software/github.md)section
-section for more information on using GitHub.
+See the [Git](../software/git.md) section of the handbook for more information on using
+git and the [GitHub](../software/github.md)section section for more information on using
+GitHub.
 
 ## Visual Studio Code
 
 You are free to chose the Integrated Development Environment (IDE) of your choice.
 However, we recommend [Visual Studio Code](https://code.visualstudio.com/) because
-integration with GitHub is built in and it provides a rich set of extensions to
-improve code quality and review.
+integration with GitHub is built in and it provides a rich set of extensions to improve
+code quality and review.
 
 ```bash
 # Windows
@@ -197,13 +207,15 @@ brew install --cask visual-studio-code
 sudo snap install code --classic
 ```
 
-See the [Visual Studio Code](../software/vscode.md) section of the handbook for more information on using Visual Studio Code.
+See the [Visual Studio Code](../software/vscode.md) section of the handbook for more
+information on using Visual Studio Code.
 
 ## Quarto
 
-For technical documentation and literate programming, we recommend using [Quarto](https://quarto.org/)
-because of it's rich suite of publishing tools that integrate notebooks (e.g. `ipynb`, `.Rmd`),
-and computer scripts (e.g. `.py`, `.r`, `.md`).
+For technical documentation and literate programming, we recommend using
+[Quarto](https://quarto.org/) because of it's rich suite of publishing tools that
+integrate notebooks (e.g. `ipynb`, `.Rmd`), and computer scripts (e.g. `.py`, `.r`,
+`.md`).
 
 ```bash
 # Windows
@@ -216,4 +228,5 @@ brew install --cask quarto
 # download and install from https://quarto.org/docs/get-started/
 ```
 
-See the [Quarto](../software/quarto.md) section of the handbook for more information on using Quarto.
+See the [Quarto](../software/quarto.md) section of the handbook for more information on
+using Quarto.

@@ -152,9 +152,10 @@ You can contribute to this Handbook in a number of ways:
   ```
 
 - File an
-   [Issue on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new)
-   with recommended additions or edits.
+  [Issue on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new)
+  with recommended additions or edits.
+
 - Edit pages of the Handbook on GitHub by clicking on the "Edit this page" link on any
-   page of the Handbook.
+  page of the Handbook.
 
 ![Handbook](./assets/images/software/handbook-gh.png)
