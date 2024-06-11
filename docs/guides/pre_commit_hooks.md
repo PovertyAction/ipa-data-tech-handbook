@@ -1,3 +1,52 @@
 ---
 title: Pre-commit hooks
 ---
+
+## What are pre-commit hooks?
+
+Pre-commit hooks are scripts that run before a commit is made to a repository. They can
+be used to check for common issues in code, such as syntax errors, formatting issues, or
+security vulnerabilities. Pre-commit hooks can help ensure that code is clean,
+consistent, and secure before it is committed to a repository.
+
+## Why use pre-commit hooks?
+
+Pre-commit hooks are used to enforce common coding standards, run tests, and check for
+security vulnerabilities before code is committed to a repository. By using pre-commit
+hooks, you can catch issues early in the development process. This can help prevent
+bugs, improve code quality, and make it easier to collaborate with other developers.
+
+## Installing pre-commit hooks
+
+Add `pre-commit` to your project by running the following command:
+
+```bash
+rye install pre-commit
+```
+
+## Example pre-commit hooks
+
+In the [.pre-commit-config.yaml](../../.pre-commit-config.yaml), this repository
+provides an example of a `pre-commit` hooks that run the following hooks before a commit
+is made:
+
+- `ruff` - Automatically linting and formatting of Python code
+- `validate-pyproject` - Validate the `pyproject.toml` file
+- `check-json` - Check JSON files for syntax errors
+- `check-toml` - Check TOML files for syntax errors
+- `check-merge-conflict` - Check for merge conflicts in files
+- `markdownlint-fix` - Automatically lint and format Markdown files
+- `typos` - Check for common spelling errors in Markdown files
+
+To run these hooks on all files, run the following command:
+
+```bash
+rye run pre-commit run --all-files
+```
+
+Alternatively, if you have installed `pre-commit` every time you run `git commit`, the
+hooks will, by default, run automatically.
+
+## Learning Resources
+
+- [Pre-commit documentation](https://pre-commit.com/index.html)
