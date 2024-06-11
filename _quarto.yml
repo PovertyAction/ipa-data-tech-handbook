@@ -3,6 +3,8 @@ project:
   preview:
     port: 3434
     browser: true
+execute:
+  freeze: auto
 website:
   title: "Data and Tech Handbook"
   description:  "Handbook for common, shared practices for data science and engineering at Innovations for Poverty Action."
