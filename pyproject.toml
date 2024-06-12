@@ -15,6 +15,8 @@ dependencies = [
     "pandas>=2.2.2",
     "matplotlib>=3.9.0",
     "numpy>=1.26.4",
+    "causaldata>=0.1.4",
+    "pystata>=0.0.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.9"

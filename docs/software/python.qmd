@@ -40,7 +40,7 @@ to the virtual environment, using `rye`, you can run:
 We'll use `rye` to demonstrate how to manage a Python virtual environment. Watch the
 following video for a quick introduction to `rye`:
 
-{{< video https://youtu.be/q99TYA7LnuA >}}
+{{\< video https://youtu.be/q99TYA7LnuA >}}
 
 First, install `rye` using `winget` (Windows) or `brew` (MacOS/Linux):
 
@@ -59,35 +59,80 @@ Add libraries to the virtual environment using `rye add ...`:
 
 ## Coding Conventions
 
-See the
+We highly recommend working with a [virtual environment](../guides/venv.md) to manage
+Python dependencies. The `pyproject.toml` is the preferred way to keep track of python
+dependencies as well as project-specific python conventions.
+
+We recommend using [Ruff](https://docs.astral.sh/ruff/) to enforce
+[linting](<https://en.wikipedia.org/wiki/Lint_(software)>) and formatting rules. In most
+cases you can use the default linting and formatting rules provided by `ruff`. However,
+you can customize the rules by modifying the `[tool.ruff]` section of the
+`pyproject.toml` file in the root of your project. for more about the configuration
+options, see the [Ruff documentation](https://docs.astral.sh/ruff/configuration/).
+
+If you are working in a virtual environment created by `rye`, you automatically have
+access to `Ruff via  `rye lint`and`rye fmt\` commands to lint and format your code.
+
+For more inspiration, see the
 [GitLab Data Team's Python Guide](https://handbook.gitlab.com/handbook/business-technology/data-team/platform/python-guide/)
+and [Google's Python Style Guide](https://google.github.io/styleguide/pyguide.html).
 
-## Learning Resources
+## Example Usage
 
-Download data from the a URL:
+Let's load an example World Bank data via [Gapminder](https://www.gapminder.org/) using
+the [causaldata](https://github.com/NickCH-K/causaldata) package.
 
 ```{python}
 # | eval: true
-from urllib.request import urlretrieve
+# | echo: true
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.formula.api as sm
+from causaldata import gapminder
+```
 
-_ = urlretrieve(
-    "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv",
-    "../assets/data/penguins.csv",
+Load the Gapminder data as a pandas DataFrame:
+
+```{python}
+# | echo: true
+df = gapminder.load_pandas().data
+```
+
+We can check the dimensions of the DataFrame using `df.info()`:
+
+```{python}
+# | echo: true
+df.info()
+```
+
+Let's take a look at the first few rows of the DataFrame using `df.head()`:
+
+```{python}
+df.head()
+```
+
+Take a look at the relationship between GDP per Capita and Life Expectancy:
+
+```{python}
+sns.scatterplot(x="gdpPercap", y="lifeExp", hue="continent", data=df).set(
+    xscale="log", ylabel="Life Expectancy", xlabel="GDP per Capita"
 )
 ```
 
+Separate the data by year, focusing on 1957 and 2007:
+
 ```{python}
-import pandas as pd
-
-df = pd.read_csv("../assets/data/penguins.csv")
-```
-
-```{python label=fig-bill-sizes, fig-cap="Bill Sizes by Species"}
-import matplotlib.pyplot as plt  # noqa: E402
-import seaborn as sns  # noqa: E402
-
-g = sns.FacetGrid(df, hue="species", height=3, aspect=1.5)
-g.map(plt.scatter, "bill_length_mm", "bill_depth_mm").add_legend()
+sns.relplot(
+    data=df.where(df["year"].isin([1957, 2007])),
+    x="gdpPercap",
+    y="lifeExp",
+    col="year",
+    hue="continent",
+    col_wrap=1,
+    kind="scatter",
+    palette="muted",
+).set(xscale="log", ylabel="Life Expectancy", xlabel="GDP per Capita")
 ```
 
 ## Learning Resources

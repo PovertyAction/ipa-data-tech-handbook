@@ -9,6 +9,10 @@ It is a powerful tool that allows you to create documents with a variety of form
 as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating
 documents that are easy to read and share.
 
+The following video provides a quick introduction to Quarto:
+
+{{< video  https://youtu.be/_f3latmOhew >}}
+
 ## How to install Quarto?
 
 | Platform | Commands                                 |
@@ -40,6 +44,10 @@ document. If you want more advanced formatting or computations, `.qmd` may be a
 preferable choice. The [Quarto Documentation](https://quarto.org/docs/guide/) provides
 helpful guides on how to use Markdown as well as the added features that Quarto Markdown
 offers.
+
+For an example of how to use Quarto within common academic and research workflows, see:
+
+{{< video https://youtu.be/EbAAmrB0luA >}}
 
 ## Learning Resources
 

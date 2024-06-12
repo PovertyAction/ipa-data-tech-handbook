@@ -1,7 +1,7 @@
 ---
 title: "Stata"
 execute:
-    eval: false
+    eval: true
 ---
 
 ## What is Stata?
@@ -33,6 +33,45 @@ by Matthew Gentzkow and Jesse Shapiro
 ## Using Stata from Python
 
 Within a Python script or Jupyter Notebook, you can call Stata using [pystata](https://www.stata.com/python/pystata18/notebook/Quick%20Start0.html).
+
+```{python}
+import stata_setup
+
+# set configuration to the path where Stata is installed and the flavor of Stata
+# in the case below, we're using Stata 18 SE
+stata_setup.config("C:/Program Files/Stata18/", "se")
+```
+
+
+### Call Stata using pystata API functions
+
+```{python}
+from pystata import stata
+```
+
+```{python}
+stata.run(
+    """
+    sysuse auto, clear
+    reg mpg price i.foreign
+    """
+)
+```
+
+
+Or use IPython magic commands to run Stata code in a Jupyter Notebook.
+
+```{python}
+%%stata
+sysuse auto, clear
+describe
+```
+
+
+```{python}
+%stata scatter mpg price
+```
+
 
 ## Data Visualization
 

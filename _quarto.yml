@@ -16,6 +16,10 @@ website:
   search:
     location: navbar
     type: overlay
+  page-footer:
+    left: |
+      Brought to you by
+      [![](./docs/assets/images/IPA-primary-color-RGB.png){fig-alt="IPA" width=65px}](https://poverty-action.org)
   navbar:
     background: '#155240'
     foreground: '#ffffff'
@@ -42,6 +46,8 @@ website:
             text: Git
           - href: ./docs/software/github.md
             text: GitHub
+          - href: ./docs/software/justfile.md
+            text: Justfile
           - href: ./docs/software/vscode.md
             text: VS Code
           - href: ./docs/software/quarto.qmd

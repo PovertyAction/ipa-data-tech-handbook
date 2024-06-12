@@ -58,16 +58,16 @@ fmt-all: lint-py fmt-py lint-sql fmt-markdown
 
 [windows]
 pre-install:
-    winget install Casey.Just Rye.Rye Posit.Quarto
+    winget install Casey.Just Rye.Rye GitHub.cli Posit.Quarto
 
 [linux]
 pre-install:
     quarto_version :=  "1.4.554"
-    brew install just rye
+    brew install just rye gh
     curl -sfL https://github.com/quarto-dev/quarto-cli/releases/download/v{{quarto_version}}/quarto-{{quarto_version}}-linux-amd64.deb  | sudo apt install ./quarto-{{quarto_version}}-linux-amd64.deb
     rm quarto-{{quarto_version}}-linux-amd64.deb
 
 [macos]
 pre-install:
-    brew install just rye
+    brew install just rye gh
     brew install --cask quarto

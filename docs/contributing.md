@@ -26,9 +26,11 @@ an open mind and willingness to understand the perspectives of our colleagues.
 
 The best ways to read the handbook are the following:
 
-- [Read it on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/docs)
-  or build the handbook from source.
-- Read it locally on your computer by cloning the GitHub repository
+1. Navigate to
+   [https://povertyaction.github.io/ipa-data-tech-handbook/docs](https://povertyaction.github.io/ipa-data-tech-handbook/docs)
+1. Read the
+   [source code on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/docs).
+1. Read it locally on your computer by cloning the GitHub repository
 
 ## Editing the Handbook
 
@@ -42,6 +44,17 @@ A typical workflow to edit the handbook is the following:
 1. Create a pull request, assign reviewers.
 1. Apply reviewers' suggestions, if any.
 1. Merge all changes to the `main` branch of the repository
+
+You can contribute to this Handbook in a number of ways:
+
+- File an
+  [Issue on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new)
+  with recommended additions or edits.
+
+- Edit pages of the Handbook on GitHub by clicking on the "Edit this page" link on any
+  page of the Handbook.
+
+![Handbook](./assets/images/software/handbook-gh.png)
 
 ### A little bit of Markdown
 
@@ -67,10 +80,14 @@ The easiest way to edit the handbook is to use the GitHub Web IDE. Go to
 and click on the file you want to edit. Then click on the pencil icon in the top right
 corner of the file to start editing.
 
+![Edit on GitHub](./assets/images/gh-edit-console.gif)
+
 ### Use the GitHub IDE to edit the handbook
 
 Another option that GitHub provides is to edit the handbook documents using a Web-based
-integrated development environment (IDE)
+integrated development environment (IDE).
+
+![Edit with GitHub IDE](./assets/images/gh-edit-ide.gif)
 
 ### Modify the handbook locally
 
@@ -83,6 +100,20 @@ information about software installation):
 - `just` for running common command line patterns
 - `rye` for installing Python and managing virtual environments
 
+First, clone this repository to your local computer either via GitHub Desktop:
+
+![Clone Repository via GitHub Desktop](./assets/images/gh-clone.gif)
+
+or from the command line:
+
+```bash
+# If using HTTPS
+git clone https://github.com/PovertyAction/ipa-data-tech-handbook.git
+
+# If using SSH
+git clone git@github.com:PovertyAction/ipa-data-tech-handbook.git
+```
+
 This repository uses a `Justfile` for collecting common command line actions that we run
 to set up the computing environment and build the assets of the handbook. Note that you
 should also have Git installed
@@ -90,26 +121,10 @@ should also have Git installed
 To get started, make sure you have `Just` installed on your computer by running the
 following from the command line:
 
-| Platform  | Commands                                    |
-| --------- | ------------------------------------------- |
-| Windows   | `winget install Git.Git Casey.Just Rye.Rye` |
-| Mac/Linux | `brew install just rye`                     |
-
-As a shortcut, if you already have `Just` installed, you can run the following to
-install required software and build a python virtual environment that is used to build
-the handbook pages:
-
-```bash
-just get-started
-```
-
-After the required software is installed, you can activate the virtual environment:
-
-| Shell      | Commands                                |
-| ---------- | --------------------------------------- |
-| Bash       | `.venv/Scripts/activate`                |
-| Powershell | `.venv/Scripts/activate.ps1`            |
-| Nushell    | `overlay use .venv/Scripts/activate.nu` |
+| Platform  | Commands                                                            |
+| --------- | ------------------------------------------------------------------- |
+| Windows   | `winget install Git.Git Casey.Just Rye.Rye GitHub.cli Posit.Quarto` |
+| Mac/Linux | `brew install just rye gh`                                          |
 
 This will make sure that you have the latest version of `Just`, as well as
 [Rye](https://rye.astral.sh/guide/) (installer for Python) and
@@ -126,6 +141,26 @@ technical documents).
   markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to
   review, update, and deploy technical documentation.
 
+As a shortcut, if you already have `Just` installed, you can run the following to
+install required software and build a python virtual environment that is used to build
+the handbook pages:
+
+```bash
+just get-started
+```
+
+Note: you may need to restart your terminal after running the command above to activate
+the installed software.
+
+After the required software is installed, you can activate the Python virtual
+environment:
+
+| Shell      | Commands                                |
+| ---------- | --------------------------------------- |
+| Bash       | `.venv/Scripts/activate`                |
+| Powershell | `.venv/Scripts/activate.ps1`            |
+| Nushell    | `overlay use .venv/Scripts/activate.nu` |
+
 ## Preview the handbook
 
 To build a version of the Handbook so that you can read it on your computer, run the
@@ -138,24 +173,5 @@ just preview-docs
 
 The command line above references the
 [ipa-data-tech-handbook/\_quarto.yml](../_quarto.yml) file and creates the `.html` files
-for the handbook then launches a browser window with a `localhost` server of the
-handbook.
-
-## Contributing to the Handbook
-
-You can contribute to this Handbook in a number of ways:
-
-- Edit the code locally on your computer using git
-
-  ```bash
-  git clone git@github.com:PovertyAction/dse_handbook.git
-  ```
-
-- File an
-  [Issue on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new)
-  with recommended additions or edits.
-
-- Edit pages of the Handbook on GitHub by clicking on the "Edit this page" link on any
-  page of the Handbook.
-
-![Handbook](./assets/images/software/handbook-gh.png)
+for the handbook then launches a browser window with a local server of the handbook at
+`http://localhost:3434/docs`.
