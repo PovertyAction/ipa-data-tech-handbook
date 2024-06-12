@@ -29,6 +29,7 @@ The best ways to read the handbook are the following:
 - [Read it on GitHub](https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/docs)
   or build the handbook from source.
 - Read it locally on your computer by cloning the GitHub repository
+- Read the handbook at [https://povertyaction.github.io/ipa-data-tech-handbook/docs](https://povertyaction.github.io/ipa-data-tech-handbook/docs)
 
 ## Editing the Handbook
 
