@@ -25,14 +25,14 @@
     "href": "docs/index.html",
     "title": "IPA Data Science, Engineering, and Technology Handbook",
     "section": "",
-    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!"
+    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
   },
   {
     "objectID": "docs/index.html#about-the-handbook",
     "href": "docs/index.html#about-the-handbook",
     "title": "IPA Data Science, Engineering, and Technology Handbook",
-    "section": "About the Handbook",
-    "text": "About the Handbook\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nFor information about specific software, see the respective pages under the software directory."
+    "section": "",
+    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
   },
   {
     "objectID": "docs/guides/code_review.html",
@@ -158,7 +158,7 @@
     "href": "docs/software/stata.html#using-stata-from-python",
     "title": "Stata",
     "section": "Using Stata from Python",
-    "text": "Using Stata from Python\nWithin a Python script or Jupyter Notebook, you can call Stata using pystata."
+    "text": "Using Stata from Python\nWithin a Python script or Jupyter Notebook, you can call Stata using pystata.\n\nimport stata_setup\n\n# set configuration to the path where Stata is installed and the flavor of Stata\n# in the case below, we're using Stata 18 SE\nstata_setup.config(\"C:/Program Files/Stata18/\", \"se\")\n\n\n  ___  ____  ____  ____  ____ ®\n /__    /   ____/   /   ____/      Stata 18.0\n___/   /   /___/   /   /___/       SE—Standard Edition\n\n Statistics and Data Science       Copyright 1985-2023 StataCorp LLC\n                                   StataCorp\n                                   4905 Lakeway Drive\n                                   College Station, Texas 77845 USA\n                                   800-782-8272        https://www.stata.com\n                                   979-696-4600        service@stata.com\n\nStata license: Unlimited-user network, expiring 22 Jan 2025\nSerial number: 401809300803\n  Licensed to: Niall Keleher\n               Innovations for Poverty Action\n\nNotes:\n      1. Unicode is supported; see help unicode_advice.\n      2. Maximum number of variables is set to 5,000 but can be increased;\n          see help set_maxvar.\n\n\n\nCall Stata using pystata API functions\n\nfrom pystata import stata\n\n\nstata.run(\n    \"\"\"\n    sysuse auto, clear\n    reg mpg price i.foreign\n    \"\"\"\n)\n\n\n. \n.     sysuse auto, clear\n(1978 automobile data)\n\n.     reg mpg price i.foreign\n\n      Source |       SS           df       MS      Number of obs   =        74\n-------------+----------------------------------   F(2, 71)        =     23.01\n       Model |  960.866305         2  480.433152   Prob &gt; F        =    0.0000\n    Residual |  1482.59315        71  20.8815937   R-squared       =    0.3932\n-------------+----------------------------------   Adj R-squared   =    0.3761\n       Total |  2443.45946        73  33.4720474   Root MSE        =    4.5696\n\n------------------------------------------------------------------------------\n         mpg | Coefficient  Std. err.      t    P&gt;|t|     [95% conf. interval]\n-------------+----------------------------------------------------------------\n       price |   -.000959   .0001815    -5.28   0.000     -.001321    -.000597\n             |\n     foreign |\n    Foreign  |   5.245271   1.163592     4.51   0.000     2.925135    7.565407\n       _cons |   25.65058   1.271581    20.17   0.000     23.11512    28.18605\n------------------------------------------------------------------------------\n\n.     \n. \n\n\nOr use IPython magic commands to run Stata code in a Jupyter Notebook.\n\n%%stata\nsysuse auto, clear\ndescribe\n\n\n. sysuse auto, clear\n(1978 automobile data)\n\n. describe\n\nContains data from C:\\Program Files\\Stata18/ado\\base/a/auto.dta\n Observations:            74                  1978 automobile data\n    Variables:            12                  13 Apr 2022 17:45\n                                              (_dta has notes)\n-------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n-------------------------------------------------------------------------------\nmake            str18   %-18s                 Make and model\nprice           int     %8.0gc                Price\nmpg             int     %8.0g                 Mileage (mpg)\nrep78           int     %8.0g                 Repair record 1978\nheadroom        float   %6.1f                 Headroom (in.)\ntrunk           int     %8.0g                 Trunk space (cu. ft.)\nweight          int     %8.0gc                Weight (lbs.)\nlength          int     %8.0g                 Length (in.)\nturn            int     %8.0g                 Turn circle (ft.)\ndisplacement    int     %8.0g                 Displacement (cu. in.)\ngear_ratio      float   %6.2f                 Gear ratio\nforeign         byte    %8.0g      origin     Car origin\n-------------------------------------------------------------------------------\nSorted by: foreign\n\n. \n\n\n\n%stata scatter mpg price"
   },
   {
     "objectID": "docs/software/stata.html#data-visualization",
@@ -217,102 +217,46 @@
     "text": "Learning Resources\n\nSELECT Star SQL\nSQL Murder Mystery\nsql-workbench\nDuckDB SQL Introduction"
   },
   {
-    "objectID": "docs/software/vscode.html",
-    "href": "docs/software/vscode.html",
-    "title": "Visual Studio Code",
+    "objectID": "docs/software/python.html",
+    "href": "docs/software/python.html",
+    "title": "Python",
     "section": "",
-    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
   },
   {
-    "objectID": "docs/software/vscode.html#what-is-visual-studio-code",
-    "href": "docs/software/vscode.html#what-is-visual-studio-code",
-    "title": "Visual Studio Code",
+    "objectID": "docs/software/python.html#what-is-python",
+    "href": "docs/software/python.html#what-is-python",
+    "title": "Python",
     "section": "",
-    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
   },
   {
-    "objectID": "docs/software/vscode.html#how-to-install-vs-code",
-    "href": "docs/software/vscode.html#how-to-install-vs-code",
-    "title": "Visual Studio Code",
-    "section": "How to Install VS Code?",
-    "text": "How to Install VS Code?\nTo install VS Code, download and install the latest software version from the Visual Studio Code website or run the following from the command line if you have the Windows Package Manager, winget, installed:\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Microsoft.VisualStudioCode\n\n\nMacOS\nbrew install --cask visual-studio-code\n\n\nLinux\nsudo snap install code --classic"
+    "objectID": "docs/software/python.html#how-to-install-python",
+    "href": "docs/software/python.html#how-to-install-python",
+    "title": "Python",
+    "section": "How to install Python?",
+    "text": "How to install Python?\nThere are many ways to install Python. We recommend using Python in a virtual environment to avoid conflicts with other Python installations on your system.\nWe recommend using a rye or pixi. Both of these tools provide a simple way to create and manage Python virtual environments.\nIn both cases, you can manage the python packages that are installed in the virtual environment using a pyproject.toml file. See the pyproject.toml example in this repository for an example of how to manage Python packages. To add package dependencies to the virtual environment, using rye, you can run:\nWe’ll use rye to demonstrate how to manage a Python virtual environment. Watch the following video for a quick introduction to rye:\n{{&lt; video https://youtu.be/q99TYA7LnuA &gt;}}\nFirst, install rye using winget (Windows) or brew (MacOS/Linux):\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install rye\n\n\nMacOS\nbrew install rye\n\n\nLinux\nbrew install rye\n\n\n\nAdd libraries to the virtual environment using rye add ...:\n\n&gt; rye add jupyterlab pandas matplotlib seaborn"
   },
   {
-    "objectID": "docs/software/vscode.html#using-vs-code",
-    "href": "docs/software/vscode.html#using-vs-code",
-    "title": "Visual Studio Code",
-    "section": "Using VS Code",
-    "text": "Using VS Code\nThe best starting point for familiarizing yourself with VS Code is the documentation.\nSome particularly helpful references in the documentation are:\n\nEditing with VS Code\nGit Source control in VS Code\nPython in VS Code"
+    "objectID": "docs/software/python.html#coding-conventions",
+    "href": "docs/software/python.html#coding-conventions",
+    "title": "Python",
+    "section": "Coding Conventions",
+    "text": "Coding Conventions\nWe highly recommend working with a virtual environment to manage Python dependencies. The pyproject.toml is the preferred way to keep track of python dependencies as well as project-specific python conventions.\nWe recommend using Ruff to enforce linting and formatting rules. In most cases you can use the default linting and formatting rules provided by ruff. However, you can customize the rules by modifying the [tool.ruff] section of the pyproject.toml file in the root of your project. for more about the configuration options, see the Ruff documentation.\nIf you are working in a virtual environment created by rye, you automatically have access to Ruff viarye lintandrye fmt` commands to lint and format your code.\nFor more inspiration, see the GitLab Data Team’s Python Guide and Google’s Python Style Guide."
   },
   {
-    "objectID": "docs/software/vscode.html#recommended-extensions",
-    "href": "docs/software/vscode.html#recommended-extensions",
-    "title": "Visual Studio Code",
-    "section": "Recommended Extensions",
-    "text": "Recommended Extensions\nThe core software and functionality in VS Code gives you a lot of useful tools for writing, editing, and collaborating. Additionally, you can add functionality through Extensions.\nSome helpful extensions are the following:\n\nPython Extension - language syntax for Python programming\nRuff - Python linting and code formatting\nR Extension - Interacting with R from VS Code\nGitHub Pull Requests - review and manage GitHub pull requests and issues in Visual Studio Code\nJupyter Extension - for developing with jupyter notebooks\nJust - support for Justfiles\nQuarto Extension - support for writing and building Quarto projects\nMarkdown All in One - support for Markdown\nMarkdown Preview Mermaid Support - support for Mermaid diagrams in Markdown\nConventional Commits - support for writing easy to understand commit messages"
+    "objectID": "docs/software/python.html#example-usage",
+    "href": "docs/software/python.html#example-usage",
+    "title": "Python",
+    "section": "Example Usage",
+    "text": "Example Usage\nLet’s load an example World Bank data via Gapminder using the causaldata package.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport statsmodels.formula.api as sm\nfrom causaldata import gapminder\n\nLoad the Gapminder data as a pandas DataFrame:\n\ndf = gapminder.load_pandas().data\n\nWe can check the dimensions of the DataFrame using df.info():\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 1704 entries, 0 to 1703\nData columns (total 6 columns):\n #   Column     Non-Null Count  Dtype  \n---  ------     --------------  -----  \n 0   country    1704 non-null   object \n 1   continent  1704 non-null   object \n 2   year       1704 non-null   int64  \n 3   lifeExp    1704 non-null   float64\n 4   pop        1704 non-null   int64  \n 5   gdpPercap  1704 non-null   float64\ndtypes: float64(2), int64(2), object(2)\nmemory usage: 80.0+ KB\n\n\nLet’s take a look at the first few rows of the DataFrame using df.head():\n\ndf.head()\n\n\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\n0\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.445314\n\n\n1\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.853030\n\n\n2\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.100710\n\n\n3\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.197138\n\n\n4\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.981106\n\n\n\n\n\n\n\nTake a look at the relationship between GDP per Capita and Life Expectancy:\n\nsns.scatterplot(x=\"gdpPercap\", y=\"lifeExp\", hue=\"continent\", data=df).set(\n    xscale=\"log\", ylabel=\"Life Expectancy\", xlabel=\"GDP per Capita\"\n)\n\n\n\n\n\n\n\n\nSeparate the data by year, focusing on 1957 and 2007:\n\nsns.relplot(\n    data=df.where(df[\"year\"].isin([1957, 2007])),\n    x=\"gdpPercap\",\n    y=\"lifeExp\",\n    col=\"year\",\n    hue=\"continent\",\n    col_wrap=1,\n    kind=\"scatter\",\n    palette=\"muted\",\n).set(xscale=\"log\", ylabel=\"Life Expectancy\", xlabel=\"GDP per Capita\")"
   },
   {
-    "objectID": "docs/software/quarto.html",
-    "href": "docs/software/quarto.html",
-    "title": "Quarto",
-    "section": "",
-    "text": "Quarto is a document authoring tool that allows you to create documents using markdown. It is a powerful tool that allows you to create documents with a variety of formats such as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating documents that are easy to read and share."
-  },
-  {
-    "objectID": "docs/software/quarto.html#what-is-quarto",
-    "href": "docs/software/quarto.html#what-is-quarto",
-    "title": "Quarto",
-    "section": "",
-    "text": "Quarto is a document authoring tool that allows you to create documents using markdown. It is a powerful tool that allows you to create documents with a variety of formats such as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating documents that are easy to read and share."
-  },
-  {
-    "objectID": "docs/software/quarto.html#how-to-install-quarto",
-    "href": "docs/software/quarto.html#how-to-install-quarto",
-    "title": "Quarto",
-    "section": "How to install Quarto?",
-    "text": "How to install Quarto?\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Posit.Quarto\n\n\nMacOS\nbrew install --cask quarto\n\n\nLinux\nSee https://quarto.org/docs/get-started/"
-  },
-  {
-    "objectID": "docs/software/quarto.html#using-quarto",
-    "href": "docs/software/quarto.html#using-quarto",
-    "title": "Quarto",
-    "section": "Using Quarto",
-    "text": "Using Quarto\nWe recommend using the Quarto Extension for Visual Studio Code. You can install the extension by searching for “Quarto” in the Extensions view (Ctrl+Shift+X). Alternatively, you can install the extension from the Visual Studio Code Marketplace.\nIf you use Jupyter Lab or RStudio, Quarto works directly with those tools as well.\nThe best place to start for learning how to use Quarto is Quarto’s tutorial, Hello, Quarto.\nAs an example, this repository uses Quarto to build the handbook.\nIn the root of the git repository, there is a _quarto.yml file that contains the metadata used to compile the handbook. Components of the handbook are written in Markdown, either standard Markdown (.md) or Quarto Markdown (.qmd). The benefit of standard markdown is that it is more portable and works with standard Markdown editors (e.g. GitHub), while Quarto markdown allows for computations that are embedded in the document. If you want more advanced formatting or computations, .qmd may be a preferable choice. The Quarto Documentation provides helpful guides on how to use Markdown as well as the added features that Quarto Markdown offers."
-  },
-  {
-    "objectID": "docs/software/quarto.html#learning-resources",
-    "href": "docs/software/quarto.html#learning-resources",
-    "title": "Quarto",
+    "objectID": "docs/software/python.html#learning-resources",
+    "href": "docs/software/python.html#learning-resources",
+    "title": "Python",
     "section": "Learning Resources",
-    "text": "Learning Resources\n\nTutorials:\n\nHello, Quarto\nComputations\nAuthoring\n\nQuarto Documentation\nQuarto Gallery of Examples"
-  },
-  {
-    "objectID": "docs/methods/references.html",
-    "href": "docs/methods/references.html",
-    "title": "Analytical and Computational Methods References",
-    "section": "",
-    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
-  },
-  {
-    "objectID": "docs/methods/references.html#causal-inference",
-    "href": "docs/methods/references.html#causal-inference",
-    "title": "Analytical and Computational Methods References",
-    "section": "",
-    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
-  },
-  {
-    "objectID": "docs/methods/references.html#causal-machine-learning",
-    "href": "docs/methods/references.html#causal-machine-learning",
-    "title": "Analytical and Computational Methods References",
-    "section": "Causal Machine Learning",
-    "text": "Causal Machine Learning\n\nEconML\nGeneralized Random Forests\nCausal Machine Learning Book, by Victor Chernozhukov, Christian Hansen, Nathan Kallus, Martin Spindler, Vasilis Syrgkanis"
-  },
-  {
-    "objectID": "docs/methods/references.html#generative-ai-large-language-models",
-    "href": "docs/methods/references.html#generative-ai-large-language-models",
-    "title": "Analytical and Computational Methods References",
-    "section": "Generative AI & Large Language Models",
-    "text": "Generative AI & Large Language Models\n\nLange Language Model Course, by Maxime Labonne\nPractical Deep Learning\nGenerative AI for Beginners\nApplied LLMs - Read “What We’ve Learned From A Year of Building with LLMs”\nGenerative AI Handbook, by William Brown"
+    "text": "Learning Resources\n\nThe Python Tutorial\nPython Data Science Handbook\nEfficient Python for Data Scientists\nThe Hitchhiker’s Guide to Python"
   },
   {
     "objectID": "docs/software/git.html",
@@ -357,60 +301,144 @@
     "text": "Learning Resources\n\nGitHub’s YouTube Git for Beginners\nGitHub’s Git Cheat Sheet\ngit - the simple guide\nGit Best Practices\nHappy Git with R\nVisual Git Guide\nVisualizing Git with D3"
   },
   {
-    "objectID": "docs/software/python.html",
-    "href": "docs/software/python.html",
-    "title": "Python",
+    "objectID": "docs/methods/references.html",
+    "href": "docs/methods/references.html",
+    "title": "Analytical and Computational Methods References",
     "section": "",
-    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
+    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
   },
   {
-    "objectID": "docs/software/python.html#what-is-python",
-    "href": "docs/software/python.html#what-is-python",
-    "title": "Python",
+    "objectID": "docs/methods/references.html#causal-inference",
+    "href": "docs/methods/references.html#causal-inference",
+    "title": "Analytical and Computational Methods References",
     "section": "",
-    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
+    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
   },
   {
-    "objectID": "docs/software/python.html#how-to-install-python",
-    "href": "docs/software/python.html#how-to-install-python",
-    "title": "Python",
-    "section": "How to install Python?",
-    "text": "How to install Python?\nThere are many ways to install Python. We recommend using Python in a virtual environment to avoid conflicts with other Python installations on your system.\nWe recommend using a rye or pixi. Both of these tools provide a simple way to create and manage Python virtual environments.\nIn both cases, you can manage the python packages that are installed in the virtual environment using a pyproject.toml file. See the pyproject.toml example in this repository for an example of how to manage Python packages. To add package dependencies to the virtual environment, using rye, you can run:\nWe’ll use rye to demonstrate how to manage a Python virtual environment. Watch the following video for a quick introduction to rye:\n\nFirst, install rye using winget (Windows) or brew (MacOS/Linux):\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install rye\n\n\nMacOS\nbrew install rye\n\n\nLinux\nbrew install rye\n\n\n\nAdd libraries to the virtual environment using rye add ...:\n\n&gt; rye add jupyterlab pandas matplotlib seaborn"
+    "objectID": "docs/methods/references.html#causal-machine-learning",
+    "href": "docs/methods/references.html#causal-machine-learning",
+    "title": "Analytical and Computational Methods References",
+    "section": "Causal Machine Learning",
+    "text": "Causal Machine Learning\n\nEconML\nGeneralized Random Forests\nCausal Machine Learning Book, by Victor Chernozhukov, Christian Hansen, Nathan Kallus, Martin Spindler, Vasilis Syrgkanis"
   },
   {
-    "objectID": "docs/software/python.html#coding-conventions",
-    "href": "docs/software/python.html#coding-conventions",
-    "title": "Python",
-    "section": "Coding Conventions",
-    "text": "Coding Conventions\nSee the GitLab Data Team’s Python Guide"
+    "objectID": "docs/methods/references.html#generative-ai-large-language-models",
+    "href": "docs/methods/references.html#generative-ai-large-language-models",
+    "title": "Analytical and Computational Methods References",
+    "section": "Generative AI & Large Language Models",
+    "text": "Generative AI & Large Language Models\n\nLange Language Model Course, by Maxime Labonne\nPractical Deep Learning\nGenerative AI for Beginners\nApplied LLMs - Read “What We’ve Learned From A Year of Building with LLMs”\nGenerative AI Handbook, by William Brown"
   },
   {
-    "objectID": "docs/software/python.html#learning-resources",
-    "href": "docs/software/python.html#learning-resources",
-    "title": "Python",
+    "objectID": "docs/software/quarto.html",
+    "href": "docs/software/quarto.html",
+    "title": "Quarto",
+    "section": "",
+    "text": "Quarto is a document authoring tool that allows you to create documents using markdown. It is a powerful tool that allows you to create documents with a variety of formats such as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating documents that are easy to read and share.\nThe following video provides a quick introduction to Quarto:"
+  },
+  {
+    "objectID": "docs/software/quarto.html#what-is-quarto",
+    "href": "docs/software/quarto.html#what-is-quarto",
+    "title": "Quarto",
+    "section": "",
+    "text": "Quarto is a document authoring tool that allows you to create documents using markdown. It is a powerful tool that allows you to create documents with a variety of formats such as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating documents that are easy to read and share.\nThe following video provides a quick introduction to Quarto:"
+  },
+  {
+    "objectID": "docs/software/quarto.html#how-to-install-quarto",
+    "href": "docs/software/quarto.html#how-to-install-quarto",
+    "title": "Quarto",
+    "section": "How to install Quarto?",
+    "text": "How to install Quarto?\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Posit.Quarto\n\n\nMacOS\nbrew install --cask quarto\n\n\nLinux\nSee https://quarto.org/docs/get-started/"
+  },
+  {
+    "objectID": "docs/software/quarto.html#using-quarto",
+    "href": "docs/software/quarto.html#using-quarto",
+    "title": "Quarto",
+    "section": "Using Quarto",
+    "text": "Using Quarto\nWe recommend using the Quarto Extension for Visual Studio Code. You can install the extension by searching for “Quarto” in the Extensions view (Ctrl+Shift+X). Alternatively, you can install the extension from the Visual Studio Code Marketplace.\nIf you use Jupyter Lab or RStudio, Quarto works directly with those tools as well.\nThe best place to start for learning how to use Quarto is Quarto’s tutorial, Hello, Quarto.\nAs an example, this repository uses Quarto to build the handbook.\nIn the root of the git repository, there is a _quarto.yml file that contains the metadata used to compile the handbook. Components of the handbook are written in Markdown, either standard Markdown (.md) or Quarto Markdown (.qmd). The benefit of standard markdown is that it is more portable and works with standard Markdown editors (e.g. GitHub), while Quarto markdown allows for computations that are embedded in the document. If you want more advanced formatting or computations, .qmd may be a preferable choice. The Quarto Documentation provides helpful guides on how to use Markdown as well as the added features that Quarto Markdown offers.\nFor an example of how to use Quarto within common academic and research workflows, see:"
+  },
+  {
+    "objectID": "docs/software/quarto.html#learning-resources",
+    "href": "docs/software/quarto.html#learning-resources",
+    "title": "Quarto",
     "section": "Learning Resources",
-    "text": "Learning Resources\nDownload data from the a URL:\n\nfrom urllib.request import urlretrieve\n\n_ = urlretrieve(\n    \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv\",\n    \"../assets/data/penguins.csv\",\n)\n\n\nimport pandas as pd\n\ndf = pd.read_csv(\"../assets/data/penguins.csv\")\n\n\nimport matplotlib.pyplot as plt  # noqa: E402\nimport seaborn as sns  # noqa: E402\n\ng = sns.FacetGrid(df, hue=\"species\", height=3, aspect=1.5)\ng.map(plt.scatter, \"bill_length_mm\", \"bill_depth_mm\").add_legend()"
+    "text": "Learning Resources\n\nTutorials:\n\nHello, Quarto\nComputations\nAuthoring\n\nQuarto Documentation\nQuarto Gallery of Examples"
   },
   {
-    "objectID": "docs/software/python.html#learning-resources-1",
-    "href": "docs/software/python.html#learning-resources-1",
-    "title": "Python",
+    "objectID": "docs/software/vscode.html",
+    "href": "docs/software/vscode.html",
+    "title": "Visual Studio Code",
+    "section": "",
+    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+  },
+  {
+    "objectID": "docs/software/vscode.html#what-is-visual-studio-code",
+    "href": "docs/software/vscode.html#what-is-visual-studio-code",
+    "title": "Visual Studio Code",
+    "section": "",
+    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+  },
+  {
+    "objectID": "docs/software/vscode.html#how-to-install-vs-code",
+    "href": "docs/software/vscode.html#how-to-install-vs-code",
+    "title": "Visual Studio Code",
+    "section": "How to Install VS Code?",
+    "text": "How to Install VS Code?\nTo install VS Code, download and install the latest software version from the Visual Studio Code website or run the following from the command line if you have the Windows Package Manager, winget, installed:\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Microsoft.VisualStudioCode\n\n\nMacOS\nbrew install --cask visual-studio-code\n\n\nLinux\nsudo snap install code --classic"
+  },
+  {
+    "objectID": "docs/software/vscode.html#using-vs-code",
+    "href": "docs/software/vscode.html#using-vs-code",
+    "title": "Visual Studio Code",
+    "section": "Using VS Code",
+    "text": "Using VS Code\nThe best starting point for familiarizing yourself with VS Code is the documentation.\nSome particularly helpful references in the documentation are:\n\nEditing with VS Code\nGit Source control in VS Code\nPython in VS Code"
+  },
+  {
+    "objectID": "docs/software/vscode.html#recommended-extensions",
+    "href": "docs/software/vscode.html#recommended-extensions",
+    "title": "Visual Studio Code",
+    "section": "Recommended Extensions",
+    "text": "Recommended Extensions\nThe core software and functionality in VS Code gives you a lot of useful tools for writing, editing, and collaborating. Additionally, you can add functionality through Extensions.\nSome helpful extensions are the following:\n\nPython Extension - language syntax for Python programming\nRuff - Python linting and code formatting\nR Extension - Interacting with R from VS Code\nGitHub Pull Requests - review and manage GitHub pull requests and issues in Visual Studio Code\nJupyter Extension - for developing with jupyter notebooks\nJust - support for Justfiles\nQuarto Extension - support for writing and building Quarto projects\nMarkdown All in One - support for Markdown\nMarkdown Preview Mermaid Support - support for Mermaid diagrams in Markdown\nConventional Commits - support for writing easy to understand commit messages"
+  },
+  {
+    "objectID": "docs/software/justfile.html",
+    "href": "docs/software/justfile.html",
+    "title": "Justfile",
+    "section": "",
+    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
+  },
+  {
+    "objectID": "docs/software/justfile.html#what-is-a-justfile",
+    "href": "docs/software/justfile.html#what-is-a-justfile",
+    "title": "Justfile",
+    "section": "",
+    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
+  },
+  {
+    "objectID": "docs/software/justfile.html#how-to-install-just",
+    "href": "docs/software/justfile.html#how-to-install-just",
+    "title": "Justfile",
+    "section": "How to install Just?",
+    "text": "How to install Just?\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Casey.Just\n\n\nMacOS\nbrew install just\n\n\nLinux\nbrew install just"
+  },
+  {
+    "objectID": "docs/software/justfile.html#learning-resources",
+    "href": "docs/software/justfile.html#learning-resources",
+    "title": "Justfile",
     "section": "Learning Resources",
-    "text": "Learning Resources\n\nThe Python Tutorial\nPython Data Science Handbook\nEfficient Python for Data Scientists\nThe Hitchhiker’s Guide to Python"
+    "text": "Learning Resources\n\nJust Documentation\nUsing the just Task Runner"
   },
   {
     "objectID": "docs/software/github.html",
     "href": "docs/software/github.html",
     "title": "GitHub",
     "section": "",
-    "text": "GitHub is a platform for hosting and collaborating on code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
+    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
   },
   {
     "objectID": "docs/software/github.html#what-is-github",
     "href": "docs/software/github.html#what-is-github",
     "title": "GitHub",
     "section": "",
-    "text": "GitHub is a platform for hosting and collaborating on code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
+    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
   },
   {
     "objectID": "docs/software/github.html#how-to-install-github-software",
@@ -536,28 +564,21 @@
     "href": "docs/contributing.html#reading-the-handbook",
     "title": "Contributing to the Handbook",
     "section": "Reading the Handbook",
-    "text": "Reading the Handbook\nThe best ways to read the handbook are the following:\n\nRead it on GitHub or build the handbook from source.\nRead it locally on your computer by cloning the GitHub repository"
+    "text": "Reading the Handbook\nThe best ways to read the handbook are the following:\n\nNavigate to https://povertyaction.github.io/ipa-data-tech-handbook/docs\nRead the source code on GitHub.\nRead it locally on your computer by cloning the GitHub repository"
   },
   {
     "objectID": "docs/contributing.html#editing-the-handbook",
     "href": "docs/contributing.html#editing-the-handbook",
     "title": "Contributing to the Handbook",
     "section": "Editing the Handbook",
-    "text": "Editing the Handbook\nAll IPA staff should feel empowered to edit this handbook. There are a few ways to edit the handbook.\nA typical workflow to edit the handbook is the following:\n\nMake edits.\nCommit changes to this repository.\nCreate a pull request, assign reviewers.\nApply reviewers’ suggestions, if any.\nMerge all changes to the main branch of the repository\n\n\nA little bit of Markdown\nMost of the handbook relies on Markdown as the computer language for writing content. In order to edit the handbook, it is helpful to have a basic understanding of Markdown, which is the main format in which this handbook’s content is written.\nUse the existing content of this handbook’s ipa-data-tech-handbook/docs folder as a reference for how to write in Markdown.\nThe following resources are helpful for getting to know the basics of Markdown:\n\nGitHub - Basic writing and formatting syntax\nGitHub - Working with advanced formatting\nGitHub Skills: Communicate using Markdown\nQuarto’s Guide to Markdown\nMarkdown Guide Cheat Sheet\n\n\n\nUse the GitHub browser interface to edit the handbook\nThe easiest way to edit the handbook is to use the GitHub Web IDE. Go to https://github.com/PovertyAction/ipa-data-tech-handbook/docs/ and click on the file you want to edit. Then click on the pencil icon in the top right corner of the file to start editing.\n\n\nUse the GitHub IDE to edit the handbook\nAnother option that GitHub provides is to edit the handbook documents using a Web-based integrated development environment (IDE)\n\n\nModify the handbook locally\nNote that building the handbook from source code requires the following to be installed on your local computer (see Computer Setup for more information about software installation):\n\nwinget (Windows) or homebrew (MacOS/Linux) for package management and installation\ngit for source control management\njust for running common command line patterns\nrye for installing Python and managing virtual environments\n\nThis repository uses a Justfile for collecting common command line actions that we run to set up the computing environment and build the assets of the handbook. Note that you should also have Git installed\nTo get started, make sure you have Just installed on your computer by running the following from the command line:\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Git.Git Casey.Just Rye.Rye\n\n\nMac/Linux\nbrew install just rye\n\n\n\nAs a shortcut, if you already have Just installed, you can run the following to install required software and build a python virtual environment that is used to build the handbook pages:\njust get-started\nAfter the required software is installed, you can activate the virtual environment:\n\n\n\nShell\nCommands\n\n\n\n\nBash\n.venv/Scripts/activate\n\n\nPowershell\n.venv/Scripts/activate.ps1\n\n\nNushell\noverlay use .venv/Scripts/activate.nu\n\n\n\nThis will make sure that you have the latest version of Just, as well as Rye (installer for Python) and Quarto (for writing and compiling scientific and technical documents).\n\nWe use Just in order to make it easier for all IPA users to be productive with data and technology systems. The goal of using a Justfile is to help make the end goal of the user easier to achieve without needing to know or remember all of the technical details of how we get to that goal.\nWe use Rye to help ease use of Python. Rye provides a global system for creating and building computing environments for Python.\nWe use Quarto to allow users to focus on writing and data analytics. Writing in markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to review, update, and deploy technical documentation."
+    "text": "Editing the Handbook\nAll IPA staff should feel empowered to edit this handbook. There are a few ways to edit the handbook.\nA typical workflow to edit the handbook is the following:\n\nMake edits.\nCommit changes to this repository.\nCreate a pull request, assign reviewers.\nApply reviewers’ suggestions, if any.\nMerge all changes to the main branch of the repository\n\nYou can contribute to this Handbook in a number of ways:\n\nFile an Issue on GitHub with recommended additions or edits.\nEdit pages of the Handbook on GitHub by clicking on the “Edit this page” link on any page of the Handbook.\n\n\n\n\nHandbook\n\n\n\nA little bit of Markdown\nMost of the handbook relies on Markdown as the computer language for writing content. In order to edit the handbook, it is helpful to have a basic understanding of Markdown, which is the main format in which this handbook’s content is written.\nUse the existing content of this handbook’s ipa-data-tech-handbook/docs folder as a reference for how to write in Markdown.\nThe following resources are helpful for getting to know the basics of Markdown:\n\nGitHub - Basic writing and formatting syntax\nGitHub - Working with advanced formatting\nGitHub Skills: Communicate using Markdown\nQuarto’s Guide to Markdown\nMarkdown Guide Cheat Sheet\n\n\n\nUse the GitHub browser interface to edit the handbook\nThe easiest way to edit the handbook is to use the GitHub Web IDE. Go to https://github.com/PovertyAction/ipa-data-tech-handbook/docs/ and click on the file you want to edit. Then click on the pencil icon in the top right corner of the file to start editing.\n\n\n\nEdit on GitHub\n\n\n\n\nUse the GitHub IDE to edit the handbook\nAnother option that GitHub provides is to edit the handbook documents using a Web-based integrated development environment (IDE).\n\n\n\nEdit with GitHub IDE\n\n\n\n\nModify the handbook locally\nNote that building the handbook from source code requires the following to be installed on your local computer (see Computer Setup for more information about software installation):\n\nwinget (Windows) or homebrew (MacOS/Linux) for package management and installation\ngit for source control management\njust for running common command line patterns\nrye for installing Python and managing virtual environments\n\nFirst, clone this repository to your local computer either via GitHub Desktop:\n\n\n\nClone Repository via GitHub Desktop\n\n\nor from the command line:\n# If using HTTPS\ngit clone https://github.com/PovertyAction/ipa-data-tech-handbook.git\n\n# If using SSH\ngit clone git@github.com:PovertyAction/ipa-data-tech-handbook.git\nThis repository uses a Justfile for collecting common command line actions that we run to set up the computing environment and build the assets of the handbook. Note that you should also have Git installed\nTo get started, make sure you have Just installed on your computer by running the following from the command line:\n\n\n\n\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Git.Git Casey.Just Rye.Rye GitHub.cli Posit.Quarto\n\n\nMac/Linux\nbrew install just rye gh\n\n\n\nThis will make sure that you have the latest version of Just, as well as Rye (installer for Python) and Quarto (for writing and compiling scientific and technical documents).\n\nWe use Just in order to make it easier for all IPA users to be productive with data and technology systems. The goal of using a Justfile is to help make the end goal of the user easier to achieve without needing to know or remember all of the technical details of how we get to that goal.\nWe use Rye to help ease use of Python. Rye provides a global system for creating and building computing environments for Python.\nWe use Quarto to allow users to focus on writing and data analytics. Writing in markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to review, update, and deploy technical documentation.\n\nAs a shortcut, if you already have Just installed, you can run the following to install required software and build a python virtual environment that is used to build the handbook pages:\njust get-started\nNote: you may need to restart your terminal after running the command above to activate the installed software.\nAfter the required software is installed, you can activate the Python virtual environment:\n\n\n\nShell\nCommands\n\n\n\n\nBash\n.venv/Scripts/activate\n\n\nPowershell\n.venv/Scripts/activate.ps1\n\n\nNushell\noverlay use .venv/Scripts/activate.nu"
   },
   {
     "objectID": "docs/contributing.html#preview-the-handbook",
     "href": "docs/contributing.html#preview-the-handbook",
     "title": "Contributing to the Handbook",
     "section": "Preview the handbook",
-    "text": "Preview the handbook\nTo build a version of the Handbook so that you can read it on your computer, run the following from a Terminal. Make sure that you are working from the root folder of this Git Repository:\njust preview-docs\nThe command line above references the ipa-data-tech-handbook/_quarto.yml file and creates the .html files for the handbook then launches a browser window with a localhost server of the handbook."
-  },
-  {
-    "objectID": "docs/contributing.html#contributing-to-the-handbook",
-    "href": "docs/contributing.html#contributing-to-the-handbook",
-    "title": "Contributing to the Handbook",
-    "section": "Contributing to the Handbook",
-    "text": "Contributing to the Handbook\nYou can contribute to this Handbook in a number of ways:\n\nEdit the code locally on your computer using git\ngit clone git@github.com:PovertyAction/dse_handbook.git\nFile an Issue on GitHub with recommended additions or edits.\nEdit pages of the Handbook on GitHub by clicking on the “Edit this page” link on any page of the Handbook.\n\n\n\n\nHandbook"
+    "text": "Preview the handbook\nTo build a version of the Handbook so that you can read it on your computer, run the following from a Terminal. Make sure that you are working from the root folder of this Git Repository:\njust preview-docs\nThe command line above references the ipa-data-tech-handbook/_quarto.yml file and creates the .html files for the handbook then launches a browser window with a local server of the handbook at http://localhost:3434/docs."
   },
   {
     "objectID": "docs/teams/dse.html",

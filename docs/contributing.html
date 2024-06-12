@@ -166,6 +166,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">GitHub</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../docs/software/justfile.html">
+ <span class="dropdown-text">Justfile</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../docs/software/vscode.html">
  <span class="dropdown-text">VS Code</span></a>
   </li>  
@@ -256,7 +260,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#modify-the-handbook-locally" id="toc-modify-the-handbook-locally" class="nav-link" data-scroll-target="#modify-the-handbook-locally">Modify the handbook locally</a></li>
   </ul></li>
   <li><a href="#preview-the-handbook" id="toc-preview-the-handbook" class="nav-link" data-scroll-target="#preview-the-handbook">Preview the handbook</a></li>
-  <li><a href="#contributing-to-the-handbook" id="toc-contributing-to-the-handbook" class="nav-link" data-scroll-target="#contributing-to-the-handbook">Contributing to the Handbook</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/contributing.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -292,10 +295,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reading-the-handbook" class="level2">
 <h2 class="anchored" data-anchor-id="reading-the-handbook">Reading the Handbook</h2>
 <p>The best ways to read the handbook are the following:</p>
-<ul>
-<li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/docs">Read it on GitHub</a> or build the handbook from source.</li>
+<ol type="1">
+<li>Navigate to <a href="https://povertyaction.github.io/ipa-data-tech-handbook/docs">https://povertyaction.github.io/ipa-data-tech-handbook/docs</a></li>
+<li>Read the <a href="https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/docs">source code on GitHub</a>.</li>
 <li>Read it locally on your computer by cloning the GitHub repository</li>
-</ul>
+</ol>
 </section>
 <section id="editing-the-handbook" class="level2">
 <h2 class="anchored" data-anchor-id="editing-the-handbook">Editing the Handbook</h2>
@@ -308,6 +312,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Apply reviewers’ suggestions, if any.</li>
 <li>Merge all changes to the <code>main</code> branch of the repository</li>
 </ol>
+<p>You can contribute to this Handbook in a number of ways:</p>
+<ul>
+<li><p>File an <a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new">Issue on GitHub</a> with recommended additions or edits.</p></li>
+<li><p>Edit pages of the Handbook on GitHub by clicking on the “Edit this page” link on any page of the Handbook.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/software/handbook-gh.png" class="img-fluid figure-img"></p>
+<figcaption>Handbook</figcaption>
+</figure>
+</div>
 <section id="a-little-bit-of-markdown" class="level3">
 <h3 class="anchored" data-anchor-id="a-little-bit-of-markdown">A little bit of Markdown</h3>
 <p>Most of the handbook relies on <code>Markdown</code> as the computer language for writing content. In order to edit the handbook, it is helpful to have a basic understanding of Markdown, which is the main format in which this handbook’s content is written.</p>
@@ -324,10 +339,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="use-the-github-browser-interface-to-edit-the-handbook" class="level3">
 <h3 class="anchored" data-anchor-id="use-the-github-browser-interface-to-edit-the-handbook">Use the GitHub browser interface to edit the handbook</h3>
 <p>The easiest way to edit the handbook is to use the GitHub Web IDE. Go to <a href="https://github.com/PovertyAction/ipa-data-tech-handbook/docs/">https://github.com/PovertyAction/ipa-data-tech-handbook/docs/</a> and click on the file you want to edit. Then click on the pencil icon in the top right corner of the file to start editing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/gh-edit-console.gif" class="img-fluid figure-img"></p>
+<figcaption>Edit on GitHub</figcaption>
+</figure>
+</div>
 </section>
 <section id="use-the-github-ide-to-edit-the-handbook" class="level3">
 <h3 class="anchored" data-anchor-id="use-the-github-ide-to-edit-the-handbook">Use the GitHub IDE to edit the handbook</h3>
-<p>Another option that GitHub provides is to edit the handbook documents using a Web-based integrated development environment (IDE)</p>
+<p>Another option that GitHub provides is to edit the handbook documents using a Web-based integrated development environment (IDE).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/gh-edit-ide.gif" class="img-fluid figure-img"></p>
+<figcaption>Edit with GitHub IDE</figcaption>
+</figure>
+</div>
 </section>
 <section id="modify-the-handbook-locally" class="level3">
 <h3 class="anchored" data-anchor-id="modify-the-handbook-locally">Modify the handbook locally</h3>
@@ -338,9 +365,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>just</code> for running common command line patterns</li>
 <li><code>rye</code> for installing Python and managing virtual environments</li>
 </ul>
+<p>First, clone this repository to your local computer either via GitHub Desktop:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/gh-clone.gif" class="img-fluid figure-img"></p>
+<figcaption>Clone Repository via GitHub Desktop</figcaption>
+</figure>
+</div>
+<p>or from the command line:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If using HTTPS</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/PovertyAction/ipa-data-tech-handbook.git</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If using SSH</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:PovertyAction/ipa-data-tech-handbook.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This repository uses a <code>Justfile</code> for collecting common command line actions that we run to set up the computing environment and build the assets of the handbook. Note that you should also have Git installed</p>
 <p>To get started, make sure you have <code>Just</code> installed on your computer by running the following from the command line:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 88%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Platform</th>
@@ -350,17 +394,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Windows</td>
-<td><code>winget install Git.Git Casey.Just Rye.Rye</code></td>
+<td><code>winget install Git.Git Casey.Just Rye.Rye GitHub.cli Posit.Quarto</code></td>
 </tr>
 <tr class="even">
 <td>Mac/Linux</td>
-<td><code>brew install just rye</code></td>
+<td><code>brew install just rye gh</code></td>
 </tr>
 </tbody>
 </table>
+<p>This will make sure that you have the latest version of <code>Just</code>, as well as <a href="https://rye.astral.sh/guide/">Rye</a> (installer for Python) and <a href="https://quarto.org/docs/guide/">Quarto</a> (for writing and compiling scientific and technical documents).</p>
+<ul>
+<li>We use <code>Just</code> in order to make it easier for all IPA users to be productive with data and technology systems. The goal of using a <code>Justfile</code> is to help make the end goal of the user easier to achieve without needing to know or remember all of the technical details of how we get to that goal.</li>
+<li>We use Rye to help ease use of Python. Rye provides a global system for creating and building computing environments for Python.</li>
+<li>We use Quarto to allow users to focus on writing and data analytics. Writing in markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to review, update, and deploy technical documentation.</li>
+</ul>
 <p>As a shortcut, if you already have <code>Just</code> installed, you can run the following to install required software and build a python virtual environment that is used to build the handbook pages:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">just</span> get-started</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>After the required software is installed, you can activate the virtual environment:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">just</span> get-started</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note: you may need to restart your terminal after running the command above to activate the installed software.</p>
+<p>After the required software is installed, you can activate the Python virtual environment:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -383,35 +434,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>This will make sure that you have the latest version of <code>Just</code>, as well as <a href="https://rye.astral.sh/guide/">Rye</a> (installer for Python) and <a href="https://quarto.org/docs/guide/">Quarto</a> (for writing and compiling scientific and technical documents).</p>
-<ul>
-<li>We use <code>Just</code> in order to make it easier for all IPA users to be productive with data and technology systems. The goal of using a <code>Justfile</code> is to help make the end goal of the user easier to achieve without needing to know or remember all of the technical details of how we get to that goal.</li>
-<li>We use Rye to help ease use of Python. Rye provides a global system for creating and building computing environments for Python.</li>
-<li>We use Quarto to allow users to focus on writing and data analytics. Writing in markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to review, update, and deploy technical documentation.</li>
-</ul>
 </section>
 </section>
 <section id="preview-the-handbook" class="level2">
 <h2 class="anchored" data-anchor-id="preview-the-handbook">Preview the handbook</h2>
 <p>To build a version of the Handbook so that you can read it on your computer, run the following from a Terminal. Make sure that you are working from the root folder of this Git Repository:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">just</span> preview-docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The command line above references the <a href="../_quarto.yml">ipa-data-tech-handbook/_quarto.yml</a> file and creates the <code>.html</code> files for the handbook then launches a browser window with a <code>localhost</code> server of the handbook.</p>
-</section>
-<section id="contributing-to-the-handbook" class="level2">
-<h2 class="anchored" data-anchor-id="contributing-to-the-handbook">Contributing to the Handbook</h2>
-<p>You can contribute to this Handbook in a number of ways:</p>
-<ul>
-<li><p>Edit the code locally on your computer using git</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:PovertyAction/dse_handbook.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>File an <a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new">Issue on GitHub</a> with recommended additions or edits.</p></li>
-<li><p>Edit pages of the Handbook on GitHub by clicking on the “Edit this page” link on any page of the Handbook.</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/images/software/handbook-gh.png" class="img-fluid figure-img"></p>
-<figcaption>Handbook</figcaption>
-</figure>
-</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">just</span> preview-docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The command line above references the <a href="../_quarto.yml">ipa-data-tech-handbook/_quarto.yml</a> file and creates the <code>.html</code> files for the handbook then launches a browser window with a local server of the handbook at <code>http://localhost:3434/docs</code>.</p>
 
 
 </section>
@@ -827,8 +856,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Brought to you by <a href="https://poverty-action.org"><img src="./docs/assets/images/IPA-primary-color-RGB.png" class="img-fluid" alt="IPA" width="65"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/contributing.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/contributing.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>

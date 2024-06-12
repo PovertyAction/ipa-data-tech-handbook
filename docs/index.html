@@ -132,6 +132,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">GitHub</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../docs/software/justfile.html">
+ <span class="dropdown-text">Justfile</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../docs/software/vscode.html">
  <span class="dropdown-text">VS Code</span></a>
   </li>  
@@ -212,7 +216,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-the-handbook" id="toc-about-the-handbook" class="nav-link active" data-scroll-target="#about-the-handbook">About the Handbook</a></li>
+  <li><a href="#about-the-handbook" id="toc-about-the-handbook" class="nav-link active" data-scroll-target="#about-the-handbook">About the Handbook</a>
+  <ul class="collapse">
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
+  <li><a href="#using-software-tools" id="toc-using-software-tools" class="nav-link" data-scroll-target="#using-software-tools">Using Software Tools</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -238,15 +248,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!</p>
 <section id="about-the-handbook" class="level2">
 <h2 class="anchored" data-anchor-id="about-the-handbook">About the Handbook</h2>
+<p>Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!</p>
 <p>This handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.</p>
+<section id="getting-started" class="level3">
+<h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
 <p>To get started with software covered in this handbook, read <a href="../docs/guides/computer_setup.html">Computer Setup</a> to learn how to set up your computer for data analysis and software development.</p>
+</section>
+<section id="contributing" class="level3">
+<h3 class="anchored" data-anchor-id="contributing">Contributing</h3>
 <p>For instructions on how to contribute to this handbook, see <a href="../docs/contributing.html">Contributing</a> to the Handbook.</p>
-<p>For information about specific software, see the respective pages under the <code>software</code> directory.</p>
+<p>Also, see the <a href="../docs/guides/code_review.html">Code Review</a> guide for information on how to conduct code reviews.</p>
+</section>
+<section id="using-software-tools" class="level3">
+<h3 class="anchored" data-anchor-id="using-software-tools">Using Software Tools</h3>
+<p>For information about specific software, see the respective pages under the <code>Software</code> directory.</p>
+<p>Here are some specific software that this guide covers:</p>
+<ul>
+<li><a href="../docs/software/git.html">Git</a></li>
+<li><a href="../docs/software/github.html">Github</a></li>
+<li><a href="../docs/software/vscode.html">VS Code</a></li>
+<li><a href="../docs/software/quarto.html">Quarto</a></li>
+<li><a href="../docs/software/python.html">Python</a></li>
+<li>and more!</li>
+</ul>
+</section>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<p>This handbook is a collaboration between multiple IPA Teams including <a href="../docs/teams/dse.html">Data Science and Engineering (DSE)</a>, <a href="../docs/teams/mist.html">Management and Information Systems Team (MIST)</a>, <a href="../docs/teams/grds.html">Global Research and Data Support</a>, and <a href="../docs/teams/ppi.html">Poverty Probability Index (PPI®)</a>.</p>
+<p>The handbook is inspired by the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/">Gitlab Data Team Handbook</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -660,8 +694,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Brought to you by <a href="https://poverty-action.org"><img src="./docs/assets/images/IPA-primary-color-RGB.png" class="img-fluid" alt="IPA" width="65"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>
