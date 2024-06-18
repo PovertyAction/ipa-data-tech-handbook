@@ -15,6 +15,7 @@ for code reviews and pull requests at IPA.
 - When relevant, include screenshots or screencasts to show the effect of the changes.
 - Try to respond to every comment that the reviewer makes.
 - Merge once you feel confident in the code and its impact on the project.
+- Make sure you say thank you!
 
 Recommended reading:
 [how to write the perfect pull request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/).
