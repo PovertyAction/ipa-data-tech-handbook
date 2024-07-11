@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SQL – Data and Tech Handbook</title>
+<title>Virtual Environments – Data and Tech Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,44 +20,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,9 +66,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../docs/assets/style_ipa.css">
@@ -253,20 +216,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-sql" id="toc-what-is-sql" class="nav-link active" data-scroll-target="#what-is-sql">What is SQL?</a></li>
-  <li><a href="#how-to-install-sql" id="toc-how-to-install-sql" class="nav-link" data-scroll-target="#how-to-install-sql">How to install SQL?</a></li>
-  <li><a href="#using-sql" id="toc-using-sql" class="nav-link" data-scroll-target="#using-sql">Using SQL</a></li>
-  <li><a href="#coding-conventions" id="toc-coding-conventions" class="nav-link" data-scroll-target="#coding-conventions">Coding Conventions</a></li>
+  <li><a href="#python-virtual-environments" id="toc-python-virtual-environments" class="nav-link active" data-scroll-target="#python-virtual-environments">Python Virtual Environments</a></li>
+  <li><a href="#r-virtual-environments" id="toc-r-virtual-environments" class="nav-link" data-scroll-target="#r-virtual-environments">R Virtual Environments</a></li>
+  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker">Docker</a></li>
   <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources">Learning Resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/software/sql.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/guides/mdtestguide.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SQL</h1>
+<h1 class="title">Virtual Environments</h1>
 </div>
 
 
@@ -283,286 +245,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="what-is-sql" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-sql">What is SQL?</h2>
-<p>SQL (pronounced “sequel”) stands for Structured Query Language. It is a standard language for accessing and manipulating databases. SQL is used to organize data in a database as well as as questions of that data.</p>
-<p>The traditional use of SQL is in relational databases, but it can also be used in other types of databases. In the examples below, we use <a href="https://duckdb.org/">duckdb</a> which has become a leading option for analytical workflows across a diverse set of data storage types (e.g.&nbsp;relational databases, csv, parquet, json, etc.).</p>
+<p>We encourage the use of virtual environments when working on shared projects. Virtual environments allow you to create an isolated environment for your project, which can help prevent conflicts between different projects that may require different versions of the same package.</p>
+<section id="python-virtual-environments" class="level2">
+<h2 class="anchored" data-anchor-id="python-virtual-environments">Python Virtual Environments</h2>
+<p>We recommend using <code>rye</code> to manage Python virtual environments as it provides an overarching framework for managing Python installations and virtual environments. See information on <code>rye</code> in the <a href="https://rye.astral.sh/guide/">Rye documentation</a>.</p>
+<p>Another option for managing virtual environments is to use <code>pixi</code>. See information on <code>pixi</code> in the <a href="https://pixi.sh/latest/">Pixi documentation</a>.</p>
 </section>
-<section id="how-to-install-sql" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-install-sql">How to install SQL?</h2>
-<p>To use DuckDB, you can add it to your python virtual environment using <code>rye</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> add duckdb duckdb-engine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="r-virtual-environments" class="level2">
+<h2 class="anchored" data-anchor-id="r-virtual-environments">R Virtual Environments</h2>
+<p>R virtual environments can be created using the <code>renv</code> package. See <a href="https://rstudio.github.io/renv/articles/renv.html">documentation</a> for more information about how to use <code>renv</code>.</p>
 </section>
-<section id="using-sql" class="level2">
-<h2 class="anchored" data-anchor-id="using-sql">Using SQL</h2>
-<p>Connect to a database.</p>
-<div id="a9519b24" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext sql</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>sql duckdb:<span class="op">//</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\NKeleher\code\ipa-data-tech-handbook\.venv\Lib\site-packages\sql\parse.py:320: SyntaxWarning: invalid escape sequence '\:'
-  """
-C:\Users\NKeleher\code\ipa-data-tech-handbook\.venv\Lib\site-packages\sql\parse.py:350: SyntaxWarning: invalid escape sequence '\:'
-  """</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<span style="None">Loading configurations from C:\Users\NKeleher\code\ipa-data-tech-handbook\pyproject.toml.</span>
-</div>
-<div class="cell-output cell-output-display">
-<span style="None">Settings changed:</span>
-</div>
-<div class="cell-output cell-output-display">
-
-
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Config</th>
-<th data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>feedback</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>autopandas</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td>autopolars</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>autolimit</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>displaylimit</td>
-<td>10</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Create a table from a CSV file.</p>
-<div id="9c51d172" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>CREATE TABLE penguins AS SELECT <span class="op">*</span> FROM <span class="st">'../assets/data/penguins.csv'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<table class="caption-top" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Count</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</div>
-</div>
-<p>Inspect the columns of the table.</p>
-<div id="9f6d4e3d" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>sqlcmd columns <span class="op">-</span>t penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">type</th>
-<th data-quarto-table-cell-role="th">nullable</th>
-<th data-quarto-table-cell-role="th">default</th>
-<th data-quarto-table-cell-role="th">autoincrement</th>
-<th data-quarto-table-cell-role="th">comment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>species</td>
-<td>VARCHAR</td>
-<td>True</td>
-<td>None</td>
-<td>False</td>
-<td>None</td>
-</tr>
-<tr class="even">
-<td>island</td>
-<td>VARCHAR</td>
-<td>True</td>
-<td>None</td>
-<td>False</td>
-<td>None</td>
-</tr>
-<tr class="odd">
-<td>bill_length_mm</td>
-<td>FLOAT</td>
-<td>True</td>
-<td>None</td>
-<td>False</td>
-<td>None</td>
-</tr>
-<tr class="even">
-<td>bill_depth_mm</td>
-<td>FLOAT</td>
-<td>True</td>
-<td>None</td>
-<td>False</td>
-<td>None</td>
-</tr>
-<tr class="odd">
-<td>flipper_length_mm</td>
-<td>BIGINT</td>
-<td>True</td>
-<td>None</td>
-<td>False</td>
-<td>None</td>
-</tr>
-<tr class="even">
-<td>body_mass_g</td>
-<td>BIGINT</td>
-<td>True</td>
-<td>None</td>
-<td>False</td>
-<td>None</td>
-</tr>
-<tr class="odd">
-<td>sex</td>
-<td>VARCHAR</td>
-<td>True</td>
-<td>None</td>
-<td>False</td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Query the table using a <code>SELECT</code> statement.</p>
-<div id="e7557271" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>SELECT <span class="op">*</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>FROM <span class="st">'../assets/data/penguins.csv'</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>LIMIT <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">species</th>
-<th data-quarto-table-cell-role="th">island</th>
-<th data-quarto-table-cell-role="th">bill_length_mm</th>
-<th data-quarto-table-cell-role="th">bill_depth_mm</th>
-<th data-quarto-table-cell-role="th">flipper_length_mm</th>
-<th data-quarto-table-cell-role="th">body_mass_g</th>
-<th data-quarto-table-cell-role="th">sex</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Adelie</td>
-<td>Torgersen</td>
-<td>39.1</td>
-<td>18.7</td>
-<td>181</td>
-<td>3750</td>
-<td>MALE</td>
-</tr>
-<tr class="even">
-<td>Adelie</td>
-<td>Torgersen</td>
-<td>39.5</td>
-<td>17.4</td>
-<td>186</td>
-<td>3800</td>
-<td>FEMALE</td>
-</tr>
-<tr class="odd">
-<td>Adelie</td>
-<td>Torgersen</td>
-<td>40.3</td>
-<td>18.0</td>
-<td>195</td>
-<td>3250</td>
-<td>FEMALE</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Run analytical operations on the data.</p>
-<div id="2fcb8a5f" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>SELECT species, COUNT(<span class="op">*</span>) AS count</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>FROM <span class="st">'../assets/data/penguins.csv'</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>GROUP BY species</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>ORDER BY count DESC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">species</th>
-<th data-quarto-table-cell-role="th">count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Adelie</td>
-<td>152</td>
-</tr>
-<tr class="even">
-<td>Gentoo</td>
-<td>124</td>
-</tr>
-<tr class="odd">
-<td>Chinstrap</td>
-<td>68</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Using <code>jupysql</code> store SQL query results as an object in a Jupyter notebook.</p>
-<div id="be06df78" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql species_count <span class="op">&lt;&lt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>SELECT species, COUNT(<span class="op">*</span>) AS count</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>FROM <span class="st">'../assets/data/penguins.csv'</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>GROUP BY species</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>ORDER BY count DESC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Plot the results of the query.</p>
-<div id="1dc4b5d7" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> <span class="op">%</span>sqlplot bar <span class="op">--</span>table <span class="st">'../assets/data/penguins.csv'</span> <span class="op">--</span>column species</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># customize plot (this is a matplotlib Axes object)</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> ax.set_title(<span class="st">"Count of penguins by species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<span style="None">Removing NULLs, if there exists any from species</span>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="sql_files/figure-html/cell-8-output-2.png" width="593" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="coding-conventions" class="level2">
-<h2 class="anchored" data-anchor-id="coding-conventions">Coding Conventions</h2>
-<p>Use <a href="https://docs.sqlfluff.com/en/stable/">SQLFluff</a> to lint SQL code.</p>
-<p>Add SQLFluff to your virtual environment using <code>rye</code>:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> add sqlfluff</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Assuming SQLFluff is installed in your virtual environment using <code>rye</code>, you can run the following command to lint SQL code:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> run sqlfluff fix <span class="at">--dialect</span> duckdb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>See the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/platform/sql-style-guide/">GitLab Data Team’s SQL Style Guide</a></p>
+<section id="docker" class="level2">
+<h2 class="anchored" data-anchor-id="docker">Docker</h2>
+<p><a href="https://docs.docker.com/get-started/overview/">Docker</a> is a tool that allows you to create, deploy, and run applications using containers. In some instances, it may be more appropriate to use Docker containers to manage your project environment, especially when there is a project environment that needs to be deployed to cloud computing services.</p>
 </section>
 <section id="learning-resources" class="level2">
 <h2 class="anchored" data-anchor-id="learning-resources">Learning Resources</h2>
 <ul>
-<li><a href="https://selectstarsql.com/">SELECT Star SQL</a></li>
-<li><a href="https://mystery.knightlab.com/walkthrough.html">SQL Murder Mystery</a></li>
-<li><a href="https://sql-workbench.com/">sql-workbench</a></li>
-<li><a href="https://duckdb.org/docs/sql/introduction">DuckDB SQL Introduction</a></li>
+<li><a href="https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/">A Complete Guide to Python Virtual Environments</a></li>
+<li><a href="https://realpython.com/python-virtual-environments-a-primer/">Real Python, Python Virtual Environments</a></li>
+<li><a href="https://docs.python.org/3/tutorial/venv.html">Python Virtual Environments</a></li>
+<li><a href="https://rstudio.github.io/renv/articles/renv.html">R Virtual Environments</a></li>
 </ul>
 
 
@@ -997,7 +700,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/software/sql.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/guides/mdtestguide.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

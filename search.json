@@ -1,129 +1,122 @@
 [
   {
-    "objectID": "docs/teams/grds.html",
-    "href": "docs/teams/grds.html",
-    "title": "Global Research and Data Support",
+    "objectID": "docs/contributing.html",
+    "href": "docs/contributing.html",
+    "title": "Contributing to the Handbook",
     "section": "",
-    "text": "IPA’s Global Research and Data Support team is known as “GRDS”, pronounced like “guards.”\nOur team does three main things to support IPA’s hundreds of research projects around the world:\nSee the GRDS Team Portal for more details about GRDS.\nresearch support, email: researchsupport@poverty-action.org"
+    "text": "This handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.\nWe use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.\nDocumentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to before they need to pursue information via email, chat, or other modes of communication.\nMost guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work today if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues."
   },
   {
-    "objectID": "docs/teams/grds.html#additional-resources",
-    "href": "docs/teams/grds.html#additional-resources",
-    "title": "Global Research and Data Support",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nGRDS Resources on Box\nGlobal Help Desk"
-  },
-  {
-    "objectID": "docs/teams/ppi.html",
-    "href": "docs/teams/ppi.html",
-    "title": "Poverty Probability Index",
+    "objectID": "docs/contributing.html#how-to-use-the-handbook",
+    "href": "docs/contributing.html#how-to-use-the-handbook",
+    "title": "Contributing to the Handbook",
     "section": "",
-    "text": "The Poverty Probability Index (PPI®) is a poverty measurement tool for organizations and businesses with a mission to serve the poor. The PPI is statistically-sound, yet simple to use: the answers to 10 questions about a household’s characteristics and asset ownership are scored to compute the likelihood that the household is living below the poverty line. With the PPI, organizations can identify the clients, customers, or employees who are most likely to be poor, integrating objective poverty data into their assessments and strategic decision-making.\nThe PPI is currently housed at Innovations for Poverty Action (IPA).\nFor more information, see Poverty Probability Index."
+    "text": "This handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.\nWe use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.\nDocumentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to before they need to pursue information via email, chat, or other modes of communication.\nMost guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work today if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues."
   },
   {
-    "objectID": "docs/index.html",
-    "href": "docs/index.html",
-    "title": "IPA Data Science, Engineering, and Technology Handbook",
+    "objectID": "docs/contributing.html#reading-the-handbook",
+    "href": "docs/contributing.html#reading-the-handbook",
+    "title": "Contributing to the Handbook",
+    "section": "Reading the Handbook",
+    "text": "Reading the Handbook\nThe best ways to read the handbook are the following:\n\nNavigate to https://povertyaction.github.io/ipa-data-tech-handbook/docs\nRead the source code on GitHub.\nRead it locally on your computer by cloning the GitHub repository"
+  },
+  {
+    "objectID": "docs/contributing.html#editing-the-handbook",
+    "href": "docs/contributing.html#editing-the-handbook",
+    "title": "Contributing to the Handbook",
+    "section": "Editing the Handbook",
+    "text": "Editing the Handbook\nAll IPA staff should feel empowered to edit this handbook. There are a few ways to edit the handbook.\nA typical workflow to edit the handbook is the following:\n\nMake edits.\nCommit changes to this repository.\nCreate a pull request, assign reviewers.\nApply reviewers’ suggestions, if any.\nMerge all changes to the main branch of the repository\n\nYou can contribute to this Handbook in a number of ways:\n\nFile an Issue on GitHub with recommended additions or edits.\nEdit pages of the Handbook on GitHub by clicking on the “Edit this page” link on any page of the Handbook.\n\n\n\n\nHandbook\n\n\n\nA little bit of Markdown\nMost of the handbook relies on Markdown as the computer language for writing content. In order to edit the handbook, it is helpful to have a basic understanding of Markdown, which is the main format in which this handbook’s content is written.\nUse the existing content of this handbook’s ipa-data-tech-handbook/docs folder as a reference for how to write in Markdown.\nThe following resources are helpful for getting to know the basics of Markdown:\n\nGitHub - Basic writing and formatting syntax\nGitHub - Working with advanced formatting\nGitHub Skills: Communicate using Markdown\nQuarto’s Guide to Markdown\nMarkdown Guide Cheat Sheet\n\n\n\nUse the GitHub browser interface to edit the handbook\nThe easiest way to edit the handbook is to use the GitHub Web IDE. Go to https://github.com/PovertyAction/ipa-data-tech-handbook/docs/ and click on the file you want to edit. Then click on the pencil icon in the top right corner of the file to start editing.\n\n\n\nEdit on GitHub\n\n\n\n\nUse the GitHub IDE to edit the handbook\nAnother option that GitHub provides is to edit the handbook documents using a Web-based integrated development environment (IDE).\n\n\n\nEdit with GitHub IDE\n\n\n\n\nModify the handbook locally\nNote that building the handbook from source code requires the following to be installed on your local computer (see Computer Setup for more information about software installation):\n\nwinget (Windows) or homebrew (MacOS/Linux) for package management and installation\ngit for source control management\njust for running common command line patterns\nrye for installing Python and managing virtual environments\n\nFirst, clone this repository to your local computer either via GitHub Desktop:\n\n\n\nClone Repository via GitHub Desktop\n\n\nor from the command line:\n# If using HTTPS\ngit clone https://github.com/PovertyAction/ipa-data-tech-handbook.git\n\n# If using SSH\ngit clone git@github.com:PovertyAction/ipa-data-tech-handbook.git\nThis repository uses a Justfile for collecting common command line actions that we run to set up the computing environment and build the assets of the handbook. Note that you should also have Git installed\nTo get started, make sure you have Just installed on your computer by running the following from the command line:\n\n\n\n\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Git.Git Casey.Just Rye.Rye GitHub.cli Posit.Quarto\n\n\nMac/Linux\nbrew install just rye gh\n\n\n\nThis will make sure that you have the latest version of Just, as well as Rye (installer for Python) and Quarto (for writing and compiling scientific and technical documents).\n\nWe use Just in order to make it easier for all IPA users to be productive with data and technology systems. The goal of using a Justfile is to help make the end goal of the user easier to achieve without needing to know or remember all of the technical details of how we get to that goal.\nWe use Rye to help ease use of Python. Rye provides a global system for creating and building computing environments for Python.\nWe use Quarto to allow users to focus on writing and data analytics. Writing in markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to review, update, and deploy technical documentation.\n\nAs a shortcut, if you already have Just installed, you can run the following to install required software and build a python virtual environment that is used to build the handbook pages:\njust get-started\nNote: you may need to restart your terminal after running the command above to activate the installed software.\nAfter the required software is installed, you can activate the Python virtual environment:\n\n\n\nShell\nCommands\n\n\n\n\nBash\n.venv/Scripts/activate\n\n\nPowershell\n.venv/Scripts/activate.ps1\n\n\nNushell\noverlay use .venv/Scripts/activate.nu"
+  },
+  {
+    "objectID": "docs/contributing.html#preview-the-handbook",
+    "href": "docs/contributing.html#preview-the-handbook",
+    "title": "Contributing to the Handbook",
+    "section": "Preview the handbook",
+    "text": "Preview the handbook\nTo build a version of the Handbook so that you can read it on your computer, run the following from a Terminal. Make sure that you are working from the root folder of this Git Repository:\njust preview-docs\nThe command line above references the ipa-data-tech-handbook/_quarto.yml file and creates the .html files for the handbook then launches a browser window with a local server of the handbook at http://localhost:3434/docs."
+  },
+  {
+    "objectID": "docs/software/sql.html",
+    "href": "docs/software/sql.html",
+    "title": "SQL",
     "section": "",
-    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
+    "text": "SQL (pronounced “sequel”) stands for Structured Query Language. It is a standard language for accessing and manipulating databases. SQL is used to organize data in a database as well as as questions of that data.\nThe traditional use of SQL is in relational databases, but it can also be used in other types of databases. In the examples below, we use duckdb which has become a leading option for analytical workflows across a diverse set of data storage types (e.g. relational databases, csv, parquet, json, etc.)."
   },
   {
-    "objectID": "docs/index.html#about-the-handbook",
-    "href": "docs/index.html#about-the-handbook",
-    "title": "IPA Data Science, Engineering, and Technology Handbook",
+    "objectID": "docs/software/sql.html#what-is-sql",
+    "href": "docs/software/sql.html#what-is-sql",
+    "title": "SQL",
     "section": "",
-    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
+    "text": "SQL (pronounced “sequel”) stands for Structured Query Language. It is a standard language for accessing and manipulating databases. SQL is used to organize data in a database as well as as questions of that data.\nThe traditional use of SQL is in relational databases, but it can also be used in other types of databases. In the examples below, we use duckdb which has become a leading option for analytical workflows across a diverse set of data storage types (e.g. relational databases, csv, parquet, json, etc.)."
   },
   {
-    "objectID": "docs/guides/code_review.html",
-    "href": "docs/guides/code_review.html",
-    "title": "Code Reviews & Pull Requests",
-    "section": "",
-    "text": "We use code reviews to ensure that code is well-written, well-documented, and follows best practices. Code reviews are an opportunity to learn from each other, share knowledge, and improve the quality of our codebase. This document outlines the process for code reviews and pull requests at IPA."
+    "objectID": "docs/software/sql.html#how-to-install-sql",
+    "href": "docs/software/sql.html#how-to-install-sql",
+    "title": "SQL",
+    "section": "How to install SQL?",
+    "text": "How to install SQL?\nTo use DuckDB, you can add it to your python virtual environment using rye:\nrye add duckdb duckdb-engine"
   },
   {
-    "objectID": "docs/guides/code_review.html#as-someone-requesting-code-review",
-    "href": "docs/guides/code_review.html#as-someone-requesting-code-review",
-    "title": "Code Reviews & Pull Requests",
-    "section": "As someone requesting code review",
-    "text": "As someone requesting code review\n\nBe courteous and respectful to your reviewer’s time.\nKeep your code review focused on changes that are relevant to review.\nExplain why the code changes are necessary.\nWhen relevant, include screenshots or screencasts to show the effect of the changes.\nTry to respond to every comment that the reviewer makes.\nMerge once you feel confident in the code and its impact on the project.\n\nRecommended reading: how to write the perfect pull request."
+    "objectID": "docs/software/sql.html#using-sql",
+    "href": "docs/software/sql.html#using-sql",
+    "title": "SQL",
+    "section": "Using SQL",
+    "text": "Using SQL\nConnect to a database.\n\n%load_ext sql\n%sql duckdb://\n\nC:\\Users\\NKeleher\\code\\ipa-data-tech-handbook\\.venv\\Lib\\site-packages\\sql\\parse.py:320: SyntaxWarning: invalid escape sequence '\\:'\n  \"\"\"\nC:\\Users\\NKeleher\\code\\ipa-data-tech-handbook\\.venv\\Lib\\site-packages\\sql\\parse.py:350: SyntaxWarning: invalid escape sequence '\\:'\n  \"\"\"\n\n\nLoading configurations from C:\\Users\\NKeleher\\code\\ipa-data-tech-handbook\\pyproject.toml.\n\n\nSettings changed:\n\n\n\n\n\n\n\nConfig\nvalue\n\n\n\n\nfeedback\n0\n\n\nautopandas\nFalse\n\n\nautopolars\nFalse\n\n\nautolimit\n0\n\n\ndisplaylimit\n10\n\n\n\n\n\nCreate a table from a CSV file.\n\n%%sql\nCREATE TABLE penguins AS SELECT * FROM '../assets/data/penguins.csv'\n\n\n\n\nCount\n\n\n\n\n\n\n\nInspect the columns of the table.\n\n%sqlcmd columns -t penguins\n\n\n\n\nname\ntype\nnullable\ndefault\nautoincrement\ncomment\n\n\n\n\nspecies\nVARCHAR\nTrue\nNone\nFalse\nNone\n\n\nisland\nVARCHAR\nTrue\nNone\nFalse\nNone\n\n\nbill_length_mm\nFLOAT\nTrue\nNone\nFalse\nNone\n\n\nbill_depth_mm\nFLOAT\nTrue\nNone\nFalse\nNone\n\n\nflipper_length_mm\nBIGINT\nTrue\nNone\nFalse\nNone\n\n\nbody_mass_g\nBIGINT\nTrue\nNone\nFalse\nNone\n\n\nsex\nVARCHAR\nTrue\nNone\nFalse\nNone\n\n\n\n\n\nQuery the table using a SELECT statement.\n\n%%sql\nSELECT *\nFROM '../assets/data/penguins.csv'\nLIMIT 3\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nMALE\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nFEMALE\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nFEMALE\n\n\n\n\n\nRun analytical operations on the data.\n\n%%sql\nSELECT species, COUNT(*) AS count\nFROM '../assets/data/penguins.csv'\nGROUP BY species\nORDER BY count DESC\n\n\n\n\nspecies\ncount\n\n\n\n\nAdelie\n152\n\n\nGentoo\n124\n\n\nChinstrap\n68\n\n\n\n\n\nUsing jupysql store SQL query results as an object in a Jupyter notebook.\n\n%%sql species_count &lt;&lt;\nSELECT species, COUNT(*) AS count\nFROM '../assets/data/penguins.csv'\nGROUP BY species\nORDER BY count DESC\n\nPlot the results of the query.\n\nax = %sqlplot bar --table '../assets/data/penguins.csv' --column species\n\n# customize plot (this is a matplotlib Axes object)\n_ = ax.set_title(\"Count of penguins by species\")\n\nRemoving NULLs, if there exists any from species"
   },
   {
-    "objectID": "docs/guides/code_review.html#as-a-code-reviewer",
-    "href": "docs/guides/code_review.html#as-a-code-reviewer",
-    "title": "Code Reviews & Pull Requests",
-    "section": "As a code reviewer",
-    "text": "As a code reviewer\n\nCommunicate which ideas or comments you feel strongly about and those you don’t.\nDon’t get stuck on details that are not immediately relevant to allow the code author to move forward with their work.\nIdentify ways to simplify the code while still achieving the project’s goal\nIf relevant, offer alternative implementations, especially if they would simplify the code or make it easier to maintain in the long run.\nSeek to understand the author’s perspective\nApprove the pull request in a reasonable amount of time. If you are unable to review the code promptly, let the author know when you will be able to review it.\nRemember that you are here to provide feedback, not to be a gatekeeper.\n\nAbove is modified from Thoughtbot Cod Review Guidelines"
+    "objectID": "docs/software/sql.html#coding-conventions",
+    "href": "docs/software/sql.html#coding-conventions",
+    "title": "SQL",
+    "section": "Coding Conventions",
+    "text": "Coding Conventions\nUse SQLFluff to lint SQL code.\nAdd SQLFluff to your virtual environment using rye:\nrye add sqlfluff\nAssuming SQLFluff is installed in your virtual environment using rye, you can run the following command to lint SQL code:\nrye run sqlfluff fix --dialect duckdb\nSee the GitLab Data Team’s SQL Style Guide"
   },
   {
-    "objectID": "docs/guides/code_review.html#use-templates-for-pull-requests",
-    "href": "docs/guides/code_review.html#use-templates-for-pull-requests",
-    "title": "Code Reviews & Pull Requests",
-    "section": "Use Templates for Pull Requests",
-    "text": "Use Templates for Pull Requests\nFor each team or repository, we highly recommend creating a template pull requests. This helps to standardize the way in which pull requests are created and reviewed.\nAs an example of a pull request template, see the pull request template in this repository.\n\n\n\nPull Request Template"
-  },
-  {
-    "objectID": "docs/guides/code_review.html#code-review-process",
-    "href": "docs/guides/code_review.html#code-review-process",
-    "title": "Code Reviews & Pull Requests",
-    "section": "Code Review Process",
-    "text": "Code Review Process\n\nCreate a Pull Request (PR) from a branch to the main branch.\nAdd a reviewer or multiple reviewers to the PR.\nReviewers will review the code and provide feedback.\nThe author of the PR will address the feedback and make changes.\nThe author will notify the reviewers that the changes have been made.\nThe reviewers will review the changes and approve the PR unless there is a need for additional revisions.\nOnce approved, the author can merge the PR into the main branch."
-  },
-  {
-    "objectID": "docs/guides/code_review.html#learning-resources",
-    "href": "docs/guides/code_review.html#learning-resources",
-    "title": "Code Reviews & Pull Requests",
+    "objectID": "docs/software/sql.html#learning-resources",
+    "href": "docs/software/sql.html#learning-resources",
+    "title": "SQL",
     "section": "Learning Resources",
-    "text": "Learning Resources\n\nGitHub’s Guide to Pull Requests\nView a Pull Request in GitHub Desktop\nCreating a Pull Request Template"
+    "text": "Learning Resources\n\nSELECT Star SQL\nSQL Murder Mystery\nsql-workbench\nDuckDB SQL Introduction"
   },
   {
-    "objectID": "docs/guides/computer_setup.html",
-    "href": "docs/guides/computer_setup.html",
-    "title": "Computer Setup",
+    "objectID": "docs/software/git.html",
+    "href": "docs/software/git.html",
+    "title": "Git",
     "section": "",
-    "text": "This page is meant to help guide you in setting up your laptop with common software used by data and technology teams at IPA. Most software covered in this page have their own page in this handbook. We encourage you to refer to for usage of each software. And please contribute to those pages so that others at IPA (including your future self) are able to learn about what works well for interacting with data at IPA.\nThe information below is for getting started with core software that IPA uses for editing, reviewing, and deploying code for software development, data engineering, analytical solutions, and data infrastructure."
+    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners"
   },
   {
-    "objectID": "docs/guides/computer_setup.html#package-manager",
-    "href": "docs/guides/computer_setup.html#package-manager",
-    "title": "Computer Setup",
-    "section": "Package Manager",
-    "text": "Package Manager\nA package manager helps to standardize how you install and update software on your computer. Generally, you want to use a package manager to install any programs that are used globally on your computer. By “globally”, we mean that it is a program that is used across many projects and computing environments.\n\nWindows\nIf using a Windows computer with Windows 10 or later, we encourage you to use the Windows Package Manager, winget. However, if you do not have Windows 10+, you can achieve a similar package management experience with either chocolatey or scoop.\n\n\nCheck to see if you have winget\n\n\nOpen Windows Powershell (See PowerShell 101 if new to Windows PowerShell)\nCheck to see if you have winget installed: \nIf you do not see a version number for winget. Follow the Microsoft instructions to Install winget\n\n\nInstall packages on Windows\n# Install a single program (e.g. GitHub for command line)\nwinget install GitHub.cli\n\n# Install multiple programs (Just, Rye for Python)\nwinget install Casey.Just Rye.Rye\n\n\nMacOS/Linux\nOn MacOS, it is recommended that you use Homebrew as a package manager. On Linux you can use Homebrew or Snap. This may be relevant if you are working in the Windows Subsystem Linux (WSL).\n# Install a single program (e.g. GitHub for command line)\nbrew install gh\n\n# Install multiple programs (Just, Rye for Python)\nbrew install just rye\nSee the Virtual Environment section of the handbook for more information on using virtual environments.\n\n\nAdditional Software\nThe preceding package manager examples can be used to install the majority of the software covered in this Handbook. Note that there are some exceptions to software available via a package manager. For example, Stata needs to be installed by first downloading the .exe for Windows, .dmg for MacOS, or .tar.gz for Linux.\n\nGet the required Stata version provided by IPA on the Box installation packages."
+    "objectID": "docs/software/git.html#what-is-git",
+    "href": "docs/software/git.html#what-is-git",
+    "title": "Git",
+    "section": "",
+    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners"
   },
   {
-    "objectID": "docs/guides/computer_setup.html#terminal",
-    "href": "docs/guides/computer_setup.html#terminal",
-    "title": "Computer Setup",
-    "section": "Terminal",
-    "text": "Terminal\nIn Windows, we recommend using the Windows Terminal. However, there are several other options for terminals. Select what you feel most comfortable with. The same is true for MacOS and Linux where there are many Terminal options to select from.\n# Windows Terminal\nwinget install Microsoft.WindowsTerminal"
+    "objectID": "docs/software/git.html#how-to-install-git",
+    "href": "docs/software/git.html#how-to-install-git",
+    "title": "Git",
+    "section": "How to install Git?",
+    "text": "How to install Git?\nInstall Git for Windows via winget. Git comes pre-installed with MacOS and Linux, if you can’t find it, try installing with Homebrew.\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Git.Git\n\n\nMacOS\ngit --version\n\n\nLinux\ngit --version"
   },
   {
-    "objectID": "docs/guides/computer_setup.html#shell",
-    "href": "docs/guides/computer_setup.html#shell",
-    "title": "Computer Setup",
-    "section": "Shell",
-    "text": "Shell\nYou are free to choose whichever shell works best for your workflow and style. Here are the common shell options you may want to consider:\n\nBash\nBash comes pre-installed with MacOS and Linux. Git Bash is included with the Git for Windows installation.\n# Install git for Windows\nwinget install Git.Git\n\n\nNushell\nNushell is a cross operating system shell with a data pipeline focus.\n# Windows\nwinget install Nushell.Nushell\n\n# MacOS/Linux\nbrew install nu\n\n\nWindows PowerShell\nWindows PowerShell is often the default shell on Windows.\n# Windows (install or upgrade)\nwinget install Microsoft.PowerShell\n\n# MacOS\nbrew install powershell/tap/powershell\n\n# Linux\n# docs: https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu\nOptionally, you can install Starship for shell prompt customization.\n# Windows\nwinget install Starship.Starship\n\n# MacOS/Linux\nbrew install starship\nFollow the starship installation instructions for using starship with your preferred shell, for example, if using Nushell, run:\nmkdir ~/.cache/starship\nstarship init nu | save -f ~/.cache/starship/init.nu\nYou can set the Starship configuration to your liking in a ~/.config/starship.toml file. For example you could use the jetpack preset configuration by running:\n# starship configuration\nmkdir ~/.config\nstarship preset jetpack -o ~/.config/starship.toml"
+    "objectID": "docs/software/git.html#using-git",
+    "href": "docs/software/git.html#using-git",
+    "title": "Git",
+    "section": "Using Git",
+    "text": "Using Git\nGit can be confusing and overwhelming. We recommend starting with a graphical user interface (GUI) to help you understand the basics of Git. GitHub Desktop is a good option or, if you use VS Code, you can use the built-in Git functionality (See VS Code documentation).\nClick on the image below to watch a video on basic Git commands:\n)\nHere are the basic commands you need to know to get started with Git:\n\ngit init\nCreate a new Git repository\ngit init\n\n\ngit clone\nClone a repository into a new directory For example, to clone the IPA handbook repository:\n# If using HTTPS\ngit clone https://github.com/PovertyAction/ipa-data-tech-handbook.git\n\n# If using SSH\ngit clone git@github.com:PovertyAction/ipa-data-tech-handbook.git\n\n\ngit checkout\nBranches are used to develop new code or modify existing code such that the “main” code is not affected until the new code is ready. To create a new branch, use:\ngit checkout -b new-branch-name\nThis checks out a new branch called new-branch-name. To switch back to the main branch, use:\ngit checkout main\nTo checkout a branch from the remote repository, use:\ngit fetch origin\ngit checkout --track origin/remote-branch-name\nTo push a branch to the remote repository, use:\ngit push origin new-branch-name\nTo delete a branch, use:\ngit branch -d new-branch-name\nList all local branches:\ngit branch --list\n\n\ngit add\nAdd files that have changed and are ready to be committed to the staging area. To add a file, file_name.md, use:\ngit add file_name.md\n\n\ngit commit\nCommit changes to the checked out branch.\nGood commit messages follow the following format:\ngit commit -m \"&lt;type&gt;: &lt;description&gt;\"\nTo commit changes with a message, use:\ngit commit -m \"feat: adding new feature to the codebase\"\n\n\ngit push\nSend changes to the remote repository. To push any commits to remote use the following:\ngit push origin new-branch-name\nIf you are pushing a new branch to the remote repository, use:\ngit push --set-upstream origin new-branch-name\nConsider adding the Conventional Commits extension to your VS Code to help you write good commit messages."
   },
   {
-    "objectID": "docs/guides/computer_setup.html#gitgithub",
-    "href": "docs/guides/computer_setup.html#gitgithub",
-    "title": "Computer Setup",
-    "section": "Git/GitHub",
-    "text": "Git/GitHub\nYou will need to have git installed on computer if you want to edit, test, or review source code and documentation locally.\nWe recommend installing GitHub Desktop if you are new to using git or prefer a GUI to the command line.\n# Windows\nwinget install GitHub.GithubDesktop\n\n# MacOS\nbrew install  --cask github\n\n## GitHub Desktop is not available on Linux\nSee the Git section of the handbook for more information on using git and the GitHubsection section for more information on using GitHub."
+    "objectID": "docs/software/git.html#best-practices",
+    "href": "docs/software/git.html#best-practices",
+    "title": "Git",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nAlways include a README file in your repository and keep it up to date with key information that anyone who visits your repository should know for using, replicating, or contributing to code in the repository.\nUse branches to develop new features or fix bugs. This helps to keep the main branch clean and stable.\nWrite clear and concise commit messages. A good commit message should describe what changes were made and why they were made. Refer to Conventional Commits for good practice in writing commit messages.\nPush changes to the remote repository frequently. This helps to keep your codebase up to date and allows others to collaborate with you.\nUse pull requests to propose changes to the main branch. Try to keep the pull request small such that there is a manageable amount of code to review."
   },
   {
-    "objectID": "docs/guides/computer_setup.html#visual-studio-code",
-    "href": "docs/guides/computer_setup.html#visual-studio-code",
-    "title": "Computer Setup",
-    "section": "Visual Studio Code",
-    "text": "Visual Studio Code\nYou are free to chose the Integrated Development Environment (IDE) of your choice. However, we recommend Visual Studio Code because integration with GitHub is built in and it provides a rich set of extensions to improve code quality and review.\n# Windows\nwinget install Microsoft.VisualStudioCode\n\n# MacOS\nbrew install --cask visual-studio-code\n\n# Linux\nsudo snap install code --classic\nSee the Visual Studio Code section of the handbook for more information on using Visual Studio Code."
-  },
-  {
-    "objectID": "docs/guides/computer_setup.html#quarto",
-    "href": "docs/guides/computer_setup.html#quarto",
-    "title": "Computer Setup",
-    "section": "Quarto",
-    "text": "Quarto\nFor technical documentation and literate programming, we recommend using Quarto because of it’s rich suite of publishing tools that integrate notebooks (e.g. ipynb, .Rmd), and computer scripts (e.g. .py, .r, .md).\n# Windows\nwinget install Posit.Quarto\n\n# MacOS\nbrew install --cask quarto\n\n# Linux\n# download and install from https://quarto.org/docs/get-started/\nSee the Quarto section of the handbook for more information on using Quarto."
+    "objectID": "docs/software/git.html#learning-resources",
+    "href": "docs/software/git.html#learning-resources",
+    "title": "Git",
+    "section": "Learning Resources",
+    "text": "Learning Resources\n\nGitHub’s YouTube Git for Beginners\nGitHub’s Git Cheat Sheet\ngit - the simple guide\nGit Best Practices\nHappy Git with R\nVisual Git Guide\nVisualizing Git with D3"
   },
   {
     "objectID": "docs/software/stata.html",
@@ -175,160 +168,6 @@
     "text": "Learning References\nFor more information on learning and using Stata, see the IPA-Stata-Trainings repository on GitHub.\n\nStata Video Tutorials"
   },
   {
-    "objectID": "docs/software/sql.html",
-    "href": "docs/software/sql.html",
-    "title": "SQL",
-    "section": "",
-    "text": "SQL (pronounced “sequel”) stands for Structured Query Language. It is a standard language for accessing and manipulating databases. SQL is used to organize data in a database as well as as questions of that data.\nThe traditional use of SQL is in relational databases, but it can also be used in other types of databases. In the examples below, we use duckdb which has become a leading option for analytical workflows across a diverse set of data storage types (e.g. relational databases, csv, parquet, json, etc.)."
-  },
-  {
-    "objectID": "docs/software/sql.html#what-is-sql",
-    "href": "docs/software/sql.html#what-is-sql",
-    "title": "SQL",
-    "section": "",
-    "text": "SQL (pronounced “sequel”) stands for Structured Query Language. It is a standard language for accessing and manipulating databases. SQL is used to organize data in a database as well as as questions of that data.\nThe traditional use of SQL is in relational databases, but it can also be used in other types of databases. In the examples below, we use duckdb which has become a leading option for analytical workflows across a diverse set of data storage types (e.g. relational databases, csv, parquet, json, etc.)."
-  },
-  {
-    "objectID": "docs/software/sql.html#how-to-install-sql",
-    "href": "docs/software/sql.html#how-to-install-sql",
-    "title": "SQL",
-    "section": "How to install SQL?",
-    "text": "How to install SQL?\nTo use DuckDB, you can add it to your python virtual environment using rye:\nrye add duckdb duckdb-engine"
-  },
-  {
-    "objectID": "docs/software/sql.html#using-sql",
-    "href": "docs/software/sql.html#using-sql",
-    "title": "SQL",
-    "section": "Using SQL",
-    "text": "Using SQL\nConnect to a database.\n\n%load_ext sql\n%sql duckdb://\n\nC:\\Users\\NKeleher\\code\\ipa-data-tech-handbook\\.venv\\Lib\\site-packages\\sql\\parse.py:320: SyntaxWarning: invalid escape sequence '\\:'\n  \"\"\"\nC:\\Users\\NKeleher\\code\\ipa-data-tech-handbook\\.venv\\Lib\\site-packages\\sql\\parse.py:350: SyntaxWarning: invalid escape sequence '\\:'\n  \"\"\"\n\n\nLoading configurations from C:\\Users\\NKeleher\\code\\ipa-data-tech-handbook\\pyproject.toml.\n\n\nSettings changed:\n\n\n\n\n\n\n\nConfig\nvalue\n\n\n\n\nfeedback\n0\n\n\nautopandas\nFalse\n\n\nautopolars\nFalse\n\n\nautolimit\n0\n\n\ndisplaylimit\n10\n\n\n\n\n\nCreate a table from a CSV file.\n\n%%sql\nCREATE TABLE penguins AS SELECT * FROM '../assets/data/penguins.csv'\n\n\n\n\nCount\n\n\n\n\n\n\n\nInspect the columns of the table.\n\n%sqlcmd columns -t penguins\n\n\n\n\nname\ntype\nnullable\ndefault\nautoincrement\ncomment\n\n\n\n\nspecies\nVARCHAR\nTrue\nNone\nFalse\nNone\n\n\nisland\nVARCHAR\nTrue\nNone\nFalse\nNone\n\n\nbill_length_mm\nFLOAT\nTrue\nNone\nFalse\nNone\n\n\nbill_depth_mm\nFLOAT\nTrue\nNone\nFalse\nNone\n\n\nflipper_length_mm\nBIGINT\nTrue\nNone\nFalse\nNone\n\n\nbody_mass_g\nBIGINT\nTrue\nNone\nFalse\nNone\n\n\nsex\nVARCHAR\nTrue\nNone\nFalse\nNone\n\n\n\n\n\nQuery the table using a SELECT statement.\n\n%%sql\nSELECT *\nFROM '../assets/data/penguins.csv'\nLIMIT 3\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nMALE\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nFEMALE\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nFEMALE\n\n\n\n\n\nRun analytical operations on the data.\n\n%%sql\nSELECT species, COUNT(*) AS count\nFROM '../assets/data/penguins.csv'\nGROUP BY species\nORDER BY count DESC\n\n\n\n\nspecies\ncount\n\n\n\n\nAdelie\n152\n\n\nGentoo\n124\n\n\nChinstrap\n68\n\n\n\n\n\nUsing jupysql store SQL query results as an object in a Jupyter notebook.\n\n%%sql species_count &lt;&lt;\nSELECT species, COUNT(*) AS count\nFROM '../assets/data/penguins.csv'\nGROUP BY species\nORDER BY count DESC\n\nPlot the results of the query.\n\nax = %sqlplot bar --table '../assets/data/penguins.csv' --column species\n\n# customize plot (this is a matplotlib Axes object)\n_ = ax.set_title(\"Count of penguins by species\")\n\nRemoving NULLs, if there exists any from species"
-  },
-  {
-    "objectID": "docs/software/sql.html#coding-conventions",
-    "href": "docs/software/sql.html#coding-conventions",
-    "title": "SQL",
-    "section": "Coding Conventions",
-    "text": "Coding Conventions\nUse SQLFluff to lint SQL code.\nAdd SQLFluff to your virtual environment using rye:\nrye add sqlfluff\nAssuming SQLFluff is installed in your virtual environment using rye, you can run the following command to lint SQL code:\nrye run sqlfluff fix --dialect duckdb\nSee the GitLab Data Team’s SQL Style Guide"
-  },
-  {
-    "objectID": "docs/software/sql.html#learning-resources",
-    "href": "docs/software/sql.html#learning-resources",
-    "title": "SQL",
-    "section": "Learning Resources",
-    "text": "Learning Resources\n\nSELECT Star SQL\nSQL Murder Mystery\nsql-workbench\nDuckDB SQL Introduction"
-  },
-  {
-    "objectID": "docs/software/python.html",
-    "href": "docs/software/python.html",
-    "title": "Python",
-    "section": "",
-    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
-  },
-  {
-    "objectID": "docs/software/python.html#what-is-python",
-    "href": "docs/software/python.html#what-is-python",
-    "title": "Python",
-    "section": "",
-    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
-  },
-  {
-    "objectID": "docs/software/python.html#how-to-install-python",
-    "href": "docs/software/python.html#how-to-install-python",
-    "title": "Python",
-    "section": "How to install Python?",
-    "text": "How to install Python?\nThere are many ways to install Python. We recommend using Python in a virtual environment to avoid conflicts with other Python installations on your system.\nWe recommend using a rye or pixi. Both of these tools provide a simple way to create and manage Python virtual environments.\nIn both cases, you can manage the python packages that are installed in the virtual environment using a pyproject.toml file. See the pyproject.toml example in this repository for an example of how to manage Python packages. To add package dependencies to the virtual environment, using rye, you can run:\nWe’ll use rye to demonstrate how to manage a Python virtual environment. Watch the following video for a quick introduction to rye:\n{{&lt; video https://youtu.be/q99TYA7LnuA &gt;}}\nFirst, install rye using winget (Windows) or brew (MacOS/Linux):\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install rye\n\n\nMacOS\nbrew install rye\n\n\nLinux\nbrew install rye\n\n\n\nAdd libraries to the virtual environment using rye add ...:\n\n&gt; rye add jupyterlab pandas matplotlib seaborn"
-  },
-  {
-    "objectID": "docs/software/python.html#coding-conventions",
-    "href": "docs/software/python.html#coding-conventions",
-    "title": "Python",
-    "section": "Coding Conventions",
-    "text": "Coding Conventions\nWe highly recommend working with a virtual environment to manage Python dependencies. The pyproject.toml is the preferred way to keep track of python dependencies as well as project-specific python conventions.\nWe recommend using Ruff to enforce linting and formatting rules. In most cases you can use the default linting and formatting rules provided by ruff. However, you can customize the rules by modifying the [tool.ruff] section of the pyproject.toml file in the root of your project. for more about the configuration options, see the Ruff documentation.\nIf you are working in a virtual environment created by rye, you automatically have access to Ruff viarye lintandrye fmt` commands to lint and format your code.\nFor more inspiration, see the GitLab Data Team’s Python Guide and Google’s Python Style Guide."
-  },
-  {
-    "objectID": "docs/software/python.html#example-usage",
-    "href": "docs/software/python.html#example-usage",
-    "title": "Python",
-    "section": "Example Usage",
-    "text": "Example Usage\nLet’s load an example World Bank data via Gapminder using the causaldata package.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport statsmodels.formula.api as sm\nfrom causaldata import gapminder\n\nLoad the Gapminder data as a pandas DataFrame:\n\ndf = gapminder.load_pandas().data\n\nWe can check the dimensions of the DataFrame using df.info():\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 1704 entries, 0 to 1703\nData columns (total 6 columns):\n #   Column     Non-Null Count  Dtype  \n---  ------     --------------  -----  \n 0   country    1704 non-null   object \n 1   continent  1704 non-null   object \n 2   year       1704 non-null   int64  \n 3   lifeExp    1704 non-null   float64\n 4   pop        1704 non-null   int64  \n 5   gdpPercap  1704 non-null   float64\ndtypes: float64(2), int64(2), object(2)\nmemory usage: 80.0+ KB\n\n\nLet’s take a look at the first few rows of the DataFrame using df.head():\n\ndf.head()\n\n\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\n0\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.445314\n\n\n1\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.853030\n\n\n2\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.100710\n\n\n3\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.197138\n\n\n4\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.981106\n\n\n\n\n\n\n\nTake a look at the relationship between GDP per Capita and Life Expectancy:\n\nsns.scatterplot(x=\"gdpPercap\", y=\"lifeExp\", hue=\"continent\", data=df).set(\n    xscale=\"log\", ylabel=\"Life Expectancy\", xlabel=\"GDP per Capita\"\n)\n\n\n\n\n\n\n\n\nSeparate the data by year, focusing on 1957 and 2007:\n\nsns.relplot(\n    data=df.where(df[\"year\"].isin([1957, 2007])),\n    x=\"gdpPercap\",\n    y=\"lifeExp\",\n    col=\"year\",\n    hue=\"continent\",\n    col_wrap=1,\n    kind=\"scatter\",\n    palette=\"muted\",\n).set(xscale=\"log\", ylabel=\"Life Expectancy\", xlabel=\"GDP per Capita\")"
-  },
-  {
-    "objectID": "docs/software/python.html#learning-resources",
-    "href": "docs/software/python.html#learning-resources",
-    "title": "Python",
-    "section": "Learning Resources",
-    "text": "Learning Resources\n\nThe Python Tutorial\nPython Data Science Handbook\nEfficient Python for Data Scientists\nThe Hitchhiker’s Guide to Python"
-  },
-  {
-    "objectID": "docs/software/git.html",
-    "href": "docs/software/git.html",
-    "title": "Git",
-    "section": "",
-    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners"
-  },
-  {
-    "objectID": "docs/software/git.html#what-is-git",
-    "href": "docs/software/git.html#what-is-git",
-    "title": "Git",
-    "section": "",
-    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners"
-  },
-  {
-    "objectID": "docs/software/git.html#how-to-install-git",
-    "href": "docs/software/git.html#how-to-install-git",
-    "title": "Git",
-    "section": "How to install Git?",
-    "text": "How to install Git?\nInstall Git for Windows via winget. Git comes pre-installed with MacOS and Linux, if you can’t find it, try installing with Homebrew.\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Git.Git\n\n\nMacOS\ngit --version\n\n\nLinux\ngit --version"
-  },
-  {
-    "objectID": "docs/software/git.html#using-git",
-    "href": "docs/software/git.html#using-git",
-    "title": "Git",
-    "section": "Using Git",
-    "text": "Using Git\nGit can be confusing and overwhelming. We recommend starting with a graphical user interface (GUI) to help you understand the basics of Git. GitHub Desktop is a good option or, if you use VS Code, you can use the built-in Git functionality (See VS Code documentation).\nClick on the image below to watch a video on basic Git commands:\n)\nHere are the basic commands you need to know to get started with Git:\n\ngit init\nCreate a new Git repository\ngit init\n\n\ngit clone\nClone a repository into a new directory For example, to clone the IPA handbook repository:\n# If using HTTPS\ngit clone https://github.com/PovertyAction/ipa-data-tech-handbook.git\n\n# If using SSH\ngit clone git@github.com:PovertyAction/ipa-data-tech-handbook.git\n\n\ngit checkout\nBranches are used to develop new code or modify existing code such that the “main” code is not affected until the new code is ready. To create a new branch, use:\ngit checkout -b new-branch-name\nThis checks out a new branch called new-branch-name. To switch back to the main branch, use:\ngit checkout main\nTo checkout a branch from the remote repository, use:\ngit fetch origin\ngit checkout --track origin/remote-branch-name\nTo push a branch to the remote repository, use:\ngit push origin new-branch-name\nTo delete a branch, use:\ngit branch -d new-branch-name\nList all local branches:\ngit branch --list\n\n\ngit add\nAdd files that have changed and are ready to be committed to the staging area. To add a file, file_name.md, use:\ngit add file_name.md\n\n\ngit commit\nCommit changes to the checked out branch.\nGood commit messages follow the following format:\ngit commit -m \"&lt;type&gt;: &lt;description&gt;\"\nTo commit changes with a message, use:\ngit commit -m \"feat: adding new feature to the codebase\"\n\n\ngit push\nSend changes to the remote repository. To push any commits to remote use the following:\ngit push origin new-branch-name\nIf you are pushing a new branch to the remote repository, use:\ngit push --set-upstream origin new-branch-name\nConsider adding the Conventional Commits extension to your VS Code to help you write good commit messages."
-  },
-  {
-    "objectID": "docs/software/git.html#best-practices",
-    "href": "docs/software/git.html#best-practices",
-    "title": "Git",
-    "section": "Best Practices",
-    "text": "Best Practices\n\nAlways include a README file in your repository and keep it up to date with key information that anyone who visits your repository should know for using, replicating, or contributing to code in the repository.\nUse branches to develop new features or fix bugs. This helps to keep the main branch clean and stable.\nWrite clear and concise commit messages. A good commit message should describe what changes were made and why they were made. Refer to Conventional Commits for good practice in writing commit messages.\nPush changes to the remote repository frequently. This helps to keep your codebase up to date and allows others to collaborate with you.\nUse pull requests to propose changes to the main branch. Try to keep the pull request small such that there is a manageable amount of code to review."
-  },
-  {
-    "objectID": "docs/software/git.html#learning-resources",
-    "href": "docs/software/git.html#learning-resources",
-    "title": "Git",
-    "section": "Learning Resources",
-    "text": "Learning Resources\n\nGitHub’s YouTube Git for Beginners\nGitHub’s Git Cheat Sheet\ngit - the simple guide\nGit Best Practices\nHappy Git with R\nVisual Git Guide\nVisualizing Git with D3"
-  },
-  {
-    "objectID": "docs/methods/references.html",
-    "href": "docs/methods/references.html",
-    "title": "Analytical and Computational Methods References",
-    "section": "",
-    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
-  },
-  {
-    "objectID": "docs/methods/references.html#causal-inference",
-    "href": "docs/methods/references.html#causal-inference",
-    "title": "Analytical and Computational Methods References",
-    "section": "",
-    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
-  },
-  {
-    "objectID": "docs/methods/references.html#causal-machine-learning",
-    "href": "docs/methods/references.html#causal-machine-learning",
-    "title": "Analytical and Computational Methods References",
-    "section": "Causal Machine Learning",
-    "text": "Causal Machine Learning\n\nEconML\nGeneralized Random Forests\nCausal Machine Learning Book, by Victor Chernozhukov, Christian Hansen, Nathan Kallus, Martin Spindler, Vasilis Syrgkanis"
-  },
-  {
-    "objectID": "docs/methods/references.html#generative-ai-large-language-models",
-    "href": "docs/methods/references.html#generative-ai-large-language-models",
-    "title": "Analytical and Computational Methods References",
-    "section": "Generative AI & Large Language Models",
-    "text": "Generative AI & Large Language Models\n\nLange Language Model Course, by Maxime Labonne\nPractical Deep Learning\nGenerative AI for Beginners\nApplied LLMs - Read “What We’ve Learned From A Year of Building with LLMs”\nGenerative AI Handbook, by William Brown"
-  },
-  {
     "objectID": "docs/software/quarto.html",
     "href": "docs/software/quarto.html",
     "title": "Quarto",
@@ -364,109 +203,67 @@
     "text": "Learning Resources\n\nTutorials:\n\nHello, Quarto\nComputations\nAuthoring\n\nQuarto Documentation\nQuarto Gallery of Examples"
   },
   {
-    "objectID": "docs/software/vscode.html",
-    "href": "docs/software/vscode.html",
-    "title": "Visual Studio Code",
+    "objectID": "docs/teams/ppi.html",
+    "href": "docs/teams/ppi.html",
+    "title": "Poverty Probability Index",
     "section": "",
-    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+    "text": "The Poverty Probability Index (PPI®) is a poverty measurement tool for organizations and businesses with a mission to serve the poor. The PPI is statistically-sound, yet simple to use: the answers to 10 questions about a household’s characteristics and asset ownership are scored to compute the likelihood that the household is living below the poverty line. With the PPI, organizations can identify the clients, customers, or employees who are most likely to be poor, integrating objective poverty data into their assessments and strategic decision-making.\nThe PPI is currently housed at Innovations for Poverty Action (IPA).\nFor more information, see Poverty Probability Index."
   },
   {
-    "objectID": "docs/software/vscode.html#what-is-visual-studio-code",
-    "href": "docs/software/vscode.html#what-is-visual-studio-code",
-    "title": "Visual Studio Code",
+    "objectID": "docs/teams/mist.html",
+    "href": "docs/teams/mist.html",
+    "title": "Management and Information Systems Team",
     "section": "",
-    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+    "text": "The Global Management and Information System Team (MIST) support all IPA staff with any technology-related needs including but not limited to:\nFor technology support, email: support@poverty-action.org"
   },
   {
-    "objectID": "docs/software/vscode.html#how-to-install-vs-code",
-    "href": "docs/software/vscode.html#how-to-install-vs-code",
-    "title": "Visual Studio Code",
-    "section": "How to Install VS Code?",
-    "text": "How to Install VS Code?\nTo install VS Code, download and install the latest software version from the Visual Studio Code website or run the following from the command line if you have the Windows Package Manager, winget, installed:\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Microsoft.VisualStudioCode\n\n\nMacOS\nbrew install --cask visual-studio-code\n\n\nLinux\nsudo snap install code --classic"
+    "objectID": "docs/teams/mist.html#additional-resources",
+    "href": "docs/teams/mist.html#additional-resources",
+    "title": "Management and Information Systems Team",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nMIST Resources on Box\nGlobal Help Desk"
   },
   {
-    "objectID": "docs/software/vscode.html#using-vs-code",
-    "href": "docs/software/vscode.html#using-vs-code",
-    "title": "Visual Studio Code",
-    "section": "Using VS Code",
-    "text": "Using VS Code\nThe best starting point for familiarizing yourself with VS Code is the documentation.\nSome particularly helpful references in the documentation are:\n\nEditing with VS Code\nGit Source control in VS Code\nPython in VS Code"
-  },
-  {
-    "objectID": "docs/software/vscode.html#recommended-extensions",
-    "href": "docs/software/vscode.html#recommended-extensions",
-    "title": "Visual Studio Code",
-    "section": "Recommended Extensions",
-    "text": "Recommended Extensions\nThe core software and functionality in VS Code gives you a lot of useful tools for writing, editing, and collaborating. Additionally, you can add functionality through Extensions.\nSome helpful extensions are the following:\n\nPython Extension - language syntax for Python programming\nRuff - Python linting and code formatting\nR Extension - Interacting with R from VS Code\nGitHub Pull Requests - review and manage GitHub pull requests and issues in Visual Studio Code\nJupyter Extension - for developing with jupyter notebooks\nJust - support for Justfiles\nQuarto Extension - support for writing and building Quarto projects\nMarkdown All in One - support for Markdown\nMarkdown Preview Mermaid Support - support for Mermaid diagrams in Markdown\nConventional Commits - support for writing easy to understand commit messages"
-  },
-  {
-    "objectID": "docs/software/justfile.html",
-    "href": "docs/software/justfile.html",
-    "title": "Justfile",
+    "objectID": "docs/guides/code_review.html",
+    "href": "docs/guides/code_review.html",
+    "title": "Code Reviews & Pull Requests",
     "section": "",
-    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
+    "text": "We use code reviews to ensure that code is well-written, well-documented, and follows best practices. Code reviews are an opportunity to learn from each other, share knowledge, and improve the quality of our codebase. This document outlines the process for code reviews and pull requests at IPA."
   },
   {
-    "objectID": "docs/software/justfile.html#what-is-a-justfile",
-    "href": "docs/software/justfile.html#what-is-a-justfile",
-    "title": "Justfile",
-    "section": "",
-    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
+    "objectID": "docs/guides/code_review.html#as-someone-requesting-code-review",
+    "href": "docs/guides/code_review.html#as-someone-requesting-code-review",
+    "title": "Code Reviews & Pull Requests",
+    "section": "As someone requesting code review",
+    "text": "As someone requesting code review\n\nBe courteous and respectful to your reviewer’s time.\nKeep your code review focused on changes that are relevant to review.\nExplain why the code changes are necessary.\nWhen relevant, include screenshots or screencasts to show the effect of the changes.\nTry to respond to every comment that the reviewer makes.\nMerge once you feel confident in the code and its impact on the project.\n\nRecommended reading: how to write the perfect pull request."
   },
   {
-    "objectID": "docs/software/justfile.html#how-to-install-just",
-    "href": "docs/software/justfile.html#how-to-install-just",
-    "title": "Justfile",
-    "section": "How to install Just?",
-    "text": "How to install Just?\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Casey.Just\n\n\nMacOS\nbrew install just\n\n\nLinux\nbrew install just"
+    "objectID": "docs/guides/code_review.html#as-a-code-reviewer",
+    "href": "docs/guides/code_review.html#as-a-code-reviewer",
+    "title": "Code Reviews & Pull Requests",
+    "section": "As a code reviewer",
+    "text": "As a code reviewer\n\nCommunicate which ideas or comments you feel strongly about and those you don’t.\nDon’t get stuck on details that are not immediately relevant to allow the code author to move forward with their work.\nIdentify ways to simplify the code while still achieving the project’s goal\nIf relevant, offer alternative implementations, especially if they would simplify the code or make it easier to maintain in the long run.\nSeek to understand the author’s perspective\nApprove the pull request in a reasonable amount of time. If you are unable to review the code promptly, let the author know when you will be able to review it.\nRemember that you are here to provide feedback, not to be a gatekeeper.\n\nAbove is modified from Thoughtbot Cod Review Guidelines"
   },
   {
-    "objectID": "docs/software/justfile.html#learning-resources",
-    "href": "docs/software/justfile.html#learning-resources",
-    "title": "Justfile",
+    "objectID": "docs/guides/code_review.html#use-templates-for-pull-requests",
+    "href": "docs/guides/code_review.html#use-templates-for-pull-requests",
+    "title": "Code Reviews & Pull Requests",
+    "section": "Use Templates for Pull Requests",
+    "text": "Use Templates for Pull Requests\nFor each team or repository, we highly recommend creating a template pull requests. This helps to standardize the way in which pull requests are created and reviewed.\nAs an example of a pull request template, see the pull request template in this repository.\n\n\n\nPull Request Template"
+  },
+  {
+    "objectID": "docs/guides/code_review.html#code-review-process",
+    "href": "docs/guides/code_review.html#code-review-process",
+    "title": "Code Reviews & Pull Requests",
+    "section": "Code Review Process",
+    "text": "Code Review Process\n\nCreate a Pull Request (PR) from a branch to the main branch.\nAdd a reviewer or multiple reviewers to the PR.\nReviewers will review the code and provide feedback.\nThe author of the PR will address the feedback and make changes.\nThe author will notify the reviewers that the changes have been made.\nThe reviewers will review the changes and approve the PR unless there is a need for additional revisions.\nOnce approved, the author can merge the PR into the main branch."
+  },
+  {
+    "objectID": "docs/guides/code_review.html#learning-resources",
+    "href": "docs/guides/code_review.html#learning-resources",
+    "title": "Code Reviews & Pull Requests",
     "section": "Learning Resources",
-    "text": "Learning Resources\n\nJust Documentation\nUsing the just Task Runner"
-  },
-  {
-    "objectID": "docs/software/github.html",
-    "href": "docs/software/github.html",
-    "title": "GitHub",
-    "section": "",
-    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
-  },
-  {
-    "objectID": "docs/software/github.html#what-is-github",
-    "href": "docs/software/github.html#what-is-github",
-    "title": "GitHub",
-    "section": "",
-    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
-  },
-  {
-    "objectID": "docs/software/github.html#how-to-install-github-software",
-    "href": "docs/software/github.html#how-to-install-github-software",
-    "title": "GitHub",
-    "section": "How to install GitHub Software?",
-    "text": "How to install GitHub Software?\nThere are two main options to consider for interacting with GitHub from your local computer:\n\nGitHub Desktop (Recommended)- GUI for working with Git repositories.\nGitHub CLI - Command-line interface for working with Git repositories. For advanced usage.\n\nIf you are new to Git or prefer working with a graphical user interface (GUI), we recommend that you start with GitHub Desktop. The Desktop interface provides a more transparent way of understanding source control and interacting with remote code repositories on GitHub.\n\nGitHub Desktop\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install GitHub.GithubDesktop\n\n\nMacOS\nbrew install --cask github\n\n\nLinux\nNot available\n\n\n\n\n\nGitHub CLI\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install GitHub.cli\n\n\nMacOS\nbrew install gh\n\n\nLinux\nbrew install gh"
-  },
-  {
-    "objectID": "docs/software/github.html#authenticating-github",
-    "href": "docs/software/github.html#authenticating-github",
-    "title": "GitHub",
-    "section": "Authenticating GitHub",
-    "text": "Authenticating GitHub\n\nGitHub Desktop\nSee instructions here for getting started with GitHub Desktop.\nIn the File menu, select “Options” and then in the “Accounts” options select “Sign in to GitHub.com” and “Continue with browser” to authenticate with your GitHub account.\n\n\n\nGitHub Desktop Authentication\n\n\n\n\nGitHub CLI\nSee the GitHub CLI Manual for more information on how to authenticate with GitHub CLI.\nTo authenticate with GitHub CLI, run the following command in your terminal:\ngh auth login\nThen walk through the prompts:\n\nWhat account do you want to log into? GitHub.com\nWhat is your preferred protocol for Git operations on this host? HTTPS\nAuthenticate Git with your GitHub credentials? (Y/n) Y\nHow would you like to authenticate GitHub CLI? Login with a web browser"
-  },
-  {
-    "objectID": "docs/software/github.html#using-github",
-    "href": "docs/software/github.html#using-github",
-    "title": "GitHub",
-    "section": "Using GitHub",
-    "text": "Using GitHub\nWithin a GitHub repository, there are four main aspects that you should be familiar with:\n\nCode: The files and directories that make up your project.\nIssues: A place to discuss and track tasks, bugs, and enhancements for a project.\nPull Requests: A way to propose changes to a repository and discuss them with others.\n\n\n\n\nGitHub Repository Aspects\n\n\nIn the Code section of a GitHub repository, you can view the files that make up the project codebase. We work with Branches to manage different versions of the codebase. The main branch is the default branch that GitHub uses for the codebase. When you want to make changes to the codebase, you create a new branch from the main branch, make your changes, and then create a Pull Request to merge your changes back into the main branch.\nFor planning changes to the codebase, you can use Issues to track tasks, bugs, and enhancements. Issues can be assigned to team members, labeled, and linked to Pull Requests. Issues can also be used to discuss changes to the codebase before making them."
-  },
-  {
-    "objectID": "docs/software/github.html#learning-resources",
-    "href": "docs/software/github.html#learning-resources",
-    "title": "GitHub",
-    "section": "Learning Resources",
-    "text": "Learning Resources\n\nGitHub Skills provides a lot of relevant resources for learning how to use GitHub. Some good starting points include:\n\nIntroduction to Github\nReview Pull Requests\n\nGitHub Foundations Certificate"
+    "text": "Learning Resources\n\nGitHub’s Guide to Pull Requests\nView a Pull Request in GitHub Desktop\nCreating a Pull Request Template"
   },
   {
     "objectID": "docs/guides/pre_commit_hooks.html",
@@ -511,6 +308,132 @@
     "text": "Learning Resources\n\nPre-commit documentation"
   },
   {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "IPA Data Science, Engineering, and Technology Handbook",
+    "section": "",
+    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
+  },
+  {
+    "objectID": "docs/index.html#about-the-handbook",
+    "href": "docs/index.html#about-the-handbook",
+    "title": "IPA Data Science, Engineering, and Technology Handbook",
+    "section": "",
+    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
+  },
+  {
+    "objectID": "docs/methods/references.html",
+    "href": "docs/methods/references.html",
+    "title": "Analytical and Computational Methods References",
+    "section": "",
+    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
+  },
+  {
+    "objectID": "docs/methods/references.html#causal-inference",
+    "href": "docs/methods/references.html#causal-inference",
+    "title": "Analytical and Computational Methods References",
+    "section": "",
+    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham"
+  },
+  {
+    "objectID": "docs/methods/references.html#causal-machine-learning",
+    "href": "docs/methods/references.html#causal-machine-learning",
+    "title": "Analytical and Computational Methods References",
+    "section": "Causal Machine Learning",
+    "text": "Causal Machine Learning\n\nEconML\nGeneralized Random Forests\nCausal Machine Learning Book, by Victor Chernozhukov, Christian Hansen, Nathan Kallus, Martin Spindler, Vasilis Syrgkanis"
+  },
+  {
+    "objectID": "docs/methods/references.html#generative-ai-large-language-models",
+    "href": "docs/methods/references.html#generative-ai-large-language-models",
+    "title": "Analytical and Computational Methods References",
+    "section": "Generative AI & Large Language Models",
+    "text": "Generative AI & Large Language Models\n\nLange Language Model Course, by Maxime Labonne\nPractical Deep Learning\nGenerative AI for Beginners\nApplied LLMs - Read “What We’ve Learned From A Year of Building with LLMs”\nGenerative AI Handbook, by William Brown"
+  },
+  {
+    "objectID": "docs/guides/mdtestguide.html",
+    "href": "docs/guides/mdtestguide.html",
+    "title": "Virtual Environments",
+    "section": "",
+    "text": "We encourage the use of virtual environments when working on shared projects. Virtual environments allow you to create an isolated environment for your project, which can help prevent conflicts between different projects that may require different versions of the same package."
+  },
+  {
+    "objectID": "docs/guides/mdtestguide.html#python-virtual-environments",
+    "href": "docs/guides/mdtestguide.html#python-virtual-environments",
+    "title": "Virtual Environments",
+    "section": "Python Virtual Environments",
+    "text": "Python Virtual Environments\nWe recommend using rye to manage Python virtual environments as it provides an overarching framework for managing Python installations and virtual environments. See information on rye in the Rye documentation.\nAnother option for managing virtual environments is to use pixi. See information on pixi in the Pixi documentation."
+  },
+  {
+    "objectID": "docs/guides/mdtestguide.html#r-virtual-environments",
+    "href": "docs/guides/mdtestguide.html#r-virtual-environments",
+    "title": "Virtual Environments",
+    "section": "R Virtual Environments",
+    "text": "R Virtual Environments\nR virtual environments can be created using the renv package. See documentation for more information about how to use renv."
+  },
+  {
+    "objectID": "docs/guides/mdtestguide.html#docker",
+    "href": "docs/guides/mdtestguide.html#docker",
+    "title": "Virtual Environments",
+    "section": "Docker",
+    "text": "Docker\nDocker is a tool that allows you to create, deploy, and run applications using containers. In some instances, it may be more appropriate to use Docker containers to manage your project environment, especially when there is a project environment that needs to be deployed to cloud computing services."
+  },
+  {
+    "objectID": "docs/guides/mdtestguide.html#learning-resources",
+    "href": "docs/guides/mdtestguide.html#learning-resources",
+    "title": "Virtual Environments",
+    "section": "Learning Resources",
+    "text": "Learning Resources\n\nA Complete Guide to Python Virtual Environments\nReal Python, Python Virtual Environments\nPython Virtual Environments\nR Virtual Environments"
+  },
+  {
+    "objectID": "docs/guides/computer_setup.html",
+    "href": "docs/guides/computer_setup.html",
+    "title": "Computer Setup",
+    "section": "",
+    "text": "This page is meant to help guide you in setting up your laptop with common software used by data and technology teams at IPA. Most software covered in this page have their own page in this handbook. We encourage you to refer to for usage of each software. And please contribute to those pages so that others at IPA (including your future self) are able to learn about what works well for interacting with data at IPA.\nThe information below is for getting started with core software that IPA uses for editing, reviewing, and deploying code for software development, data engineering, analytical solutions, and data infrastructure."
+  },
+  {
+    "objectID": "docs/guides/computer_setup.html#package-manager",
+    "href": "docs/guides/computer_setup.html#package-manager",
+    "title": "Computer Setup",
+    "section": "Package Manager",
+    "text": "Package Manager\nA package manager helps to standardize how you install and update software on your computer. Generally, you want to use a package manager to install any programs that are used globally on your computer. By “globally”, we mean that it is a program that is used across many projects and computing environments.\n\nWindows\nIf using a Windows computer with Windows 10 or later, we encourage you to use the Windows Package Manager, winget. However, if you do not have Windows 10+, you can achieve a similar package management experience with either chocolatey or scoop.\n\n\nCheck to see if you have winget\n\n\nOpen Windows Powershell (See PowerShell 101 if new to Windows PowerShell)\nCheck to see if you have winget installed: \nIf you do not see a version number for winget. Follow the Microsoft instructions to Install winget\n\n\nInstall packages on Windows\n# Install a single program (e.g. GitHub for command line)\nwinget install GitHub.cli\n\n# Install multiple programs (Just, Rye for Python)\nwinget install Casey.Just Rye.Rye\n\n\nMacOS/Linux\nOn MacOS, it is recommended that you use Homebrew as a package manager. On Linux you can use Homebrew or Snap. This may be relevant if you are working in the Windows Subsystem Linux (WSL).\n# Install a single program (e.g. GitHub for command line)\nbrew install gh\n\n# Install multiple programs (Just, Rye for Python)\nbrew install just rye\nSee the Virtual Environment section of the handbook for more information on using virtual environments.\n\n\nAdditional Software\nThe preceding package manager examples can be used to install the majority of the software covered in this Handbook. Note that there are some exceptions to software available via a package manager. For example, Stata needs to be installed by first downloading the .exe for Windows, .dmg for MacOS, or .tar.gz for Linux.\n\nGet the required Stata version provided by IPA on the Box installation packages."
+  },
+  {
+    "objectID": "docs/guides/computer_setup.html#terminal",
+    "href": "docs/guides/computer_setup.html#terminal",
+    "title": "Computer Setup",
+    "section": "Terminal",
+    "text": "Terminal\nIn Windows, we recommend using the Windows Terminal. However, there are several other options for terminals. Select what you feel most comfortable with. The same is true for MacOS and Linux where there are many Terminal options to select from.\n# Windows Terminal\nwinget install Microsoft.WindowsTerminal"
+  },
+  {
+    "objectID": "docs/guides/computer_setup.html#shell",
+    "href": "docs/guides/computer_setup.html#shell",
+    "title": "Computer Setup",
+    "section": "Shell",
+    "text": "Shell\nYou are free to choose whichever shell works best for your workflow and style. Here are the common shell options you may want to consider:\n\nBash\nBash comes pre-installed with MacOS and Linux. Git Bash is included with the Git for Windows installation.\n# Install git for Windows\nwinget install Git.Git\n\n\nNushell\nNushell is a cross operating system shell with a data pipeline focus.\n# Windows\nwinget install Nushell.Nushell\n\n# MacOS/Linux\nbrew install nu\n\n\nWindows PowerShell\nWindows PowerShell is often the default shell on Windows.\n# Windows (install or upgrade)\nwinget install Microsoft.PowerShell\n\n# MacOS\nbrew install powershell/tap/powershell\n\n# Linux\n# docs: https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu\nOptionally, you can install Starship for shell prompt customization.\n# Windows\nwinget install Starship.Starship\n\n# MacOS/Linux\nbrew install starship\nFollow the starship installation instructions for using starship with your preferred shell, for example, if using Nushell, run:\nmkdir ~/.cache/starship\nstarship init nu | save -f ~/.cache/starship/init.nu\nYou can set the Starship configuration to your liking in a ~/.config/starship.toml file. For example you could use the jetpack preset configuration by running:\n# starship configuration\nmkdir ~/.config\nstarship preset jetpack -o ~/.config/starship.toml"
+  },
+  {
+    "objectID": "docs/guides/computer_setup.html#gitgithub",
+    "href": "docs/guides/computer_setup.html#gitgithub",
+    "title": "Computer Setup",
+    "section": "Git/GitHub",
+    "text": "Git/GitHub\nYou will need to have git installed on computer if you want to edit, test, or review source code and documentation locally.\nWe recommend installing GitHub Desktop if you are new to using git or prefer a GUI to the command line.\n# Windows\nwinget install GitHub.GithubDesktop\n\n# MacOS\nbrew install  --cask github\n\n## GitHub Desktop is not available on Linux\nSee the Git section of the handbook for more information on using git and the GitHubsection section for more information on using GitHub."
+  },
+  {
+    "objectID": "docs/guides/computer_setup.html#visual-studio-code",
+    "href": "docs/guides/computer_setup.html#visual-studio-code",
+    "title": "Computer Setup",
+    "section": "Visual Studio Code",
+    "text": "Visual Studio Code\nYou are free to chose the Integrated Development Environment (IDE) of your choice. However, we recommend Visual Studio Code because integration with GitHub is built in and it provides a rich set of extensions to improve code quality and review.\n# Windows\nwinget install Microsoft.VisualStudioCode\n\n# MacOS\nbrew install --cask visual-studio-code\n\n# Linux\nsudo snap install code --classic\nSee the Visual Studio Code section of the handbook for more information on using Visual Studio Code."
+  },
+  {
+    "objectID": "docs/guides/computer_setup.html#quarto",
+    "href": "docs/guides/computer_setup.html#quarto",
+    "title": "Computer Setup",
+    "section": "Quarto",
+    "text": "Quarto\nFor technical documentation and literate programming, we recommend using Quarto because of it’s rich suite of publishing tools that integrate notebooks (e.g. ipynb, .Rmd), and computer scripts (e.g. .py, .r, .md).\n# Windows\nwinget install Posit.Quarto\n\n# MacOS\nbrew install --cask quarto\n\n# Linux\n# download and install from https://quarto.org/docs/get-started/\nSee the Quarto section of the handbook for more information on using Quarto."
+  },
+  {
     "objectID": "docs/guides/venv.html",
     "href": "docs/guides/venv.html",
     "title": "Virtual Environments",
@@ -546,41 +469,6 @@
     "text": "Learning Resources\n\nA Complete Guide to Python Virtual Environments\nReal Python, Python Virtual Environments\nPython Virtual Environments\nR Virtual Environments"
   },
   {
-    "objectID": "docs/contributing.html",
-    "href": "docs/contributing.html",
-    "title": "Contributing to the Handbook",
-    "section": "",
-    "text": "This handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.\nWe use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.\nDocumentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to before they need to pursue information via email, chat, or other modes of communication.\nMost guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work today if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues."
-  },
-  {
-    "objectID": "docs/contributing.html#how-to-use-the-handbook",
-    "href": "docs/contributing.html#how-to-use-the-handbook",
-    "title": "Contributing to the Handbook",
-    "section": "",
-    "text": "This handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.\nWe use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.\nDocumentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to before they need to pursue information via email, chat, or other modes of communication.\nMost guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work today if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues."
-  },
-  {
-    "objectID": "docs/contributing.html#reading-the-handbook",
-    "href": "docs/contributing.html#reading-the-handbook",
-    "title": "Contributing to the Handbook",
-    "section": "Reading the Handbook",
-    "text": "Reading the Handbook\nThe best ways to read the handbook are the following:\n\nNavigate to https://povertyaction.github.io/ipa-data-tech-handbook/docs\nRead the source code on GitHub.\nRead it locally on your computer by cloning the GitHub repository"
-  },
-  {
-    "objectID": "docs/contributing.html#editing-the-handbook",
-    "href": "docs/contributing.html#editing-the-handbook",
-    "title": "Contributing to the Handbook",
-    "section": "Editing the Handbook",
-    "text": "Editing the Handbook\nAll IPA staff should feel empowered to edit this handbook. There are a few ways to edit the handbook.\nA typical workflow to edit the handbook is the following:\n\nMake edits.\nCommit changes to this repository.\nCreate a pull request, assign reviewers.\nApply reviewers’ suggestions, if any.\nMerge all changes to the main branch of the repository\n\nYou can contribute to this Handbook in a number of ways:\n\nFile an Issue on GitHub with recommended additions or edits.\nEdit pages of the Handbook on GitHub by clicking on the “Edit this page” link on any page of the Handbook.\n\n\n\n\nHandbook\n\n\n\nA little bit of Markdown\nMost of the handbook relies on Markdown as the computer language for writing content. In order to edit the handbook, it is helpful to have a basic understanding of Markdown, which is the main format in which this handbook’s content is written.\nUse the existing content of this handbook’s ipa-data-tech-handbook/docs folder as a reference for how to write in Markdown.\nThe following resources are helpful for getting to know the basics of Markdown:\n\nGitHub - Basic writing and formatting syntax\nGitHub - Working with advanced formatting\nGitHub Skills: Communicate using Markdown\nQuarto’s Guide to Markdown\nMarkdown Guide Cheat Sheet\n\n\n\nUse the GitHub browser interface to edit the handbook\nThe easiest way to edit the handbook is to use the GitHub Web IDE. Go to https://github.com/PovertyAction/ipa-data-tech-handbook/docs/ and click on the file you want to edit. Then click on the pencil icon in the top right corner of the file to start editing.\n\n\n\nEdit on GitHub\n\n\n\n\nUse the GitHub IDE to edit the handbook\nAnother option that GitHub provides is to edit the handbook documents using a Web-based integrated development environment (IDE).\n\n\n\nEdit with GitHub IDE\n\n\n\n\nModify the handbook locally\nNote that building the handbook from source code requires the following to be installed on your local computer (see Computer Setup for more information about software installation):\n\nwinget (Windows) or homebrew (MacOS/Linux) for package management and installation\ngit for source control management\njust for running common command line patterns\nrye for installing Python and managing virtual environments\n\nFirst, clone this repository to your local computer either via GitHub Desktop:\n\n\n\nClone Repository via GitHub Desktop\n\n\nor from the command line:\n# If using HTTPS\ngit clone https://github.com/PovertyAction/ipa-data-tech-handbook.git\n\n# If using SSH\ngit clone git@github.com:PovertyAction/ipa-data-tech-handbook.git\nThis repository uses a Justfile for collecting common command line actions that we run to set up the computing environment and build the assets of the handbook. Note that you should also have Git installed\nTo get started, make sure you have Just installed on your computer by running the following from the command line:\n\n\n\n\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Git.Git Casey.Just Rye.Rye GitHub.cli Posit.Quarto\n\n\nMac/Linux\nbrew install just rye gh\n\n\n\nThis will make sure that you have the latest version of Just, as well as Rye (installer for Python) and Quarto (for writing and compiling scientific and technical documents).\n\nWe use Just in order to make it easier for all IPA users to be productive with data and technology systems. The goal of using a Justfile is to help make the end goal of the user easier to achieve without needing to know or remember all of the technical details of how we get to that goal.\nWe use Rye to help ease use of Python. Rye provides a global system for creating and building computing environments for Python.\nWe use Quarto to allow users to focus on writing and data analytics. Writing in markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to review, update, and deploy technical documentation.\n\nAs a shortcut, if you already have Just installed, you can run the following to install required software and build a python virtual environment that is used to build the handbook pages:\njust get-started\nNote: you may need to restart your terminal after running the command above to activate the installed software.\nAfter the required software is installed, you can activate the Python virtual environment:\n\n\n\nShell\nCommands\n\n\n\n\nBash\n.venv/Scripts/activate\n\n\nPowershell\n.venv/Scripts/activate.ps1\n\n\nNushell\noverlay use .venv/Scripts/activate.nu"
-  },
-  {
-    "objectID": "docs/contributing.html#preview-the-handbook",
-    "href": "docs/contributing.html#preview-the-handbook",
-    "title": "Contributing to the Handbook",
-    "section": "Preview the handbook",
-    "text": "Preview the handbook\nTo build a version of the Handbook so that you can read it on your computer, run the following from a Terminal. Make sure that you are working from the root folder of this Git Repository:\njust preview-docs\nThe command line above references the ipa-data-tech-handbook/_quarto.yml file and creates the .html files for the handbook then launches a browser window with a local server of the handbook at http://localhost:3434/docs."
-  },
-  {
     "objectID": "docs/teams/dse.html",
     "href": "docs/teams/dse.html",
     "title": "Data Science and Engineering",
@@ -595,17 +483,164 @@
     "text": "Data Infrastructure\nDSE develops and maintains approaches to data that allow for greater efficiency in learning from IPA’s research and operational data. For this DSE partners closely with the GRDS and MIST teams.\n\nData Science and Machine Learning Capacity\nDSE works to establish an industry-leading and persistent capacity to apply methods from machine learning, causal inference, and data visualization to further IPA’s mission to discover and advance what works to improve the lives of people living in poverty.\n\n\nData Products and Services\nDSE supports the development of data applications and products that support decision-making within IPA’s programs and external partners.\n\n\nExternal Engagement\nDSE strives elevate IPA’s global profile to support evidence based policy through data insights and ethics in machine learning and artificial intelligence for development."
   },
   {
-    "objectID": "docs/teams/mist.html",
-    "href": "docs/teams/mist.html",
-    "title": "Management and Information Systems Team",
+    "objectID": "docs/teams/grds.html",
+    "href": "docs/teams/grds.html",
+    "title": "Global Research and Data Support",
     "section": "",
-    "text": "The Global Management and Information System Team (MIST) support all IPA staff with any technology-related needs including but not limited to:\nFor technology support, email: support@poverty-action.org"
+    "text": "IPA’s Global Research and Data Support team is known as “GRDS”, pronounced like “guards.”\nOur team does three main things to support IPA’s hundreds of research projects around the world:\nSee the GRDS Team Portal for more details about GRDS.\nresearch support, email: researchsupport@poverty-action.org"
   },
   {
-    "objectID": "docs/teams/mist.html#additional-resources",
-    "href": "docs/teams/mist.html#additional-resources",
-    "title": "Management and Information Systems Team",
+    "objectID": "docs/teams/grds.html#additional-resources",
+    "href": "docs/teams/grds.html#additional-resources",
+    "title": "Global Research and Data Support",
     "section": "Additional Resources",
-    "text": "Additional Resources\n\nMIST Resources on Box\nGlobal Help Desk"
+    "text": "Additional Resources\n\nGRDS Resources on Box\nGlobal Help Desk"
+  },
+  {
+    "objectID": "docs/software/justfile.html",
+    "href": "docs/software/justfile.html",
+    "title": "Justfile",
+    "section": "",
+    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
+  },
+  {
+    "objectID": "docs/software/justfile.html#what-is-a-justfile",
+    "href": "docs/software/justfile.html#what-is-a-justfile",
+    "title": "Justfile",
+    "section": "",
+    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
+  },
+  {
+    "objectID": "docs/software/justfile.html#how-to-install-just",
+    "href": "docs/software/justfile.html#how-to-install-just",
+    "title": "Justfile",
+    "section": "How to install Just?",
+    "text": "How to install Just?\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Casey.Just\n\n\nMacOS\nbrew install just\n\n\nLinux\nbrew install just"
+  },
+  {
+    "objectID": "docs/software/justfile.html#learning-resources",
+    "href": "docs/software/justfile.html#learning-resources",
+    "title": "Justfile",
+    "section": "Learning Resources",
+    "text": "Learning Resources\n\nJust Documentation\nUsing the just Task Runner"
+  },
+  {
+    "objectID": "docs/software/vscode.html",
+    "href": "docs/software/vscode.html",
+    "title": "Visual Studio Code",
+    "section": "",
+    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+  },
+  {
+    "objectID": "docs/software/vscode.html#what-is-visual-studio-code",
+    "href": "docs/software/vscode.html#what-is-visual-studio-code",
+    "title": "Visual Studio Code",
+    "section": "",
+    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions."
+  },
+  {
+    "objectID": "docs/software/vscode.html#how-to-install-vs-code",
+    "href": "docs/software/vscode.html#how-to-install-vs-code",
+    "title": "Visual Studio Code",
+    "section": "How to Install VS Code?",
+    "text": "How to Install VS Code?\nTo install VS Code, download and install the latest software version from the Visual Studio Code website or run the following from the command line if you have the Windows Package Manager, winget, installed:\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install Microsoft.VisualStudioCode\n\n\nMacOS\nbrew install --cask visual-studio-code\n\n\nLinux\nsudo snap install code --classic"
+  },
+  {
+    "objectID": "docs/software/vscode.html#using-vs-code",
+    "href": "docs/software/vscode.html#using-vs-code",
+    "title": "Visual Studio Code",
+    "section": "Using VS Code",
+    "text": "Using VS Code\nThe best starting point for familiarizing yourself with VS Code is the documentation.\nSome particularly helpful references in the documentation are:\n\nEditing with VS Code\nGit Source control in VS Code\nPython in VS Code"
+  },
+  {
+    "objectID": "docs/software/vscode.html#recommended-extensions",
+    "href": "docs/software/vscode.html#recommended-extensions",
+    "title": "Visual Studio Code",
+    "section": "Recommended Extensions",
+    "text": "Recommended Extensions\nThe core software and functionality in VS Code gives you a lot of useful tools for writing, editing, and collaborating. Additionally, you can add functionality through Extensions.\nSome helpful extensions are the following:\n\nPython Extension - language syntax for Python programming\nRuff - Python linting and code formatting\nR Extension - Interacting with R from VS Code\nGitHub Pull Requests - review and manage GitHub pull requests and issues in Visual Studio Code\nJupyter Extension - for developing with jupyter notebooks\nJust - support for Justfiles\nQuarto Extension - support for writing and building Quarto projects\nMarkdown All in One - support for Markdown\nMarkdown Preview Mermaid Support - support for Mermaid diagrams in Markdown\nConventional Commits - support for writing easy to understand commit messages"
+  },
+  {
+    "objectID": "docs/software/python.html",
+    "href": "docs/software/python.html",
+    "title": "Python",
+    "section": "",
+    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
+  },
+  {
+    "objectID": "docs/software/python.html#what-is-python",
+    "href": "docs/software/python.html#what-is-python",
+    "title": "Python",
+    "section": "",
+    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications."
+  },
+  {
+    "objectID": "docs/software/python.html#how-to-install-python",
+    "href": "docs/software/python.html#how-to-install-python",
+    "title": "Python",
+    "section": "How to install Python?",
+    "text": "How to install Python?\nThere are many ways to install Python. We recommend using Python in a virtual environment to avoid conflicts with other Python installations on your system.\nWe recommend using a rye or pixi. Both of these tools provide a simple way to create and manage Python virtual environments.\nIn both cases, you can manage the python packages that are installed in the virtual environment using a pyproject.toml file. See the pyproject.toml example in this repository for an example of how to manage Python packages. To add package dependencies to the virtual environment, using rye, you can run:\nWe’ll use rye to demonstrate how to manage a Python virtual environment. Watch the following video for a quick introduction to rye:\n{{&lt; video https://youtu.be/q99TYA7LnuA &gt;}}\nFirst, install rye using winget (Windows) or brew (MacOS/Linux):\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install rye\n\n\nMacOS\nbrew install rye\n\n\nLinux\nbrew install rye\n\n\n\nAdd libraries to the virtual environment using rye add ...:\n\n&gt; rye add jupyterlab pandas matplotlib seaborn"
+  },
+  {
+    "objectID": "docs/software/python.html#coding-conventions",
+    "href": "docs/software/python.html#coding-conventions",
+    "title": "Python",
+    "section": "Coding Conventions",
+    "text": "Coding Conventions\nWe highly recommend working with a virtual environment to manage Python dependencies. The pyproject.toml is the preferred way to keep track of python dependencies as well as project-specific python conventions.\nWe recommend using Ruff to enforce linting and formatting rules. In most cases you can use the default linting and formatting rules provided by ruff. However, you can customize the rules by modifying the [tool.ruff] section of the pyproject.toml file in the root of your project. for more about the configuration options, see the Ruff documentation.\nIf you are working in a virtual environment created by rye, you automatically have access to Ruff viarye lintandrye fmt` commands to lint and format your code.\nFor more inspiration, see the GitLab Data Team’s Python Guide and Google’s Python Style Guide."
+  },
+  {
+    "objectID": "docs/software/python.html#example-usage",
+    "href": "docs/software/python.html#example-usage",
+    "title": "Python",
+    "section": "Example Usage",
+    "text": "Example Usage\nLet’s load an example World Bank data via Gapminder using the causaldata package.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport statsmodels.formula.api as sm\nfrom causaldata import gapminder\n\nLoad the Gapminder data as a pandas DataFrame:\n\ndf = gapminder.load_pandas().data\n\nWe can check the dimensions of the DataFrame using df.info():\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 1704 entries, 0 to 1703\nData columns (total 6 columns):\n #   Column     Non-Null Count  Dtype  \n---  ------     --------------  -----  \n 0   country    1704 non-null   object \n 1   continent  1704 non-null   object \n 2   year       1704 non-null   int64  \n 3   lifeExp    1704 non-null   float64\n 4   pop        1704 non-null   int64  \n 5   gdpPercap  1704 non-null   float64\ndtypes: float64(2), int64(2), object(2)\nmemory usage: 80.0+ KB\n\n\nLet’s take a look at the first few rows of the DataFrame using df.head():\n\ndf.head()\n\n\n\n\n\n\n\n\ncountry\ncontinent\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\n0\nAfghanistan\nAsia\n1952\n28.801\n8425333\n779.445314\n\n\n1\nAfghanistan\nAsia\n1957\n30.332\n9240934\n820.853030\n\n\n2\nAfghanistan\nAsia\n1962\n31.997\n10267083\n853.100710\n\n\n3\nAfghanistan\nAsia\n1967\n34.020\n11537966\n836.197138\n\n\n4\nAfghanistan\nAsia\n1972\n36.088\n13079460\n739.981106\n\n\n\n\n\n\n\nTake a look at the relationship between GDP per Capita and Life Expectancy:\n\nsns.scatterplot(x=\"gdpPercap\", y=\"lifeExp\", hue=\"continent\", data=df).set(\n    xscale=\"log\", ylabel=\"Life Expectancy\", xlabel=\"GDP per Capita\"\n)\n\n\n\n\n\n\n\n\nSeparate the data by year, focusing on 1957 and 2007:\n\nsns.relplot(\n    data=df.where(df[\"year\"].isin([1957, 2007])),\n    x=\"gdpPercap\",\n    y=\"lifeExp\",\n    col=\"year\",\n    hue=\"continent\",\n    col_wrap=1,\n    kind=\"scatter\",\n    palette=\"muted\",\n).set(xscale=\"log\", ylabel=\"Life Expectancy\", xlabel=\"GDP per Capita\")"
+  },
+  {
+    "objectID": "docs/software/python.html#learning-resources",
+    "href": "docs/software/python.html#learning-resources",
+    "title": "Python",
+    "section": "Learning Resources",
+    "text": "Learning Resources\n\nThe Python Tutorial\nPython Data Science Handbook\nEfficient Python for Data Scientists\nThe Hitchhiker’s Guide to Python"
+  },
+  {
+    "objectID": "docs/software/github.html",
+    "href": "docs/software/github.html",
+    "title": "GitHub",
+    "section": "",
+    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
+  },
+  {
+    "objectID": "docs/software/github.html#what-is-github",
+    "href": "docs/software/github.html#what-is-github",
+    "title": "GitHub",
+    "section": "",
+    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer."
+  },
+  {
+    "objectID": "docs/software/github.html#how-to-install-github-software",
+    "href": "docs/software/github.html#how-to-install-github-software",
+    "title": "GitHub",
+    "section": "How to install GitHub Software?",
+    "text": "How to install GitHub Software?\nThere are two main options to consider for interacting with GitHub from your local computer:\n\nGitHub Desktop (Recommended)- GUI for working with Git repositories.\nGitHub CLI - Command-line interface for working with Git repositories. For advanced usage.\n\nIf you are new to Git or prefer working with a graphical user interface (GUI), we recommend that you start with GitHub Desktop. The Desktop interface provides a more transparent way of understanding source control and interacting with remote code repositories on GitHub.\n\nGitHub Desktop\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install GitHub.GithubDesktop\n\n\nMacOS\nbrew install --cask github\n\n\nLinux\nNot available\n\n\n\n\n\nGitHub CLI\n\n\n\nPlatform\nCommands\n\n\n\n\nWindows\nwinget install GitHub.cli\n\n\nMacOS\nbrew install gh\n\n\nLinux\nbrew install gh"
+  },
+  {
+    "objectID": "docs/software/github.html#authenticating-github",
+    "href": "docs/software/github.html#authenticating-github",
+    "title": "GitHub",
+    "section": "Authenticating GitHub",
+    "text": "Authenticating GitHub\n\nGitHub Desktop\nSee instructions here for getting started with GitHub Desktop.\nIn the File menu, select “Options” and then in the “Accounts” options select “Sign in to GitHub.com” and “Continue with browser” to authenticate with your GitHub account.\n\n\n\nGitHub Desktop Authentication\n\n\n\n\nGitHub CLI\nSee the GitHub CLI Manual for more information on how to authenticate with GitHub CLI.\nTo authenticate with GitHub CLI, run the following command in your terminal:\ngh auth login\nThen walk through the prompts:\n\nWhat account do you want to log into? GitHub.com\nWhat is your preferred protocol for Git operations on this host? HTTPS\nAuthenticate Git with your GitHub credentials? (Y/n) Y\nHow would you like to authenticate GitHub CLI? Login with a web browser"
+  },
+  {
+    "objectID": "docs/software/github.html#using-github",
+    "href": "docs/software/github.html#using-github",
+    "title": "GitHub",
+    "section": "Using GitHub",
+    "text": "Using GitHub\nWithin a GitHub repository, there are four main aspects that you should be familiar with:\n\nCode: The files and directories that make up your project.\nIssues: A place to discuss and track tasks, bugs, and enhancements for a project.\nPull Requests: A way to propose changes to a repository and discuss them with others.\n\n\n\n\nGitHub Repository Aspects\n\n\nIn the Code section of a GitHub repository, you can view the files that make up the project codebase. We work with Branches to manage different versions of the codebase. The main branch is the default branch that GitHub uses for the codebase. When you want to make changes to the codebase, you create a new branch from the main branch, make your changes, and then create a Pull Request to merge your changes back into the main branch.\nFor planning changes to the codebase, you can use Issues to track tasks, bugs, and enhancements. Issues can be assigned to team members, labeled, and linked to Pull Requests. Issues can also be used to discuss changes to the codebase before making them."
+  },
+  {
+    "objectID": "docs/software/github.html#learning-resources",
+    "href": "docs/software/github.html#learning-resources",
+    "title": "GitHub",
+    "section": "Learning Resources",
+    "text": "Learning Resources\n\nGitHub Skills provides a lot of relevant resources for learning how to use GitHub. Some good starting points include:\n\nIntroduction to Github\nReview Pull Requests\n\nGitHub Foundations Certificate"
   }
 ]
