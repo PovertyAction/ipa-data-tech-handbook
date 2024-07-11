@@ -39,6 +39,8 @@ website:
           text: Code Review
         - href: ./docs/guides/pre_commit_hooks.md
           text: pre-commit
+        - href: ./docs/guides/mdtestguide.md
+          text: Test Label
 
       - text: Software
         menu:
