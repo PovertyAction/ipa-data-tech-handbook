@@ -24,7 +24,7 @@ jobs:
 
       - name: Set up Rye
         id: setup-rye
-        uses: eifinger/setup-rye@v3
+        uses: eifinger/setup-rye@v4
         with:
           enable-cache: false
 
