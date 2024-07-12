@@ -308,20 +308,6 @@
     "text": "Learning Resources\n\nPre-commit documentation"
   },
   {
-    "objectID": "docs/index.html",
-    "href": "docs/index.html",
-    "title": "IPA Data Science, Engineering, and Technology Handbook",
-    "section": "",
-    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
-  },
-  {
-    "objectID": "docs/index.html#about-the-handbook",
-    "href": "docs/index.html#about-the-handbook",
-    "title": "IPA Data Science, Engineering, and Technology Handbook",
-    "section": "",
-    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
-  },
-  {
     "objectID": "docs/methods/references.html",
     "href": "docs/methods/references.html",
     "title": "Analytical and Computational Methods References",
@@ -350,39 +336,18 @@
     "text": "Generative AI & Large Language Models\n\nLange Language Model Course, by Maxime Labonne\nPractical Deep Learning\nGenerative AI for Beginners\nApplied LLMs - Read “What We’ve Learned From A Year of Building with LLMs”\nGenerative AI Handbook, by William Brown"
   },
   {
-    "objectID": "docs/guides/mdtestguide.html",
-    "href": "docs/guides/mdtestguide.html",
-    "title": "Virtual Environments",
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "IPA Data Science, Engineering, and Technology Handbook",
     "section": "",
-    "text": "We encourage the use of virtual environments when working on shared projects. Virtual environments allow you to create an isolated environment for your project, which can help prevent conflicts between different projects that may require different versions of the same package."
+    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
   },
   {
-    "objectID": "docs/guides/mdtestguide.html#python-virtual-environments",
-    "href": "docs/guides/mdtestguide.html#python-virtual-environments",
-    "title": "Virtual Environments",
-    "section": "Python Virtual Environments",
-    "text": "Python Virtual Environments\nWe recommend using rye to manage Python virtual environments as it provides an overarching framework for managing Python installations and virtual environments. See information on rye in the Rye documentation.\nAnother option for managing virtual environments is to use pixi. See information on pixi in the Pixi documentation."
-  },
-  {
-    "objectID": "docs/guides/mdtestguide.html#r-virtual-environments",
-    "href": "docs/guides/mdtestguide.html#r-virtual-environments",
-    "title": "Virtual Environments",
-    "section": "R Virtual Environments",
-    "text": "R Virtual Environments\nR virtual environments can be created using the renv package. See documentation for more information about how to use renv."
-  },
-  {
-    "objectID": "docs/guides/mdtestguide.html#docker",
-    "href": "docs/guides/mdtestguide.html#docker",
-    "title": "Virtual Environments",
-    "section": "Docker",
-    "text": "Docker\nDocker is a tool that allows you to create, deploy, and run applications using containers. In some instances, it may be more appropriate to use Docker containers to manage your project environment, especially when there is a project environment that needs to be deployed to cloud computing services."
-  },
-  {
-    "objectID": "docs/guides/mdtestguide.html#learning-resources",
-    "href": "docs/guides/mdtestguide.html#learning-resources",
-    "title": "Virtual Environments",
-    "section": "Learning Resources",
-    "text": "Learning Resources\n\nA Complete Guide to Python Virtual Environments\nReal Python, Python Virtual Environments\nPython Virtual Environments\nR Virtual Environments"
+    "objectID": "docs/index.html#about-the-handbook",
+    "href": "docs/index.html#about-the-handbook",
+    "title": "IPA Data Science, Engineering, and Technology Handbook",
+    "section": "",
+    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook."
   },
   {
     "objectID": "docs/guides/computer_setup.html",
