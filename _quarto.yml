@@ -100,19 +100,19 @@ website:
           - href: ./docs/teams/ppi.md
             text: PPI
 
+    right:
       # - text: Blog
       #   href: ./docs/blog/index.qmd
-
-      - href: ./docs/contributing.md
-        text: Contributing
+      - text: Contributing
+        href: ./docs/contributing.md
 
     tools:
-      - icon: twitter
-        href: https://twitter.com/poverty_action
-        aria-label: IPA Twitter
       - icon: github
         href: https://github.com/povertyaction
         aria-label: IPA GitHub
+      - icon: twitter
+        href: https://twitter.com/poverty_action
+        aria-label: IPA Twitter
       # - icon: rss
         # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
         # aria-label: IPA Blog RSS
