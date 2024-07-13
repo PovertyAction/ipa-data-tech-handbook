@@ -80,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
+  "limit": 20,
   "keyboard-shortcut": [
     "f",
     "/",
@@ -124,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../docs/index.html"> 
 <span class="menu-text">Home</span></a>
@@ -133,7 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guides" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Guides</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-guides">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-guides">    
         <li>
     <a class="dropdown-item" href="../docs/guides/computer_setup.html">
  <span class="dropdown-text">Computer Setup</span></a>
@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="../docs/guides/pre_commit_hooks.html">
- <span class="dropdown-text">pre-commit</span></a>
+ <span class="dropdown-text">Pre-commit Hooks</span></a>
   </li>  
     </ul>
   </li>
@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-software" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Software</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-software">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-software">    
         <li>
     <a class="dropdown-item" href="../docs/software/git.html">
  <span class="dropdown-text">Git</span></a>
@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-methods" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Methods</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-methods">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-methods">    
         <li>
     <a class="dropdown-item" href="../docs/methods/references.html">
  <span class="dropdown-text">References</span></a>
@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teams" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Teams</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-teams">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teams">    
         <li>
     <a class="dropdown-item" href="../docs/teams/dse.html">
  <span class="dropdown-text">DSE</span></a>
@@ -232,14 +232,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
+    <a href="https://twitter.com/poverty_action" title="" class="quarto-navigation-tool px-1" aria-label="IPA Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/povertyaction" title="" class="quarto-navigation-tool px-1" aria-label="IPA GitHub"><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <div id="quarto-announcement" data-announcement-id="5fe417821c5ccbbc55c096c218849f5c" class="alert alert-warning hidden"><i class="bi bi-cone-striped quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Welcome!</strong> - This handbook is an early draft and prototype. Content, pages, and the site are subject to change.</p>
+</div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -247,40 +247,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#how-to-use-the-handbook" id="toc-how-to-use-the-handbook" class="nav-link active" data-scroll-target="#how-to-use-the-handbook">How to use the Handbook</a></li>
-  <li><a href="#reading-the-handbook" id="toc-reading-the-handbook" class="nav-link" data-scroll-target="#reading-the-handbook">Reading the Handbook</a></li>
-  <li><a href="#editing-the-handbook" id="toc-editing-the-handbook" class="nav-link" data-scroll-target="#editing-the-handbook">Editing the Handbook</a>
-  <ul class="collapse">
-  <li><a href="#a-little-bit-of-markdown" id="toc-a-little-bit-of-markdown" class="nav-link" data-scroll-target="#a-little-bit-of-markdown">A little bit of Markdown</a></li>
-  <li><a href="#use-the-github-browser-interface-to-edit-the-handbook" id="toc-use-the-github-browser-interface-to-edit-the-handbook" class="nav-link" data-scroll-target="#use-the-github-browser-interface-to-edit-the-handbook">Use the GitHub browser interface to edit the handbook</a></li>
-  <li><a href="#use-the-github-ide-to-edit-the-handbook" id="toc-use-the-github-ide-to-edit-the-handbook" class="nav-link" data-scroll-target="#use-the-github-ide-to-edit-the-handbook">Use the GitHub IDE to edit the handbook</a></li>
-  <li><a href="#modify-the-handbook-locally" id="toc-modify-the-handbook-locally" class="nav-link" data-scroll-target="#modify-the-handbook-locally">Modify the handbook locally</a></li>
-  </ul></li>
-  <li><a href="#preview-the-handbook" id="toc-preview-the-handbook" class="nav-link" data-scroll-target="#preview-the-handbook">Preview the handbook</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/contributing.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+        <h2 id="toc-title">On this page</h2>
+        <ul>
+        <li><a href="#how-to-use-the-handbook" id="toc-how-to-use-the-handbook" class="nav-link active" data-scroll-target="#how-to-use-the-handbook">How to use the Handbook</a></li>
+        <li><a href="#reading-the-handbook" id="toc-reading-the-handbook" class="nav-link" data-scroll-target="#reading-the-handbook">Reading the Handbook</a></li>
+        <li><a href="#editing-the-handbook" id="toc-editing-the-handbook" class="nav-link" data-scroll-target="#editing-the-handbook">Editing the Handbook</a>
+        <ul class="collapse">
+        <li><a href="#a-little-bit-of-markdown" id="toc-a-little-bit-of-markdown" class="nav-link" data-scroll-target="#a-little-bit-of-markdown">A little bit of Markdown</a></li>
+        <li><a href="#use-the-github-browser-interface-to-edit-the-handbook" id="toc-use-the-github-browser-interface-to-edit-the-handbook" class="nav-link" data-scroll-target="#use-the-github-browser-interface-to-edit-the-handbook">Use the GitHub browser interface to edit the handbook</a></li>
+        <li><a href="#use-the-github-ide-to-edit-the-handbook" id="toc-use-the-github-ide-to-edit-the-handbook" class="nav-link" data-scroll-target="#use-the-github-ide-to-edit-the-handbook">Use the GitHub IDE to edit the handbook</a></li>
+        <li><a href="#modify-the-handbook-locally" id="toc-modify-the-handbook-locally" class="nav-link" data-scroll-target="#modify-the-handbook-locally">Modify the handbook locally</a></li>
+        </ul></li>
+        <li><a href="#preview-the-handbook" id="toc-preview-the-handbook" class="nav-link" data-scroll-target="#preview-the-handbook">Preview the handbook</a></li>
+        </ul>
+        <hr>
+    <h2 class="anchored">Maintainers</h2>
+    <ul>
+                <li class="editor"><a href="https://poverty-action.org/people/niall-keleher" class="nav-link" data-scroll-target="https\://poverty-action.org/people/niall-keleher">Niall Keleher</a></li>
+          </ul>
+    <hr>
+          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/docs/contributing.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Contributing to the Handbook</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
+<header id="title-block-header">
+<h1 class="title display-7">Contributing to the Handbook</h1>
+<!--  -->
 
 </header>
 
@@ -870,13 +863,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Brought to you by <a href="https://poverty-action.org"><img src="./docs/assets/images/IPA-primary-color-RGB.png" class="img-fluid" alt="IPA" width="65"></a></p>
+<p>Brought to you by <a href="https://poverty-action.org"><img src="../../docs/assets/images/IPA-primary-color-RGB.png" class="img-fluid" alt="IPA" width="65"></a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/dse_handbook/edit/main/docs/contributing.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/dse_handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/docs/contributing.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/poverty_action">
+      <i class="bi bi-twitter" role="img" aria-label="IPA Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/PovertyAction/ipa-data-tech-handbook">
+      <i class="bi bi-github" role="img" aria-label="IPA GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>
