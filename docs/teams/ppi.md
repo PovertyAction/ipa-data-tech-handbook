@@ -1,5 +1,13 @@
 ---
 title: Poverty Probability Index
+# Editors are the "Maintainers" of the page
+# editors:
+#   - "[Niall Keleher](https://poverty-action.org/people/niall-keleher)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+# author:
+#   - Niall Keleher
 ---
 
 The Poverty Probability Index (PPI®) is a poverty measurement tool for organizations and

@@ -1,7 +1,15 @@
 ---
 title: Computer Setup
+editors:
+  - "[Niall Keleher](https://poverty-action.org/people/niall-keleher)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+# author:
+#   - Niall Keleher
 execute:
   eval: false
+# Editors are the "Maintainers" of the page
 ---
 
 This page is meant to help guide you in setting up your laptop with common software used
@@ -228,5 +236,5 @@ brew install --cask quarto
 # download and install from https://quarto.org/docs/get-started/
 ```
 
-See the [Quarto](../software/quarto.md) section of the handbook for more information on
+See the [Quarto](../software/quarto.qmd) section of the handbook for more information on
 using Quarto.

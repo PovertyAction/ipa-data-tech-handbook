@@ -1,10 +1,10 @@
 ---
-title: IPA Data Science, Engineering, and Technology Handbook
+title: IPA Data and Technology Handbook
 ---
 
 ## About the Handbook
 
-Welcome to IPA's Handbook for Data Science, Engineering, and Technology!
+Welcome to IPA's Handbook for Data and Technology!
 
 This handbook is intended as a living document to assist IPA staff and collaborators
 with common practices for writing code and working with data. The handbook will never be

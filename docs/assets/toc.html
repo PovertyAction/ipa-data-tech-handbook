@@ -1,0 +1,25 @@
+<nav id="$idprefix$TOC" role="doc-toc">
+    $if(toc-title)$
+    <h2 id="$idprefix$toc-title">$toc-title$</h2>
+    $endif$
+    $table-of-contents$
+    $if(editors)$
+    <hr>
+    <h2>Maintainers</h2>
+    <ul>
+      $for(editors)$
+          <li class="editor">$editors$</li>
+      $endfor$
+    </ul>
+    <hr>
+    $endif$
+    $if(author)$
+    <h2>Contributors</h2>
+    <ul>
+      $for(author)$
+          <li class="author">$author$</li>
+      $endfor$
+    </ul>
+    <hr>
+    $endif$
+  </nav>

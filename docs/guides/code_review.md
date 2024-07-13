@@ -1,5 +1,14 @@
 ---
 title: Code Reviews & Pull Requests
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Niall Keleher](https://poverty-action.org/people/niall-keleher)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+# author:
+#   - Niall Keleher
 ---
 
 We use code reviews to ensure that code is well-written, well-documented, and follows
@@ -33,7 +42,7 @@ Recommended reading:
 - Remember that you are here to provide feedback, not to be a gatekeeper.
 
 Above is modified from
-[Thoughtbot Cod Review Guidelines](https://github.com/thoughtbot/guides/tree/main/code-review)
+[Thoughtbot Code Review Guidelines](https://github.com/thoughtbot/guides/tree/main/code-review)
 
 ## Use Templates for Pull Requests
 

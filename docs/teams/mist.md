@@ -1,5 +1,13 @@
 ---
 title: Management and Information Systems Team
+# Editors are the "Maintainers" of the page
+# editors:
+#   - "[Niall Keleher](https://poverty-action.org/people/niall-keleher)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+# author:
+#   - Niall Keleher
 ---
 
 The Global Management and Information System Team (MIST) support all IPA staff with any
