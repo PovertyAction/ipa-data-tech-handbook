@@ -106,13 +106,13 @@ website:
       - text: Contributing
         href: ./docs/contributing.md
 
-    tools:
-      - icon: github
-        href: https://github.com/povertyaction
-        aria-label: IPA GitHub
-      - icon: twitter
-        href: https://twitter.com/poverty_action
-        aria-label: IPA Twitter
+    # tools:
+    #   - icon: github
+    #     href: https://github.com/povertyaction
+    #     aria-label: IPA GitHub
+    #   - icon: twitter
+    #     href: https://twitter.com/poverty_action
+    #     aria-label: IPA Twitter
       # - icon: rss
         # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
         # aria-label: IPA Blog RSS
