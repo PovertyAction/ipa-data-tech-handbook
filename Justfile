@@ -1,10 +1,11 @@
 # Set the shell to use
 # set shell := ["nu", "-c"]
-
 # Set shell for Windows
+
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 # Set path to virtual environment's python
+
 python_dir := ".venv/Scripts"
 python := python_dir + if os_family() == "windows" { "/python.exe" } else { "/python3" }
 
@@ -19,11 +20,12 @@ system-info:
 get-started: pre-install venv
 
 # sync python virtual environment with requirements.lock
-venv:
+sync:
     rye sync
-    rye run pre-commit install
 
-# Preview the handbook
+venv: sync
+    rye run pre-commit install# Preview the handbook
+
 preview-docs:
     quarto preview
 
@@ -34,6 +36,7 @@ build-docs:
 # Lint python code
 lint-py:
     rye lint
+
 # Format python code
 fmt-py:
     rye fmt
@@ -48,7 +51,7 @@ fmt-markdown:
 
 # Format a single markdown file, "f"
 fmt-md f:
-    rye run mdformat {{f}}
+    rye run mdformat {{ f }}
 
 # Check format of all markdown files
 fmt-check-markdown:
@@ -62,10 +65,10 @@ pre-install:
 
 [linux]
 pre-install:
-    quarto_version :=  "1.4.554"
+    quarto_version :=  "1.5.54"
     brew install just rye gh
-    curl -sfL https://github.com/quarto-dev/quarto-cli/releases/download/v{{quarto_version}}/quarto-{{quarto_version}}-linux-amd64.deb  | sudo apt install ./quarto-{{quarto_version}}-linux-amd64.deb
-    rm quarto-{{quarto_version}}-linux-amd64.deb
+    curl -sfL https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.54/quarto-1.5.54-linux-amd64.deb  | sudo apt install ./quarto-1.5.54-linux-amd64.deb
+    rm quarto-1.5.54-linux-amd64.deb
 
 [macos]
 pre-install:
