@@ -45,66 +45,50 @@ website:
       # - icon: rss
         # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
         # aria-label: IPA Blog RSS
-  navbar:
+  sidebar:
     background: '#155240'
     foreground: '#ffffff'
     logo: ./docs/assets/images/IPA-primary-white-abbreviated.png
-    collapse: true
-    left:
+    collapse-level: 1
+    search: true
+    style: "floating"
+    contents:
       - href: ./docs/index.md
         text: Home
 
-      - text: Guides
-        menu:
-        - href: ./docs/guides/computer_setup.md
-          text: Computer Setup
-        - href: ./docs/guides/venv.md
-          text: Virtual Environments
-        - href: ./docs/guides/code_review.md
-          text: Code Review
-        - href: ./docs/guides/pre_commit_hooks.md
-          text: Pre-commit Hooks
+      - section: About
+        contents:
+        - href: ./docs/about/foundations.md
+          text: Foundations
+        - href: ./docs/about/mmds.md
+          text: Minimum Must Dos
+        - href: ./docs/about/ipa_researchers.md
+          text: For IPA Researchers
+        - href: ./docs/about/ipa_staff.md
+          text: For IPA staff
 
-      - text: Software
-        menu:
-          - href: ./docs/software/git.md
-            text: Git
-          - href: ./docs/software/github.md
-            text: GitHub
-          - href: ./docs/software/justfile.md
-            text: Justfile
-          - href: ./docs/software/vscode.md
-            text: VS Code
-          - href: ./docs/software/quarto.qmd
-            text: Quarto
-          - href: ./docs/software/python.qmd
-            text: Python
-          - href: ./docs/software/stata.qmd
+      - section: Software Guides
+        contents:
+          - href: ./docs/software/coding_best_practices.md
+            text: Coding Best Practices
+          - href: ./docs/software/surveycto.md
+            section: SurveyCTO
+            contents: 
+              - href: ./docs/software/surveycto/scto_best_practices.md
+                text: "SurveyCTO: Best Practices"
+              - href: ./docs/software/surveycto/scto_ipa_tools.md
+                text: "SurveyCTO: IPA Tools"
+
+          - href: ./docs/software/Stata.md
             text: Stata
-          - href: ./docs/software/sql.qmd
-            text: SQL
+          - href: ./docs/software/ml.md
+            text: Machine Learning
 
-      - text: Methods
-        menu:
-          - href: ./docs/methods/references.md
-            text: References
-
-      - text: Teams
-        menu:
-          - href: ./docs/teams/dse.md
-            text: DSE
-          - href: ./docs/teams/grds.md
-            text: GRDS
-          - href: ./docs/teams/mist.md
-            text: MIST
-          - href: ./docs/teams/ppi.md
-            text: PPI
-
-    right:
+#    right:
       # - text: Blog
       #   href: ./docs/blog/index.qmd
-      - text: Contributing
-        href: ./docs/contributing.md
+#     - text: Contributing
+#      href: ./docs/contributing.md
 
     # tools:
     #   - icon: github
@@ -126,7 +110,8 @@ format:
       - ./docs/assets/title-block.html
       - ./docs/assets/toc.html
     title-block-banner: false
-    css: ./docs/assets/style_ipa.css
+    # css: ./docs/assets/style_ipa.css
+    theme: cosmo
     toc: true
     code-background: true
     code-copy: true
