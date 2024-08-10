@@ -1,3 +1,4 @@
 # Add environment variables for Quarto
-# Modify if you are using a different Python interpreter
-QUARTO_PYTHON = ".venv/Scripts/python.exe"
+# Modify if you are using a different Python or R interpreter
+QUARTO_PYTHON = ".pixi\\envs\\default\\python.exe"
+QUARTO_R = ".pixi\\envs\\default\\Scripts\\Rscript.exe"

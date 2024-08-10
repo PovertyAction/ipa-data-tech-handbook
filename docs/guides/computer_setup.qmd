@@ -78,7 +78,7 @@ brew install gh
 brew install just rye
 ```
 
-See the [Virtual Environment](./venv.md) section of the handbook for more information on
+See the [Virtual Environment](./venv.qmd) section of the handbook for more information on
 using virtual environments.
 
 ### Additional Software
@@ -193,8 +193,8 @@ brew install  --cask github
 ## GitHub Desktop is not available on Linux
 ```
 
-See the [Git](../software/git.md) section of the handbook for more information on using
-git and the [GitHub](../software/github.md)section section for more information on using
+See the [Git](../software/git.qmd) section of the handbook for more information on using
+git and the [GitHub](../software/github.qmd)section section for more information on using
 GitHub.
 
 ## Visual Studio Code
@@ -215,7 +215,7 @@ brew install --cask visual-studio-code
 sudo snap install code --classic
 ```
 
-See the [Visual Studio Code](../software/vscode.md) section of the handbook for more
+See the [Visual Studio Code](../software/vscode.qmd) section of the handbook for more
 information on using Visual Studio Code.
 
 ## Quarto

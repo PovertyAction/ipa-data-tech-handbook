@@ -1,46 +1,47 @@
 [project]
-name = "ipa-data-tech-handbook"
+name = "ipa-research-resources"
 version = "0.1.0"
-description = "Handbook for IPA Data and Technology"
+description = "IPA Research Resources"
 
 dependencies = [
-    "jupyterlab>=4.2.1",
-    "jupytext>=1.16.2",
-    "jupysql>=0.10.10",
-    "duckdb>=1.0.0",
-    "duckdb-engine>=0.13.0",
-    "stata-setup>=0.1.3",
-    "seaborn>=0.13.2",
-    "polars>=0.20.31",
-    "pandas>=2.2.2",
-    "matplotlib>=3.9.0",
-    "numpy>=1.26.4",
-    "causaldata>=0.1.4",
-    "pystata>=0.0.1",
+    "jupyterlab>=4.2.4,<5",
+    "jupytext>=1.16.4,<2",
+    "jupysql>=0.10.12,<0.11",
+    "duckdb>=1.0.0,<2",
+    "duckdb-engine>=0.13.1,<0.14",
+    "stata-setup>=0.1.3,<0.2",
+    "seaborn>=0.13.2,<0.14",
+    "ibis-framework>=9.3.0,<10",
+    "polars>=1.4.1,<2",
+    "pandas>=2.2.2,<3",
+    "great-tables>=0.10.0,<0.11",
+    "matplotlib>=3.9.1.post1,<4",
+    "numpy>=2.0.1,<3",
+    "causaldata>=0.1.4,<0.2",
+    "pystata>=0.0.1,<0.0.2",
+    "pre-commit>=3.8.0,<4",
+    "ruff>=0.5.7,<0.6",
+    "sqlfluff>=3.1.0,<4",
+    "mdformat>=0.7.17,<0.8",
+    "mdformat-pyproject>=0.0.1,<0.0.2",
+    "mdformat-gfm>=0.3.6,<0.4",
+    "mdformat-frontmatter>=2.0.8,<3",
+    "mdformat-config>=0.1.3,<0.2",
+
 ]
+
 readme = "README.md"
 requires-python = ">= 3.9"
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 
-[tool.hatch.metadata]
-allow-direct-references = true
+[tool.pixi.tasks]
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/ipa-data-tech-handbook"]
-
-[tool.rye]
-managed = true
-dev-dependencies = [
-    "pre-commit>=3.7.1",
-    "sqlfluff>=3.0.7",
-    "mdformat-pyproject>=0.0.1",
-    "mdformat-gfm>=0.3.6",
-    "mdformat-frontmatter>=2.0.8",
-    "mdformat-config>=0.1.3",
-]
+[tool.pixi.dependencies]
+r-base = ">=4.4.1,<5"
+r-renv = ">=1.0.7,<2"
 
 [tool.jupysql.SqlMagic]
 feedback = 0
@@ -52,7 +53,6 @@ displaylimit = 10
 [tool.ruff]
 line-length = 88
 fix = true
-
 # Assume Python 3.11
 target-version = "py311"
 
@@ -84,6 +84,8 @@ ignore = [
     "SIM110", # Use all instead of `for` loop
     "TRY003", # Avoid specifying long messages outside the exception class
     "D205",   # 1 blank line required between summary line and description
+    "D203",
+    "D213",
 ]
 
 [tool.ruff.format]

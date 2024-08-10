@@ -1,33 +1,38 @@
 project:
   type: website
+  output-dir: _site
   preview:
     port: 3434
     browser: true
+
 execute:
   freeze: auto
+
 website:
   title: "Data and Tech Handbook"
   announcement:
     dismissable: false
-    content: "**Welcome!** - This handbook is an early draft and prototype. Content, pages, and the site are subject to change."
-    position: below-navbar
+    content: "**Welcome!** - This site is an early draft and prototype. Content, pages, and the site are subject to change."
+    position: above-navbar
     type: warning
     icon: cone-striped
   description:  "Handbook for common, shared practices for data science and engineering at Innovations for Poverty Action."
-  favicon: ./docs/assets/images/IPA-primary-full-color-abbreviated.png
+  favicon: ./assets/images/IPA-primary-full-color-abbreviated.png
   # site-url: https://research.poverty-action.org
   repo-url: https://github.com/PovertyAction/ipa-data-tech-handbook
   repo-actions: [edit, issue]
+  page-navigation: true
   bread-crumbs: true
   reader-mode: false
   search:
-    location: navbar
-    type: overlay
+    show-item-context: true
+    location: sidebar
+    type: textbox
     limit: 20
   page-footer:
     left: |
       Brought to you by
-      [![](../../docs/assets/images/IPA-primary-color-RGB.png){fig-alt="IPA" width=65px}](https://poverty-action.org)
+      [![](../../assets/images/IPA-primary-color-RGB.png){fig-alt="IPA" width=65px}](https://poverty-action.org)
     # center:
     #   - text: "About"
     #     href: about.qmd
@@ -45,66 +50,50 @@ website:
       # - icon: rss
         # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
         # aria-label: IPA Blog RSS
-  navbar:
+  sidebar:
     background: '#155240'
     foreground: '#ffffff'
-    logo: ./docs/assets/images/IPA-primary-white-abbreviated.png
-    collapse: true
-    left:
-      - href: ./docs/index.md
+    logo: ./assets/images/IPA-primary-white-abbreviated.png
+    collapse-level: 1
+    search: true
+    style: "docked"
+    contents:
+      - href: ./docs/index.qmd
         text: Home
 
-      - text: Guides
-        menu:
-        - href: ./docs/guides/computer_setup.md
-          text: Computer Setup
-        - href: ./docs/guides/venv.md
-          text: Virtual Environments
-        - href: ./docs/guides/code_review.md
-          text: Code Review
-        - href: ./docs/guides/pre_commit_hooks.md
-          text: Pre-commit Hooks
+      - section: About
+        contents:
+        - href: ./docs/about/foundations.qmd
+          text: Foundations
+        - href: ./docs/about/mmds.qmd
+          text: Minimum Must Dos
+        - href: ./docs/about/ipa_researchers.qmd
+          text: For IPA Researchers
+        - href: ./docs/about/ipa_staff.qmd
+          text: For IPA staff
 
-      - text: Software
-        menu:
-          - href: ./docs/software/git.md
-            text: Git
-          - href: ./docs/software/github.md
-            text: GitHub
-          - href: ./docs/software/justfile.md
-            text: Justfile
-          - href: ./docs/software/vscode.md
-            text: VS Code
-          - href: ./docs/software/quarto.qmd
-            text: Quarto
-          - href: ./docs/software/python.qmd
-            text: Python
+      - section: Software Guides
+        contents:
+          - href: ./docs/software/coding_best_practices.qmd
+            text: Coding Best Practices
+          - href: ./docs/software/surveycto.qmd
+            section: SurveyCTO
+            contents:
+              - href: ./docs/software/surveycto/scto_best_practices.qmd
+                text: "SurveyCTO: Best Practices"
+              - href: ./docs/software/surveycto/scto_tools.qmd
+                text: "SurveyCTO: IPA Tools"
+
           - href: ./docs/software/stata.qmd
             text: Stata
-          - href: ./docs/software/sql.qmd
-            text: SQL
+          - href: ./docs/software/ml.qmd
+            text: Machine Learning
 
-      - text: Methods
-        menu:
-          - href: ./docs/methods/references.md
-            text: References
-
-      - text: Teams
-        menu:
-          - href: ./docs/teams/dse.md
-            text: DSE
-          - href: ./docs/teams/grds.md
-            text: GRDS
-          - href: ./docs/teams/mist.md
-            text: MIST
-          - href: ./docs/teams/ppi.md
-            text: PPI
-
-    right:
+#    right:
       # - text: Blog
       #   href: ./docs/blog/index.qmd
       - text: Contributing
-        href: ./docs/contributing.md
+        href: ./docs/contributing.qmd
 
     # tools:
     #   - icon: github
@@ -117,16 +106,24 @@ website:
         # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
         # aria-label: IPA Blog RSS
 
+# bibliography: ./assets/references.bib
+
 format:
   html:
-    # for sharepoint: use aspx
-    # reference: https://github.com/quarto-dev/quarto-cli/discussions/3535#discussioncomment-9111419
     output-ext: html
     template-partials:
-      - ./docs/assets/title-block.html
-      - ./docs/assets/toc.html
+      - ./assets/title-block.html
+      - ./assets/toc.html
     title-block-banner: false
-    css: ./docs/assets/style_ipa.css
+    theme:
+      light: [cosmo, ./assets/theme.scss]
     toc: true
     code-background: true
     code-copy: true
+    code-overflow: wrap
+    css: ./assets/styles.css
+    include-after-body: ./assets/js.html
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px

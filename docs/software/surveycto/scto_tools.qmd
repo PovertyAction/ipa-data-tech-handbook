@@ -1,5 +1,5 @@
 ---
-title: Stata
+title: SCTO Tools for IPA staff
 # Editors are the "Maintainers" of the page
 # editors:
 #  - "[Niall Keleher](https://poverty-action.org/people/niall-keleher)"

@@ -3,11 +3,16 @@
 *.ipynb_checkpoints/
 /.ruff_cache/
 /.venv/
-/docs/assets/data/*.csv
-/docs/assets/data/*.parquet
-/docs/assets/data/*.dta
+/assets/data/*.csv
+/assets/data/*.parquet
+/assets/data/*.dta
 
 *.deb
-requirements-dev.lock
-requirements.lock
 README.html
+
+.env
+/_*.local
+
+# pixi environments
+.pixi
+*.egg-info

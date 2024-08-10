@@ -1,5 +1,5 @@
 ---
-title: Stata
+title: For IPA Staff
 # Editors are the "Maintainers" of the page
 # editors:
 #  - "[Niall Keleher](https://poverty-action.org/people/niall-keleher)"
