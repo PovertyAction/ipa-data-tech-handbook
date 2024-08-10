@@ -1,0 +1,8 @@
+Type: project
+Description: Research Resources.
+Depends:
+    tidyverse,
+    tidymodels,
+    estimatr,
+    fabricatr,
+    gt

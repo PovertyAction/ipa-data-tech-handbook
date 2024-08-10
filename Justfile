@@ -16,16 +16,35 @@ system-info:
     @echo "Operating system: {{ os() }}"
     @echo "Home directory: {{ home_directory() }}"
 
+# Clean venv
+clean:
+    pixi run RScript -e 'renv::clean()'
+    rm -rf .pixi/envs
+
 # Setup environment
 get-started: pre-install venv
 
-# sync python virtual environment with requirements.lock
-sync:
-    rye sync
+# Update project software versions in requirements
+update-reqs:
+    pixi update
+    pre-commit autoupdate
+    pixi run RScript -e 'renv::install()'
 
-venv: sync
-    rye run pre-commit install# Preview the handbook
+# create virtual environment
+venv:
+    pixi install
+    pixi global install pre-commit
+    pre-commit install
+    pixi run RScript -e 'renv::restore()'
 
+activate-venv:
+    pixi shell
+
+# launch jupyter lab
+lab:
+    pixi run jupyter lab
+
+# Preview the handbook
 preview-docs:
     quarto preview
 
@@ -33,44 +52,54 @@ preview-docs:
 build-docs:
     quarto render
 
+build-docs-production:
+    quarto render --profile production
+
 # Lint python code
 lint-py:
-    rye lint
+    pixi run ruff check
 
 # Format python code
-fmt-py:
-    rye fmt
+fmt-python:
+    pixi run ruff format
+
+# Format a single python file, "f"
+fmt-py f:
+    pixi run ruff format {{ f }}
 
 # Lint sql scripts
 lint-sql:
-    rye run sqlfluff fix --dialect duckdb
+    pixi run sqlfluff fix --dialect duckdb
 
 # Format all markdown and config files
 fmt-markdown:
-    rye run mdformat .
+    pixi run mdformat .
 
 # Format a single markdown file, "f"
 fmt-md f:
-    rye run mdformat {{ f }}
+    pixi run mdformat {{ f }}
 
 # Check format of all markdown files
 fmt-check-markdown:
-    rye run mdformat --check .
+    pixi run mdformat --check .
 
-fmt-all: lint-py fmt-py lint-sql fmt-markdown
+fmt-all: lint-py fmt-python lint-sql fmt-markdown
+
+# Run pre-commit hooks
+pre-commit-run:
+    pre-commit run
 
 [windows]
 pre-install:
-    winget install Casey.Just Rye.Rye GitHub.cli Posit.Quarto
+    winget install Casey.Just prefix-dev.pixi  GitHub.cli Posit.Quarto
 
 [linux]
 pre-install:
-    quarto_version :=  "1.5.54"
-    brew install just rye gh
+    brew install just pixi gh
     curl -sfL https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.54/quarto-1.5.54-linux-amd64.deb  | sudo apt install ./quarto-1.5.54-linux-amd64.deb
     rm quarto-1.5.54-linux-amd64.deb
 
 [macos]
 pre-install:
-    brew install just rye gh
+    brew install just pixi gh
     brew install --cask quarto

@@ -1,33 +1,38 @@
 project:
   type: website
+  output-dir: _site
   preview:
     port: 3434
     browser: true
+
 execute:
   freeze: auto
+
 website:
   title: "Data and Tech Handbook"
   announcement:
     dismissable: false
-    content: "**Welcome!** - This handbook is an early draft and prototype. Content, pages, and the site are subject to change."
-    position: below-navbar
+    content: "**Welcome!** - This site is an early draft and prototype. Content, pages, and the site are subject to change."
+    position: above-navbar
     type: warning
     icon: cone-striped
   description:  "Handbook for common, shared practices for data science and engineering at Innovations for Poverty Action."
-  favicon: ./docs/assets/images/IPA-primary-full-color-abbreviated.png
+  favicon: ./assets/images/IPA-primary-full-color-abbreviated.png
   # site-url: https://research.poverty-action.org
   repo-url: https://github.com/PovertyAction/ipa-data-tech-handbook
   repo-actions: [edit, issue]
+  page-navigation: true
   bread-crumbs: true
   reader-mode: false
   search:
-    location: navbar
-    type: overlay
+    show-item-context: true
+    location: sidebar
+    type: textbox
     limit: 20
   page-footer:
     left: |
       Brought to you by
-      [![](../../docs/assets/images/IPA-primary-color-RGB.png){fig-alt="IPA" width=65px}](https://poverty-action.org)
+      [![](../../assets/images/IPA-primary-color-RGB.png){fig-alt="IPA" width=65px}](https://poverty-action.org)
     # center:
     #   - text: "About"
     #     href: about.qmd
@@ -48,47 +53,47 @@ website:
   sidebar:
     background: '#155240'
     foreground: '#ffffff'
-    logo: ./docs/assets/images/IPA-primary-white-abbreviated.png
+    logo: ./assets/images/IPA-primary-white-abbreviated.png
     collapse-level: 1
     search: true
-    style: "floating"
+    style: "docked"
     contents:
-      - href: ./docs/index.md
+      - href: ./docs/index.qmd
         text: Home
 
       - section: About
         contents:
-        - href: ./docs/about/foundations.md
+        - href: ./docs/about/foundations.qmd
           text: Foundations
-        - href: ./docs/about/mmds.md
+        - href: ./docs/about/mmds.qmd
           text: Minimum Must Dos
-        - href: ./docs/about/ipa_researchers.md
+        - href: ./docs/about/ipa_researchers.qmd
           text: For IPA Researchers
-        - href: ./docs/about/ipa_staff.md
+        - href: ./docs/about/ipa_staff.qmd
           text: For IPA staff
 
       - section: Software Guides
         contents:
-          - href: ./docs/software/coding_best_practices.md
+          - href: ./docs/software/coding_best_practices.qmd
             text: Coding Best Practices
-          - href: ./docs/software/surveycto.md
+          - href: ./docs/software/surveycto.qmd
             section: SurveyCTO
-            contents: 
-              - href: ./docs/software/surveycto/scto_best_practices.md
+            contents:
+              - href: ./docs/software/surveycto/scto_best_practices.qmd
                 text: "SurveyCTO: Best Practices"
-              - href: ./docs/software/surveycto/scto_ipa_tools.md
+              - href: ./docs/software/surveycto/scto_tools.qmd
                 text: "SurveyCTO: IPA Tools"
 
-          - href: ./docs/software/Stata.md
+          - href: ./docs/software/stata.qmd
             text: Stata
-          - href: ./docs/software/ml.md
+          - href: ./docs/software/ml.qmd
             text: Machine Learning
 
 #    right:
       # - text: Blog
       #   href: ./docs/blog/index.qmd
-#     - text: Contributing
-#      href: ./docs/contributing.md
+      - text: Contributing
+        href: ./docs/contributing.qmd
 
     # tools:
     #   - icon: github
@@ -101,17 +106,24 @@ website:
         # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
         # aria-label: IPA Blog RSS
 
+# bibliography: ./assets/references.bib
+
 format:
   html:
-    # for sharepoint: use aspx
-    # reference: https://github.com/quarto-dev/quarto-cli/discussions/3535#discussioncomment-9111419
     output-ext: html
     template-partials:
-      - ./docs/assets/title-block.html
-      - ./docs/assets/toc.html
+      - ./assets/title-block.html
+      - ./assets/toc.html
     title-block-banner: false
-    # css: ./docs/assets/style_ipa.css
-    theme: cosmo
+    theme:
+      light: [cosmo, ./assets/theme.scss]
     toc: true
     code-background: true
     code-copy: true
+    code-overflow: wrap
+    css: ./assets/styles.css
+    include-after-body: ./assets/js.html
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px

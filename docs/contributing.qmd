@@ -100,7 +100,7 @@ integrated development environment (IDE).
 ### Modify the handbook locally
 
 Note that building the handbook from source code requires the following to be installed
-on your local computer (see [Computer Setup](./guides/computer_setup.md) for more
+on your local computer (see [Computer Setup](./guides/computer_setup.qmd) for more
 information about software installation):
 
 - `winget` (Windows) or `homebrew` (MacOS/Linux) for package management and installation
