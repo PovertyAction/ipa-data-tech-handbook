@@ -17,12 +17,10 @@ the same package.
 
 ## Python Virtual Environments
 
-We recommend using `rye` to manage Python virtual environments as it provides an
+We recommend using `pixi` to manage Python virtual environments as it provides an
 overarching framework for managing Python installations and virtual environments. See
-information on `rye` in the [Rye documentation](https://rye.astral.sh/guide/).
+information on `pixi` in the [pixi documentation](https://pixi.sh/latest/).
 
-Another option for managing virtual environments is to use `pixi`. See information on
-`pixi` in the [Pixi documentation](https://pixi.sh/latest/).
 
 ## R Virtual Environments
 

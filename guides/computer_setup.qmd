@@ -59,8 +59,8 @@ Install packages on Windows
 # Install a single program (e.g. GitHub for command line)
 winget install GitHub.cli
 
-# Install multiple programs (Just, Rye for Python)
-winget install Casey.Just Rye.Rye
+# Install multiple programs (Just, pixi for Python)
+winget install Casey.Just prefix-dev.pixi
 ```
 
 ### MacOS/Linux
@@ -75,7 +75,7 @@ relevant if you are working in the
 brew install gh
 
 # Install multiple programs (Just, Rye for Python)
-brew install just rye
+brew install just pixi
 ```
 
 See the [Virtual Environment](./venv.qmd) section of the handbook for more information on

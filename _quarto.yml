@@ -1,13 +1,10 @@
 project:
   type: website
-  output-dir: _site
   preview:
     port: 3434
     browser: true
-
 execute:
   freeze: auto
-
 website:
   title: "Data and Tech Handbook"
   announcement:
@@ -58,53 +55,55 @@ website:
     search: true
     style: "docked"
     contents:
-      - href: ./docs/index.qmd
+      - href: index.qmd
         text: Home
 
-      - section: About
+      - section: Guides
         contents:
-        - href: ./docs/about/foundations.qmd
-          text: Foundations
-        - href: ./docs/about/mmds.qmd
-          text: Minimum Must Dos
-        - href: ./docs/about/ipa_researchers.qmd
-          text: For IPA Researchers
-        - href: ./docs/about/ipa_staff.qmd
-          text: For IPA staff
+        - href: ./guides/computer_setup.qmd
+          text: Computer Setup
+        - href: ./guides/venv.qmd
+          text: Virtual Environments
+        - href: ./guides/code_review.qmd
+          text: Code Review
+        - href: ./guides/pre_commit_hooks.qmd
+          text: pre-commit
 
-      - section: Software Guides
+      - section: Software
         contents:
-          - href: ./docs/software/coding_best_practices.qmd
-            text: Coding Best Practices
-          - href: ./docs/software/surveycto.qmd
-            section: SurveyCTO
-            contents:
-              - href: ./docs/software/surveycto/scto_best_practices.qmd
-                text: "SurveyCTO: Best Practices"
-              - href: ./docs/software/surveycto/scto_tools.qmd
-                text: "SurveyCTO: IPA Tools"
-
-          - href: ./docs/software/stata.qmd
+          - href: ./software/git.qmd
+            text: Git
+          - href: ./software/github.qmd
+            text: GitHub
+          - href: ./software/vscode.qmd
+            text: VS Code
+          - href: ./software/quarto.qmd
+            text: Quarto
+          - href: ./software/python.qmd
+            text: Python
+          - href: ./software/stata.qmd
             text: Stata
-          - href: ./docs/software/ml.qmd
-            text: Machine Learning
+          - href: ./software/sql.qmd
+            text: SQL
 
-#    right:
-      # - text: Blog
-      #   href: ./docs/blog/index.qmd
-      - text: Contributing
-        href: ./docs/contributing.qmd
+      - section: Methods
+        contents:
+          - href: ./methods/references.qmd
+            text: References
 
-    # tools:
-    #   - icon: github
-    #     href: https://github.com/povertyaction
-    #     aria-label: IPA GitHub
-    #   - icon: twitter
-    #     href: https://twitter.com/poverty_action
-    #     aria-label: IPA Twitter
-      # - icon: rss
-        # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
-        # aria-label: IPA Blog RSS
+      - section: Teams
+        contents:
+          - href: ./teams/dse.qmd
+            text: DSE
+          - href: ./teams/grds.qmd
+            text: GRDS
+          - href: ./teams/mist.qmd
+            text: MIST
+          - href: ./teams/ppi.qmd
+            text: PPI
+
+      - href: ./contributing.qmd
+        text: Contributing
 
 # bibliography: ./assets/references.bib
 
