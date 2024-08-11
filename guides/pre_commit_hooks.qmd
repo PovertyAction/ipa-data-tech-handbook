@@ -29,7 +29,7 @@ bugs, improve code quality, and make it easier to collaborate with other develop
 Add `pre-commit` to your project by running the following command:
 
 ```bash
-rye install pre-commit
+pixi install pre-commit
 ```
 
 ## Example pre-commit hooks
@@ -49,7 +49,7 @@ is made:
 To run these hooks on all files, run the following command:
 
 ```bash
-rye run pre-commit run --all-files
+pixi run pre-commit run --all-files
 ```
 
 Alternatively, if you have installed `pre-commit` every time you run `git commit`, the

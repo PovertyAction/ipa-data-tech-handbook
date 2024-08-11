@@ -1,0 +1,97 @@
+---
+title: SQL
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
+      jupytext_version: 1.16.4
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+```{python}
+%load_ext sql
+%sql duckdb://
+```
+
+Create a table from a CSV file.
+
+```{python}
+%%sql
+CREATE TABLE penguins AS SELECT * FROM '../assets/data/penguins.csv'
+```
+
+Inspect the columns of the table.
+
+```{python}
+%sqlcmd columns -t penguins
+```
+
+Query the table using a `SELECT` statement.
+
+```{python}
+%%sql
+SELECT *
+FROM '../assets/data/penguins.csv'
+LIMIT 3
+```
+
+Run analytical operations on the data.
+
+```{python}
+%%sql
+SELECT species, COUNT(*) AS count
+FROM '../assets/data/penguins.csv'
+GROUP BY species
+ORDER BY count DESC
+```
+
+Using `jupysql` store SQL query results as an object in a Jupyter notebook.
+
+```{python}
+%%sql species_count <<
+SELECT species, COUNT(*) AS count
+FROM '../assets/data/penguins.csv'
+GROUP BY species
+ORDER BY count DESC
+```
+
+Plot the results of the query.
+
+```{python}
+ax = %sqlplot bar --table '../assets/data/penguins.csv' --column species
+
+# customize plot (this is a matplotlib Axes object)
+_ = ax.set_title("Count of penguins by species")
+```
+
+## Coding Conventions
+
+Use [SQLFluff](https://docs.sqlfluff.com/en/stable/) to lint SQL code.
+
+Add SQLFluff to your virtual environment using `pixi`:
+
+```{.bash}
+pixi add sqlfluff --pypi
+```
+
+Assuming SQLFluff is installed in your virtual environment using `pixi`, you can run the
+following command to lint SQL code:
+
+```{.bash}
+pixi run sqlfluff fix --dialect duckdb
+```
+
+See the
+[GitLab Data Team's SQL Style Guide](https://handbook.gitlab.com/handbook/business-technology/data-team/platform/sql-style-guide/)
+
+## Learning Resources
+
+- [SELECT Star SQL](https://selectstarsql.com/)
+- [SQL Murder Mystery](https://mystery.knightlab.com/walkthrough.html)
+- [sql-workbench](https://sql-workbench.com/)
+- [DuckDB SQL Introduction](https://duckdb.org/docs/sql/introduction)

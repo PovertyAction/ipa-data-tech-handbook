@@ -106,7 +106,7 @@ information about software installation):
 - `winget` (Windows) or `homebrew` (MacOS/Linux) for package management and installation
 - `git` for source control management
 - `just` for running common command line patterns
-- `rye` for installing Python and managing virtual environments
+- `pixi` for installing Python and managing virtual environments
 
 First, clone this repository to your local computer either via GitHub Desktop:
 
@@ -131,11 +131,11 @@ following from the command line:
 
 | Platform  | Commands                                                            |
 | --------- | ------------------------------------------------------------------- |
-| Windows   | `winget install Git.Git Casey.Just Rye.Rye GitHub.cli Posit.Quarto` |
-| Mac/Linux | `brew install just rye gh`                                          |
+| Windows   | `winget install Git.Git Casey.Just prefix-dev.pixi GitHub.cli Posit.Quarto` |
+| Mac/Linux | `brew install just pixi gh`                                          |
 
 This will make sure that you have the latest version of `Just`, as well as
-[Rye](https://rye.astral.sh/guide/) (installer for Python) and
+[Pixi]([https://prefix.d/](https://pixi.sh/latest/)) (installer for Python) and
 [Quarto](https://quarto.org/docs/guide/) (for writing and compiling scientific and
 technical documents).
 
