@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IPA Data Science, Engineering, and Technology Handbook – Data and Tech Handbook</title>
+<title>Python – Data and Tech Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./guides/computer_setup.html" rel="next">
-<link href="././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../software/stata.html" rel="next">
+<link href="../software/quarto.html" rel="prev">
+<link href=".././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,9 +103,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -85,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../software/git.html">Software</a></li><li class="breadcrumb-item"><a href="../software/python.html">Python</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,8 +137,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src=".././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -112,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -127,25 +165,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/computer_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/computer_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computer Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Virtual Environments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/code_review.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/code_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">pre-commit</span></a>
   </div>
 </li>
@@ -153,52 +191,52 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Software</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/git.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/vscode.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/python.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/python.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/sql.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/sql.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SQL</span></a>
   </div>
 </li>
@@ -215,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methods/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../methods/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -232,25 +270,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/dse.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/dse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DSE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/grds.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/grds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GRDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/mist.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/mist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MIST</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/ppi.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/ppi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PPI</span></a>
   </div>
 </li>
@@ -258,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
+  <a href="../contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
@@ -271,59 +309,216 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
         <h2 id="toc-title">On this page</h2>
         <ul>
-        <li><a href="#about-the-handbook" id="toc-about-the-handbook" class="nav-link active" data-scroll-target="#about-the-handbook">About the Handbook</a>
-        <ul class="collapse">
-        <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-        <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
-        <li><a href="#using-software-tools" id="toc-using-software-tools" class="nav-link" data-scroll-target="#using-software-tools">Using Software Tools</a></li>
-        <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-        </ul></li>
+        <li><a href="#what-is-python" id="toc-what-is-python" class="nav-link active" data-scroll-target="#what-is-python">What is Python?</a></li>
+        <li><a href="#how-to-install-python" id="toc-how-to-install-python" class="nav-link" data-scroll-target="#how-to-install-python">How to install Python?</a></li>
+        <li><a href="#coding-conventions" id="toc-coding-conventions" class="nav-link" data-scroll-target="#coding-conventions">Coding Conventions</a></li>
+        <li><a href="#example-usage" id="toc-example-usage" class="nav-link" data-scroll-target="#example-usage">Example Usage</a></li>
+        <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources">Learning Resources</a></li>
         </ul>
-          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/software/python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">IPA Data Science, Engineering, and Technology Handbook</h1>
+<h1 class="title display-7">Python</h1>
 <!--  -->
 
 </header>
 
 
-<section id="about-the-handbook" class="level2">
-<h2 class="anchored" data-anchor-id="about-the-handbook">About the Handbook</h2>
-<p>Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!</p>
-<p>This handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.</p>
-<section id="getting-started" class="level3">
-<h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
-<p>To get started with software covered in this handbook, read <a href="./guides/computer_setup.html">Computer Setup</a> to learn how to set up your computer for data analysis and software development.</p>
+<section id="what-is-python" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-python">What is Python?</h2>
+<p>Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications.</p>
 </section>
-<section id="contributing" class="level3">
-<h3 class="anchored" data-anchor-id="contributing">Contributing</h3>
-<p>For instructions on how to contribute to this handbook, see <a href="./contributing.html">Contributing</a> to the Handbook.</p>
-<p>Also, see the <a href="./guides/code_review.html">Code Review</a> guide for information on how to conduct code reviews.</p>
+<section id="how-to-install-python" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-install-python">How to install Python?</h2>
+<p>There are many ways to install Python. We recommend using Python in a virtual environment to avoid conflicts with other Python installations on your system.</p>
+<p>We recommend using <a href="https://pixi.sh/latest/">pixi</a> as a a simple way to create and manage Python virtual environments.</p>
+<p>You can manage the python packages that are installed in the virtual environment using a <code>pyproject.toml</code> file. See the pyproject.toml example in this repository for an example of how to manage Python packages. To add package dependencies to the virtual environment, using <code>pixi</code>, you can run:</p>
+<p>First, install <code>pixi</code> using <code>winget</code> (Windows) or <code>brew</code> (MacOS/Linux):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Platform</th>
+<th>Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Windows</td>
+<td><code>winget install prefix-dev.pixi</code></td>
+</tr>
+<tr class="even">
+<td>MacOS</td>
+<td><code>brew install pixi</code></td>
+</tr>
+<tr class="odd">
+<td>Linux</td>
+<td><code>brew install pixi</code></td>
+</tr>
+</tbody>
+</table>
+<p>Add libraries to the virtual environment using <code>pixi add ...</code>:</p>
+<div id="a7e20e28" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi add jupyterlab pandas matplotlib seaborn <span class="op">--</span>pypi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="using-software-tools" class="level3">
-<h3 class="anchored" data-anchor-id="using-software-tools">Using Software Tools</h3>
-<p>For information about specific software, see the respective pages under the <code>Software</code> directory.</p>
-<p>Here are some specific software that this guide covers:</p>
+<section id="coding-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="coding-conventions">Coding Conventions</h2>
+<p>We highly recommend working with a <a href="../guides/venv.html">virtual environment</a> to manage Python dependencies. The <code>pyproject.toml</code> is the preferred way to keep track of python dependencies as well as project-specific python conventions.</p>
+<p>We recommend using <a href="https://docs.astral.sh/ruff/">Ruff</a> to enforce <a href="https://en.wikipedia.org/wiki/Lint_(software)">linting</a> and formatting rules. In most cases you can use the default linting and formatting rules provided by <code>ruff</code>. However, you can customize the rules by modifying the <code>[tool.ruff]</code> section of the <code>pyproject.toml</code> file in the root of your project. for more about the configuration options, see the <a href="https://docs.astral.sh/ruff/configuration/">Ruff documentation</a>.</p>
+<p>If you are working in a virtual environment created in this repository<code>, you automatically have access to</code>Ruff via <code>just lint-py</code> and <code>just fmt-python</code> commands to lint and format your code.</p>
+<p>For more inspiration, see the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/platform/python-guide/">GitLab Data Team’s Python Guide</a> and <a href="https://google.github.io/styleguide/pyguide.html">Google’s Python Style Guide</a>.</p>
+</section>
+<section id="example-usage" class="level2">
+<h2 class="anchored" data-anchor-id="example-usage">Example Usage</h2>
+<p>Let’s load an example World Bank data via <a href="https://www.gapminder.org/">Gapminder</a> using the <a href="https://github.com/NickCH-K/causaldata">causaldata</a> package.</p>
+<div id="7edc64e0" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> sm</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> causaldata <span class="im">import</span> gapminder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Load the Gapminder data as a pandas DataFrame:</p>
+<div id="cfa82fec" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> gapminder.load_pandas().data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can check the dimensions of the DataFrame using <code>df.info()</code>:</p>
+<div id="d36c0824" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1704 entries, 0 to 1703
+Data columns (total 6 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   country    1704 non-null   object 
+ 1   continent  1704 non-null   object 
+ 2   year       1704 non-null   int64  
+ 3   lifeExp    1704 non-null   float64
+ 4   pop        1704 non-null   int64  
+ 5   gdpPercap  1704 non-null   float64
+dtypes: float64(2), int64(2), object(2)
+memory usage: 80.0+ KB</code></pre>
+</div>
+</div>
+<p>Let’s take a look at the first few rows of the DataFrame using <code>df.head()</code>:</p>
+<div id="ed4450e7" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">country</th>
+<th data-quarto-table-cell-role="th">continent</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">lifeExp</th>
+<th data-quarto-table-cell-role="th">pop</th>
+<th data-quarto-table-cell-role="th">gdpPercap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>Asia</td>
+<td>1952</td>
+<td>28.801</td>
+<td>8425333</td>
+<td>779.445314</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Afghanistan</td>
+<td>Asia</td>
+<td>1957</td>
+<td>30.332</td>
+<td>9240934</td>
+<td>820.853030</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Afghanistan</td>
+<td>Asia</td>
+<td>1962</td>
+<td>31.997</td>
+<td>10267083</td>
+<td>853.100710</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Afghanistan</td>
+<td>Asia</td>
+<td>1967</td>
+<td>34.020</td>
+<td>11537966</td>
+<td>836.197138</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Afghanistan</td>
+<td>Asia</td>
+<td>1972</td>
+<td>36.088</td>
+<td>13079460</td>
+<td>739.981106</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Take a look at the relationship between GDP per Capita and Life Expectancy:</p>
+<div id="fa1711dd" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">"gdpPercap"</span>, y<span class="op">=</span><span class="st">"lifeExp"</span>, hue<span class="op">=</span><span class="st">"continent"</span>, data<span class="op">=</span>df).<span class="bu">set</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    xscale<span class="op">=</span><span class="st">"log"</span>, ylabel<span class="op">=</span><span class="st">"Life Expectancy"</span>, xlabel<span class="op">=</span><span class="st">"GDP per Capita"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="python_files/figure-html/cell-7-output-1.png" width="585" height="431" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Separate the data by year, focusing on 1957 and 2007:</p>
+<div id="410097cc" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sns.relplot(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>df.where(df[<span class="st">"year"</span>].isin([<span class="dv">1957</span>, <span class="dv">2007</span>])),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"gdpPercap"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"lifeExp"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="st">"year"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">"continent"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    col_wrap<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    kind<span class="op">=</span><span class="st">"scatter"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    palette<span class="op">=</span><span class="st">"muted"</span>,</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>).<span class="bu">set</span>(xscale<span class="op">=</span><span class="st">"log"</span>, ylabel<span class="op">=</span><span class="st">"Life Expectancy"</span>, xlabel<span class="op">=</span><span class="st">"GDP per Capita"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="python_files/figure-html/cell-8-output-1.png" width="575" height="952" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="learning-resources" class="level2">
+<h2 class="anchored" data-anchor-id="learning-resources">Learning Resources</h2>
 <ul>
-<li><a href="./software/git.html">Git</a></li>
-<li><a href="./software/github.html">Github</a></li>
-<li><a href="./software/vscode.html">VS Code</a></li>
-<li><a href="./software/quarto.html">Quarto</a></li>
-<li><a href="./software/python.html">Python</a></li>
-<li>and more!</li>
+<li><a href="https://docs.python.org/3.12/tutorial/index.html">The Python Tutorial</a></li>
+<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a></li>
+<li><a href="https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scientists/README.html">Efficient Python for Data Scientists</a></li>
+<li><a href="https://docs.python-guide.org/">The Hitchhiker’s Guide to Python</a></li>
 </ul>
-</section>
-<section id="acknowledgements" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
-<p>This handbook is a collaboration between multiple IPA Teams including <a href="./teams/dse.html">Data Science and Engineering (DSE)</a>, <a href="./teams/mist.html">Management and Information Systems Team (MIST)</a>, <a href="./teams/grds.html">Global Research and Data Support</a>, and <a href="./teams/ppi.html">Poverty Probability Index (PPI®)</a>.</p>
-<p>The handbook is inspired by the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/">Gitlab Data Team Handbook</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -768,10 +963,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../software/quarto.html" class="pagination-link" aria-label="Quarto">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Quarto</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./guides/computer_setup.html" class="pagination-link" aria-label="Computer Setup">
-        <span class="nav-page-text">Computer Setup</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../software/stata.html" class="pagination-link" aria-label="Stata">
+        <span class="nav-page-text">Stata</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -783,7 +981,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/software/python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

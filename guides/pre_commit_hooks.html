@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IPA Data Science, Engineering, and Technology Handbook – Data and Tech Handbook</title>
+<title>Pre-commit hooks – Data and Tech Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./guides/computer_setup.html" rel="next">
-<link href="././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../software/git.html" rel="next">
+<link href="../guides/code_review.html" rel="prev">
+<link href=".././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -85,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guides/computer_setup.html">Guides</a></li><li class="breadcrumb-item"><a href="../guides/pre_commit_hooks.html">pre-commit</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,8 +134,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src=".././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -112,40 +147,40 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Guides</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/computer_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/computer_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computer Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Virtual Environments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/code_review.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/code_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">pre-commit</span></a>
   </div>
 </li>
@@ -162,43 +197,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/git.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/vscode.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/python.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/sql.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/sql.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SQL</span></a>
   </div>
 </li>
@@ -215,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methods/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../methods/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -232,25 +267,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/dse.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/dse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DSE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/grds.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/grds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GRDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/mist.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/mist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MIST</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/ppi.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/ppi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PPI</span></a>
   </div>
 </li>
@@ -258,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
+  <a href="../contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
@@ -271,59 +306,66 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
         <h2 id="toc-title">On this page</h2>
         <ul>
-        <li><a href="#about-the-handbook" id="toc-about-the-handbook" class="nav-link active" data-scroll-target="#about-the-handbook">About the Handbook</a>
-        <ul class="collapse">
-        <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-        <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
-        <li><a href="#using-software-tools" id="toc-using-software-tools" class="nav-link" data-scroll-target="#using-software-tools">Using Software Tools</a></li>
-        <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-        </ul></li>
+        <li><a href="#what-are-pre-commit-hooks" id="toc-what-are-pre-commit-hooks" class="nav-link active" data-scroll-target="#what-are-pre-commit-hooks">What are pre-commit hooks?</a></li>
+        <li><a href="#why-use-pre-commit-hooks" id="toc-why-use-pre-commit-hooks" class="nav-link" data-scroll-target="#why-use-pre-commit-hooks">Why use pre-commit hooks?</a></li>
+        <li><a href="#installing-pre-commit-hooks" id="toc-installing-pre-commit-hooks" class="nav-link" data-scroll-target="#installing-pre-commit-hooks">Installing pre-commit hooks</a></li>
+        <li><a href="#example-pre-commit-hooks" id="toc-example-pre-commit-hooks" class="nav-link" data-scroll-target="#example-pre-commit-hooks">Example pre-commit hooks</a></li>
+        <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources">Learning Resources</a></li>
         </ul>
-          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+        <hr>
+    <h2 class="anchored">Maintainers</h2>
+    <ul>
+                <li class="editor"><a href="https://poverty-action.org/people/niall-keleher" class="nav-link" data-scroll-target="https\://poverty-action.org/people/niall-keleher">Niall Keleher</a></li>
+          </ul>
+    <hr>
+          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/guides/pre_commit_hooks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">IPA Data Science, Engineering, and Technology Handbook</h1>
+<h1 class="title display-7">Pre-commit hooks</h1>
 <!--  -->
 
 </header>
 
 
-<section id="about-the-handbook" class="level2">
-<h2 class="anchored" data-anchor-id="about-the-handbook">About the Handbook</h2>
-<p>Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!</p>
-<p>This handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.</p>
-<section id="getting-started" class="level3">
-<h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
-<p>To get started with software covered in this handbook, read <a href="./guides/computer_setup.html">Computer Setup</a> to learn how to set up your computer for data analysis and software development.</p>
+<section id="what-are-pre-commit-hooks" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-pre-commit-hooks">What are pre-commit hooks?</h2>
+<p>Pre-commit hooks are scripts that run before a commit is made to a repository. They can be used to check for common issues in code, such as syntax errors, formatting issues, or security vulnerabilities. Pre-commit hooks can help ensure that code is clean, consistent, and secure before it is committed to a repository.</p>
 </section>
-<section id="contributing" class="level3">
-<h3 class="anchored" data-anchor-id="contributing">Contributing</h3>
-<p>For instructions on how to contribute to this handbook, see <a href="./contributing.html">Contributing</a> to the Handbook.</p>
-<p>Also, see the <a href="./guides/code_review.html">Code Review</a> guide for information on how to conduct code reviews.</p>
+<section id="why-use-pre-commit-hooks" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-pre-commit-hooks">Why use pre-commit hooks?</h2>
+<p>Pre-commit hooks are used to enforce common coding standards, run tests, and check for security vulnerabilities before code is committed to a repository. By using pre-commit hooks, you can catch issues early in the development process. This can help prevent bugs, improve code quality, and make it easier to collaborate with other developers.</p>
 </section>
-<section id="using-software-tools" class="level3">
-<h3 class="anchored" data-anchor-id="using-software-tools">Using Software Tools</h3>
-<p>For information about specific software, see the respective pages under the <code>Software</code> directory.</p>
-<p>Here are some specific software that this guide covers:</p>
+<section id="installing-pre-commit-hooks" class="level2">
+<h2 class="anchored" data-anchor-id="installing-pre-commit-hooks">Installing pre-commit hooks</h2>
+<p>Add <code>pre-commit</code> to your project by running the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> install pre-commit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="example-pre-commit-hooks" class="level2">
+<h2 class="anchored" data-anchor-id="example-pre-commit-hooks">Example pre-commit hooks</h2>
+<p>In the <a href="../../.pre-commit-config.yaml">.pre-commit-config.yaml</a>, this repository provides an example of a <code>pre-commit</code> hooks that run the following hooks before a commit is made:</p>
 <ul>
-<li><a href="./software/git.html">Git</a></li>
-<li><a href="./software/github.html">Github</a></li>
-<li><a href="./software/vscode.html">VS Code</a></li>
-<li><a href="./software/quarto.html">Quarto</a></li>
-<li><a href="./software/python.html">Python</a></li>
-<li>and more!</li>
+<li><code>ruff</code> - Automatically linting and formatting of Python code</li>
+<li><code>validate-pyproject</code> - Validate the <code>pyproject.toml</code> file</li>
+<li><code>check-json</code> - Check JSON files for syntax errors</li>
+<li><code>check-toml</code> - Check TOML files for syntax errors</li>
+<li><code>check-merge-conflict</code> - Check for merge conflicts in files</li>
+<li><code>markdownlint-fix</code> - Automatically lint and format Markdown files</li>
+<li><code>typos</code> - Check for common spelling errors in Markdown files</li>
 </ul>
+<p>To run these hooks on all files, run the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run pre-commit run <span class="at">--all-files</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Alternatively, if you have installed <code>pre-commit</code> every time you run <code>git commit</code>, the hooks will, by default, run automatically.</p>
 </section>
-<section id="acknowledgements" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
-<p>This handbook is a collaboration between multiple IPA Teams including <a href="./teams/dse.html">Data Science and Engineering (DSE)</a>, <a href="./teams/mist.html">Management and Information Systems Team (MIST)</a>, <a href="./teams/grds.html">Global Research and Data Support</a>, and <a href="./teams/ppi.html">Poverty Probability Index (PPI®)</a>.</p>
-<p>The handbook is inspired by the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/">Gitlab Data Team Handbook</a>.</p>
+<section id="learning-resources" class="level2">
+<h2 class="anchored" data-anchor-id="learning-resources">Learning Resources</h2>
+<ul>
+<li><a href="https://pre-commit.com/index.html">Pre-commit documentation</a></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -768,10 +810,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../guides/code_review.html" class="pagination-link" aria-label="Code Review">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Code Review</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./guides/computer_setup.html" class="pagination-link" aria-label="Computer Setup">
-        <span class="nav-page-text">Computer Setup</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../software/git.html" class="pagination-link" aria-label="Git">
+        <span class="nav-page-text">Git</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -783,7 +828,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/guides/pre_commit_hooks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

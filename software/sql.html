@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IPA Data Science, Engineering, and Technology Handbook – Data and Tech Handbook</title>
+<title>SQL – Data and Tech Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./guides/computer_setup.html" rel="next">
-<link href="././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../methods/references.html" rel="next">
+<link href="../software/stata.html" rel="prev">
+<link href=".././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,9 +103,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -85,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../software/git.html">Software</a></li><li class="breadcrumb-item"><a href="../software/sql.html">SQL</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,8 +137,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src=".././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -112,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -127,25 +165,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/computer_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/computer_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computer Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Virtual Environments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/code_review.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/code_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">pre-commit</span></a>
   </div>
 </li>
@@ -153,52 +191,52 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Software</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/git.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/vscode.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/python.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/sql.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/sql.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">SQL</span></a>
   </div>
 </li>
@@ -215,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methods/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../methods/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -232,25 +270,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/dse.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/dse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DSE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/grds.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/grds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GRDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/mist.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/mist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MIST</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/ppi.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/ppi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PPI</span></a>
   </div>
 </li>
@@ -258,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
+  <a href="../contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
@@ -271,59 +309,284 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
         <h2 id="toc-title">On this page</h2>
         <ul>
-        <li><a href="#about-the-handbook" id="toc-about-the-handbook" class="nav-link active" data-scroll-target="#about-the-handbook">About the Handbook</a>
-        <ul class="collapse">
-        <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-        <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
-        <li><a href="#using-software-tools" id="toc-using-software-tools" class="nav-link" data-scroll-target="#using-software-tools">Using Software Tools</a></li>
-        <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-        </ul></li>
+        <li><a href="#coding-conventions" id="toc-coding-conventions" class="nav-link active" data-scroll-target="#coding-conventions">Coding Conventions</a></li>
+        <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources">Learning Resources</a></li>
         </ul>
-          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/software/sql.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">IPA Data Science, Engineering, and Technology Handbook</h1>
+<h1 class="title display-7">SQL</h1>
 <!--  -->
 
 </header>
 
 
-<section id="about-the-handbook" class="level2">
-<h2 class="anchored" data-anchor-id="about-the-handbook">About the Handbook</h2>
-<p>Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!</p>
-<p>This handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.</p>
-<section id="getting-started" class="level3">
-<h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
-<p>To get started with software covered in this handbook, read <a href="./guides/computer_setup.html">Computer Setup</a> to learn how to set up your computer for data analysis and software development.</p>
+<div id="34f426b9" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext sql</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>sql duckdb:<span class="op">//</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<span style="None">Loading configurations from C:\Users\NKeleher\code\ipa-data-tech-handbook\pyproject.toml.</span>
+</div>
+<div class="cell-output cell-output-display">
+<span style="None">Settings changed:</span>
+</div>
+<div class="cell-output cell-output-display">
+
+
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Config</th>
+<th data-quarto-table-cell-role="th">value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>feedback</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>autopandas</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>autopolars</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>autolimit</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>displaylimit</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Create a table from a CSV file.</p>
+<div id="01f5f5db" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>CREATE TABLE penguins AS SELECT <span class="op">*</span> FROM <span class="st">'../assets/data/penguins.csv'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<table class="caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Count</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p>Inspect the columns of the table.</p>
+<div id="9c804ae7" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>sqlcmd columns <span class="op">-</span>t penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">type</th>
+<th data-quarto-table-cell-role="th">nullable</th>
+<th data-quarto-table-cell-role="th">default</th>
+<th data-quarto-table-cell-role="th">autoincrement</th>
+<th data-quarto-table-cell-role="th">comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>species</td>
+<td>VARCHAR</td>
+<td>True</td>
+<td>None</td>
+<td>False</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td>island</td>
+<td>VARCHAR</td>
+<td>True</td>
+<td>None</td>
+<td>False</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td>bill_length_mm</td>
+<td>FLOAT</td>
+<td>True</td>
+<td>None</td>
+<td>False</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td>bill_depth_mm</td>
+<td>FLOAT</td>
+<td>True</td>
+<td>None</td>
+<td>False</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td>flipper_length_mm</td>
+<td>BIGINT</td>
+<td>True</td>
+<td>None</td>
+<td>False</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td>body_mass_g</td>
+<td>BIGINT</td>
+<td>True</td>
+<td>None</td>
+<td>False</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td>sex</td>
+<td>VARCHAR</td>
+<td>True</td>
+<td>None</td>
+<td>False</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Query the table using a <code>SELECT</code> statement.</p>
+<div id="353a5c12" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>SELECT <span class="op">*</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>FROM <span class="st">'../assets/data/penguins.csv'</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>LIMIT <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">species</th>
+<th data-quarto-table-cell-role="th">island</th>
+<th data-quarto-table-cell-role="th">bill_length_mm</th>
+<th data-quarto-table-cell-role="th">bill_depth_mm</th>
+<th data-quarto-table-cell-role="th">flipper_length_mm</th>
+<th data-quarto-table-cell-role="th">body_mass_g</th>
+<th data-quarto-table-cell-role="th">sex</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adelie</td>
+<td>Torgersen</td>
+<td>39.1</td>
+<td>18.7</td>
+<td>181</td>
+<td>3750</td>
+<td>MALE</td>
+</tr>
+<tr class="even">
+<td>Adelie</td>
+<td>Torgersen</td>
+<td>39.5</td>
+<td>17.4</td>
+<td>186</td>
+<td>3800</td>
+<td>FEMALE</td>
+</tr>
+<tr class="odd">
+<td>Adelie</td>
+<td>Torgersen</td>
+<td>40.3</td>
+<td>18.0</td>
+<td>195</td>
+<td>3250</td>
+<td>FEMALE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Run analytical operations on the data.</p>
+<div id="781dadc0" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>SELECT species, COUNT(<span class="op">*</span>) AS count</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>FROM <span class="st">'../assets/data/penguins.csv'</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>GROUP BY species</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ORDER BY count DESC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">species</th>
+<th data-quarto-table-cell-role="th">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adelie</td>
+<td>152</td>
+</tr>
+<tr class="even">
+<td>Gentoo</td>
+<td>124</td>
+</tr>
+<tr class="odd">
+<td>Chinstrap</td>
+<td>68</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Using <code>jupysql</code> store SQL query results as an object in a Jupyter notebook.</p>
+<div id="ba400740" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>sql species_count <span class="op">&lt;&lt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>SELECT species, COUNT(<span class="op">*</span>) AS count</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>FROM <span class="st">'../assets/data/penguins.csv'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>GROUP BY species</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>ORDER BY count DESC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plot the results of the query.</p>
+<div id="f4e96aaf" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> <span class="op">%</span>sqlplot bar <span class="op">--</span>table <span class="st">'../assets/data/penguins.csv'</span> <span class="op">--</span>column species</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># customize plot (this is a matplotlib Axes object)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> ax.set_title(<span class="st">"Count of penguins by species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<span style="None">Removing NULLs, if there exists any from species</span>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="sql_files/figure-html/cell-8-output-2.png" width="593" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="coding-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="coding-conventions">Coding Conventions</h2>
+<p>Use <a href="https://docs.sqlfluff.com/en/stable/">SQLFluff</a> to lint SQL code.</p>
+<p>Add SQLFluff to your virtual environment using <code>pixi</code>:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add sqlfluff <span class="at">--pypi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Assuming SQLFluff is installed in your virtual environment using <code>pixi</code>, you can run the following command to lint SQL code:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run sqlfluff fix <span class="at">--dialect</span> duckdb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/platform/sql-style-guide/">GitLab Data Team’s SQL Style Guide</a></p>
 </section>
-<section id="contributing" class="level3">
-<h3 class="anchored" data-anchor-id="contributing">Contributing</h3>
-<p>For instructions on how to contribute to this handbook, see <a href="./contributing.html">Contributing</a> to the Handbook.</p>
-<p>Also, see the <a href="./guides/code_review.html">Code Review</a> guide for information on how to conduct code reviews.</p>
-</section>
-<section id="using-software-tools" class="level3">
-<h3 class="anchored" data-anchor-id="using-software-tools">Using Software Tools</h3>
-<p>For information about specific software, see the respective pages under the <code>Software</code> directory.</p>
-<p>Here are some specific software that this guide covers:</p>
+<section id="learning-resources" class="level2">
+<h2 class="anchored" data-anchor-id="learning-resources">Learning Resources</h2>
 <ul>
-<li><a href="./software/git.html">Git</a></li>
-<li><a href="./software/github.html">Github</a></li>
-<li><a href="./software/vscode.html">VS Code</a></li>
-<li><a href="./software/quarto.html">Quarto</a></li>
-<li><a href="./software/python.html">Python</a></li>
-<li>and more!</li>
+<li><a href="https://selectstarsql.com/">SELECT Star SQL</a></li>
+<li><a href="https://mystery.knightlab.com/walkthrough.html">SQL Murder Mystery</a></li>
+<li><a href="https://sql-workbench.com/">sql-workbench</a></li>
+<li><a href="https://duckdb.org/docs/sql/introduction">DuckDB SQL Introduction</a></li>
 </ul>
-</section>
-<section id="acknowledgements" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
-<p>This handbook is a collaboration between multiple IPA Teams including <a href="./teams/dse.html">Data Science and Engineering (DSE)</a>, <a href="./teams/mist.html">Management and Information Systems Team (MIST)</a>, <a href="./teams/grds.html">Global Research and Data Support</a>, and <a href="./teams/ppi.html">Poverty Probability Index (PPI®)</a>.</p>
-<p>The handbook is inspired by the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/">Gitlab Data Team Handbook</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -768,10 +1031,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../software/stata.html" class="pagination-link" aria-label="Stata">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Stata</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./guides/computer_setup.html" class="pagination-link" aria-label="Computer Setup">
-        <span class="nav-page-text">Computer Setup</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../methods/references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -783,7 +1049,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/software/sql.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

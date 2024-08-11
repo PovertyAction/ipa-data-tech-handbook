@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IPA Data Science, Engineering, and Technology Handbook – Data and Tech Handbook</title>
+<title>Contributing to the Handbook – Data and Tech Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./guides/computer_setup.html" rel="next">
+<link href="./teams/ppi.html" rel="prev">
 <link href="././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -85,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./contributing.html">Contributing</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -112,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -258,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
+  <a href="./contributing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
@@ -271,59 +305,193 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
         <h2 id="toc-title">On this page</h2>
         <ul>
-        <li><a href="#about-the-handbook" id="toc-about-the-handbook" class="nav-link active" data-scroll-target="#about-the-handbook">About the Handbook</a>
+        <li><a href="#how-to-use-the-handbook" id="toc-how-to-use-the-handbook" class="nav-link active" data-scroll-target="#how-to-use-the-handbook">How to use the Handbook</a></li>
+        <li><a href="#reading-the-handbook" id="toc-reading-the-handbook" class="nav-link" data-scroll-target="#reading-the-handbook">Reading the Handbook</a></li>
+        <li><a href="#editing-the-handbook" id="toc-editing-the-handbook" class="nav-link" data-scroll-target="#editing-the-handbook">Editing the Handbook</a>
         <ul class="collapse">
-        <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-        <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
-        <li><a href="#using-software-tools" id="toc-using-software-tools" class="nav-link" data-scroll-target="#using-software-tools">Using Software Tools</a></li>
-        <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+        <li><a href="#a-little-bit-of-markdown" id="toc-a-little-bit-of-markdown" class="nav-link" data-scroll-target="#a-little-bit-of-markdown">A little bit of Markdown</a></li>
+        <li><a href="#use-the-github-browser-interface-to-edit-the-handbook" id="toc-use-the-github-browser-interface-to-edit-the-handbook" class="nav-link" data-scroll-target="#use-the-github-browser-interface-to-edit-the-handbook">Use the GitHub browser interface to edit the handbook</a></li>
+        <li><a href="#use-the-github-ide-to-edit-the-handbook" id="toc-use-the-github-ide-to-edit-the-handbook" class="nav-link" data-scroll-target="#use-the-github-ide-to-edit-the-handbook">Use the GitHub IDE to edit the handbook</a></li>
+        <li><a href="#modify-the-handbook-locally" id="toc-modify-the-handbook-locally" class="nav-link" data-scroll-target="#modify-the-handbook-locally">Modify the handbook locally</a></li>
         </ul></li>
+        <li><a href="#preview-the-handbook" id="toc-preview-the-handbook" class="nav-link" data-scroll-target="#preview-the-handbook">Preview the handbook</a></li>
         </ul>
-          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+        <hr>
+    <h2 class="anchored">Maintainers</h2>
+    <ul>
+                <li class="editor"><a href="https://poverty-action.org/people/niall-keleher" class="nav-link" data-scroll-target="https\://poverty-action.org/people/niall-keleher">Niall Keleher</a></li>
+          </ul>
+    <hr>
+          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/contributing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">IPA Data Science, Engineering, and Technology Handbook</h1>
+<h1 class="title display-7">Contributing to the Handbook</h1>
 <!--  -->
 
 </header>
 
 
-<section id="about-the-handbook" class="level2">
-<h2 class="anchored" data-anchor-id="about-the-handbook">About the Handbook</h2>
-<p>Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!</p>
-<p>This handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.</p>
-<section id="getting-started" class="level3">
-<h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
-<p>To get started with software covered in this handbook, read <a href="./guides/computer_setup.html">Computer Setup</a> to learn how to set up your computer for data analysis and software development.</p>
+<section id="how-to-use-the-handbook" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-the-handbook">How to use the Handbook</h2>
+<p>This handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.</p>
+<p>We use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.</p>
+<p>Documentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to <em>before</em> they need to pursue information via email, chat, or other modes of communication.</p>
+<p>Most guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work <em>today</em> if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues.</p>
 </section>
-<section id="contributing" class="level3">
-<h3 class="anchored" data-anchor-id="contributing">Contributing</h3>
-<p>For instructions on how to contribute to this handbook, see <a href="./contributing.html">Contributing</a> to the Handbook.</p>
-<p>Also, see the <a href="./guides/code_review.html">Code Review</a> guide for information on how to conduct code reviews.</p>
+<section id="reading-the-handbook" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-handbook">Reading the Handbook</h2>
+<p>The best ways to read the handbook are the following:</p>
+<ol type="1">
+<li>Navigate to <a href="https://povertyaction.github.io/ipa-data-tech-handbook/docs">https://povertyaction.github.io/ipa-data-tech-handbook/docs</a></li>
+<li>Read the <a href="https://github.com/PovertyAction/ipa-data-tech-handbook/tree/main/docs">source code on GitHub</a>.</li>
+<li>Read it locally on your computer by cloning the GitHub repository</li>
+</ol>
 </section>
-<section id="using-software-tools" class="level3">
-<h3 class="anchored" data-anchor-id="using-software-tools">Using Software Tools</h3>
-<p>For information about specific software, see the respective pages under the <code>Software</code> directory.</p>
-<p>Here are some specific software that this guide covers:</p>
+<section id="editing-the-handbook" class="level2">
+<h2 class="anchored" data-anchor-id="editing-the-handbook">Editing the Handbook</h2>
+<p>All IPA staff should feel empowered to edit this handbook. There are a few ways to edit the handbook.</p>
+<p>A typical workflow to edit the handbook is the following:</p>
+<ol type="1">
+<li>Make edits.</li>
+<li>Commit changes to this repository.</li>
+<li>Create a pull request, assign reviewers.</li>
+<li>Apply reviewers’ suggestions, if any.</li>
+<li>Merge all changes to the <code>main</code> branch of the repository</li>
+</ol>
+<p>You can contribute to this Handbook in a number of ways:</p>
 <ul>
-<li><a href="./software/git.html">Git</a></li>
-<li><a href="./software/github.html">Github</a></li>
-<li><a href="./software/vscode.html">VS Code</a></li>
-<li><a href="./software/quarto.html">Quarto</a></li>
-<li><a href="./software/python.html">Python</a></li>
-<li>and more!</li>
+<li><p>File an <a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new">Issue on GitHub</a> with recommended additions or edits.</p></li>
+<li><p>Edit pages of the Handbook on GitHub by clicking on the “Edit this page” link on any page of the Handbook.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/software/handbook-gh.png" class="img-fluid figure-img"></p>
+<figcaption>Handbook</figcaption>
+</figure>
+</div>
+<section id="a-little-bit-of-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="a-little-bit-of-markdown">A little bit of Markdown</h3>
+<p>Most of the handbook relies on <code>Markdown</code> as the computer language for writing content. In order to edit the handbook, it is helpful to have a basic understanding of Markdown, which is the main format in which this handbook’s content is written.</p>
+<p>Use the existing content of this handbook’s <code>ipa-data-tech-handbook/docs</code> folder as a reference for how to write in Markdown.</p>
+<p>The following resources are helpful for getting to know the basics of Markdown:</p>
+<ul>
+<li><a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">GitHub - Basic writing and formatting syntax</a></li>
+<li><a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting">GitHub - Working with advanced formatting</a></li>
+<li><a href="https://github.com/skills/communicate-using-markdown">GitHub Skills: Communicate using Markdown</a></li>
+<li><a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto’s Guide to Markdown</a></li>
+<li><a href="https://www.markdownguide.org/cheat-sheet">Markdown Guide Cheat Sheet</a></li>
 </ul>
 </section>
-<section id="acknowledgements" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
-<p>This handbook is a collaboration between multiple IPA Teams including <a href="./teams/dse.html">Data Science and Engineering (DSE)</a>, <a href="./teams/mist.html">Management and Information Systems Team (MIST)</a>, <a href="./teams/grds.html">Global Research and Data Support</a>, and <a href="./teams/ppi.html">Poverty Probability Index (PPI®)</a>.</p>
-<p>The handbook is inspired by the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/">Gitlab Data Team Handbook</a>.</p>
-
-
+<section id="use-the-github-browser-interface-to-edit-the-handbook" class="level3">
+<h3 class="anchored" data-anchor-id="use-the-github-browser-interface-to-edit-the-handbook">Use the GitHub browser interface to edit the handbook</h3>
+<p>The easiest way to edit the handbook is to use the GitHub Web IDE. Go to <a href="https://github.com/PovertyAction/ipa-data-tech-handbook/docs/">https://github.com/PovertyAction/ipa-data-tech-handbook/docs/</a> and click on the file you want to edit. Then click on the pencil icon in the top right corner of the file to start editing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/gh-edit-console.gif" class="img-fluid figure-img"></p>
+<figcaption>Edit on GitHub</figcaption>
+</figure>
+</div>
 </section>
+<section id="use-the-github-ide-to-edit-the-handbook" class="level3">
+<h3 class="anchored" data-anchor-id="use-the-github-ide-to-edit-the-handbook">Use the GitHub IDE to edit the handbook</h3>
+<p>Another option that GitHub provides is to edit the handbook documents using a Web-based integrated development environment (IDE).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/gh-edit-ide.gif" class="img-fluid figure-img"></p>
+<figcaption>Edit with GitHub IDE</figcaption>
+</figure>
+</div>
+</section>
+<section id="modify-the-handbook-locally" class="level3">
+<h3 class="anchored" data-anchor-id="modify-the-handbook-locally">Modify the handbook locally</h3>
+<p>Note that building the handbook from source code requires the following to be installed on your local computer (see <a href="./guides/computer_setup.html">Computer Setup</a> for more information about software installation):</p>
+<ul>
+<li><code>winget</code> (Windows) or <code>homebrew</code> (MacOS/Linux) for package management and installation</li>
+<li><code>git</code> for source control management</li>
+<li><code>just</code> for running common command line patterns</li>
+<li><code>pixi</code> for installing Python and managing virtual environments</li>
+</ul>
+<p>First, clone this repository to your local computer either via GitHub Desktop:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/gh-clone.gif" class="img-fluid figure-img"></p>
+<figcaption>Clone Repository via GitHub Desktop</figcaption>
+</figure>
+</div>
+<p>or from the command line:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If using HTTPS</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/PovertyAction/ipa-data-tech-handbook.git</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If using SSH</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:PovertyAction/ipa-data-tech-handbook.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This repository uses a <code>Justfile</code> for collecting common command line actions that we run to set up the computing environment and build the assets of the handbook. Note that you should also have Git installed</p>
+<p>To get started, make sure you have <code>Just</code> installed on your computer by running the following from the command line:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 88%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Platform</th>
+<th>Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Windows</td>
+<td><code>winget install Git.Git Casey.Just prefix-dev.pixi GitHub.cli Posit.Quarto</code></td>
+</tr>
+<tr class="even">
+<td>Mac/Linux</td>
+<td><code>brew install just pixi gh</code></td>
+</tr>
+</tbody>
+</table>
+<p>This will make sure that you have the latest version of <code>Just</code>, as well as <a href="[https://prefix.d/](https://pixi.sh/latest/)">Pixi</a> (installer for Python) and <a href="https://quarto.org/docs/guide/">Quarto</a> (for writing and compiling scientific and technical documents).</p>
+<ul>
+<li>We use <code>Just</code> in order to make it easier for all IPA users to be productive with data and technology systems. The goal of using a <code>Justfile</code> is to help make the end goal of the user easier to achieve without needing to know or remember all of the technical details of how we get to that goal.</li>
+<li>We use Rye to help ease use of Python. Rye provides a global system for creating and building computing environments for Python.</li>
+<li>We use Quarto to allow users to focus on writing and data analytics. Writing in markdown, jupyter notebooks, python scripts, R scripts, etc. makes it easier to review, update, and deploy technical documentation.</li>
+</ul>
+<p>As a shortcut, if you already have <code>Just</code> installed, you can run the following to install required software and build a python virtual environment that is used to build the handbook pages:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">just</span> get-started</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note: you may need to restart your terminal after running the command above to activate the installed software.</p>
+<p>After the required software is installed, you can activate the Python virtual environment:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Shell</th>
+<th>Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bash</td>
+<td><code>.venv/Scripts/activate</code></td>
+</tr>
+<tr class="even">
+<td>Powershell</td>
+<td><code>.venv/Scripts/activate.ps1</code></td>
+</tr>
+<tr class="odd">
+<td>Nushell</td>
+<td><code>overlay use .venv/Scripts/activate.nu</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="preview-the-handbook" class="level2">
+<h2 class="anchored" data-anchor-id="preview-the-handbook">Preview the handbook</h2>
+<p>To build a version of the Handbook so that you can read it on your computer, run the following from a Terminal. Make sure that you are working from the root folder of this Git Repository:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">just</span> preview-docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The command line above references the <a href="../_quarto.yml">ipa-data-tech-handbook/_quarto.yml</a> file and creates the <code>.html</code> files for the handbook then launches a browser window with a local server of the handbook at <code>http://localhost:3434/docs</code>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -768,11 +936,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./teams/ppi.html" class="pagination-link" aria-label="PPI">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">PPI</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./guides/computer_setup.html" class="pagination-link" aria-label="Computer Setup">
-        <span class="nav-page-text">Computer Setup</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -783,7 +951,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/contributing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

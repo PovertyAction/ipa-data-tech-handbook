@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IPA Data Science, Engineering, and Technology Handbook – Data and Tech Handbook</title>
+<title>Computer Setup – Data and Tech Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./guides/computer_setup.html" rel="next">
-<link href="././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../guides/venv.html" rel="next">
+<link href="../index.html" rel="prev">
+<link href=".././assets/images/IPA-primary-full-color-abbreviated.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -85,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guides/computer_setup.html">Guides</a></li><li class="breadcrumb-item"><a href="../guides/computer_setup.html">Computer Setup</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,8 +134,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src=".././assets/images/IPA-primary-white-abbreviated.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -112,40 +147,40 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Guides</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/computer_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/computer_setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Computer Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Virtual Environments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/code_review.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/code_review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../guides/pre_commit_hooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">pre-commit</span></a>
   </div>
 </li>
@@ -162,43 +197,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/git.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/vscode.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/python.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software/sql.html" class="sidebar-item-text sidebar-link">
+  <a href="../software/sql.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SQL</span></a>
   </div>
 </li>
@@ -215,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methods/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../methods/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -232,25 +267,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/dse.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/dse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DSE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/grds.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/grds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GRDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/mist.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/mist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MIST</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./teams/ppi.html" class="sidebar-item-text sidebar-link">
+  <a href="../teams/ppi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PPI</span></a>
   </div>
 </li>
@@ -258,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
+  <a href="../contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
@@ -271,59 +306,177 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
         <h2 id="toc-title">On this page</h2>
         <ul>
-        <li><a href="#about-the-handbook" id="toc-about-the-handbook" class="nav-link active" data-scroll-target="#about-the-handbook">About the Handbook</a>
+        <li><a href="#package-manager" id="toc-package-manager" class="nav-link active" data-scroll-target="#package-manager">Package Manager</a>
         <ul class="collapse">
-        <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-        <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
-        <li><a href="#using-software-tools" id="toc-using-software-tools" class="nav-link" data-scroll-target="#using-software-tools">Using Software Tools</a></li>
-        <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+        <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+        <li><a href="#macoslinux" id="toc-macoslinux" class="nav-link" data-scroll-target="#macoslinux">MacOS/Linux</a></li>
+        <li><a href="#additional-software" id="toc-additional-software" class="nav-link" data-scroll-target="#additional-software">Additional Software</a></li>
         </ul></li>
+        <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal">Terminal</a></li>
+        <li><a href="#shell" id="toc-shell" class="nav-link" data-scroll-target="#shell">Shell</a>
+        <ul class="collapse">
+        <li><a href="#bash" id="toc-bash" class="nav-link" data-scroll-target="#bash">Bash</a></li>
+        <li><a href="#nushell" id="toc-nushell" class="nav-link" data-scroll-target="#nushell">Nushell</a></li>
+        <li><a href="#windows-powershell" id="toc-windows-powershell" class="nav-link" data-scroll-target="#windows-powershell">Windows PowerShell</a></li>
+        </ul></li>
+        <li><a href="#gitgithub" id="toc-gitgithub" class="nav-link" data-scroll-target="#gitgithub">Git/GitHub</a></li>
+        <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code">Visual Studio Code</a></li>
+        <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
         </ul>
-          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+        <hr>
+    <h2 class="anchored">Maintainers</h2>
+    <ul>
+                <li class="editor"><a href="https://poverty-action.org/people/niall-keleher" class="nav-link" data-scroll-target="https\://poverty-action.org/people/niall-keleher">Niall Keleher</a></li>
+          </ul>
+    <hr>
+          <div class="toc-actions"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/guides/computer_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">IPA Data Science, Engineering, and Technology Handbook</h1>
+<h1 class="title display-7">Computer Setup</h1>
 <!--  -->
 
 </header>
 
 
-<section id="about-the-handbook" class="level2">
-<h2 class="anchored" data-anchor-id="about-the-handbook">About the Handbook</h2>
-<p>Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!</p>
-<p>This handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.</p>
-<section id="getting-started" class="level3">
-<h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
-<p>To get started with software covered in this handbook, read <a href="./guides/computer_setup.html">Computer Setup</a> to learn how to set up your computer for data analysis and software development.</p>
+<p>This page is meant to help guide you in setting up your laptop with common software used by data and technology teams at IPA. Most software covered in this page have their own page in this handbook. We encourage you to refer to for usage of each software. And please contribute to those pages so that others at IPA (including your future self) are able to learn about what works well for interacting with data at IPA.</p>
+<blockquote class="blockquote">
+<p>Refer to the <a href="https://poverty-action.my.site.com/">IPA Global Help Desk</a> for general guidance on IPA software and account access.</p>
+</blockquote>
+<p>The information below is for getting started with core software that IPA uses for editing, reviewing, and deploying code for software development, data engineering, analytical solutions, and data infrastructure.</p>
+<section id="package-manager" class="level2">
+<h2 class="anchored" data-anchor-id="package-manager">Package Manager</h2>
+<p>A package manager helps to standardize how you install and update software on your computer. Generally, you want to use a package manager to install any programs that are used globally on your computer. By “globally”, we mean that it is a program that is used across many projects and computing environments.</p>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<p>If using a Windows computer with Windows 10 or later, we encourage you to use the Windows Package Manager, <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>. However, if you do not have Windows 10+, you can achieve a similar package management experience with either <a href="https://chocolatey.org/">chocolatey</a> or <a href="https://scoop.sh/">scoop</a>.</p>
+<details>
+<summary>
+Check to see if you have winget
+</summary>
+<ol type="1">
+<li>Open Windows Powershell (See <a href="https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started">PowerShell 101</a> if new to Windows PowerShell)</li>
+<li>Check to see if you have <code>winget</code> installed: <img src="../assets/images/software/winget-version.png" class="img-fluid" alt="Winget Version"></li>
+<li>If you do not see a version number for <code>winget</code>. Follow the Microsoft instructions to <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget">Install winget</a></li>
+</ol>
+</details>
+<p>Install packages on Windows</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install a single program (e.g. GitHub for command line)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install GitHub.cli</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install multiple programs (Just, pixi for Python)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Casey.Just prefix-dev.pixi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="contributing" class="level3">
-<h3 class="anchored" data-anchor-id="contributing">Contributing</h3>
-<p>For instructions on how to contribute to this handbook, see <a href="./contributing.html">Contributing</a> to the Handbook.</p>
-<p>Also, see the <a href="./guides/code_review.html">Code Review</a> guide for information on how to conduct code reviews.</p>
+<section id="macoslinux" class="level3">
+<h3 class="anchored" data-anchor-id="macoslinux">MacOS/Linux</h3>
+<p>On MacOS, it is recommended that you use <a href="https://brew.sh/">Homebrew</a> as a package manager. On Linux you can use Homebrew or <a href="https://snapcraft.io/">Snap</a>. This may be relevant if you are working in the <a href="https://learn.microsoft.com/en-us/windows/wsl/">Windows Subsystem Linux</a> (WSL).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install a single program (e.g. GitHub for command line)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install gh</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install multiple programs (Just, Rye for Python)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install just pixi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See the <a href="../guides/venv.html">Virtual Environment</a> section of the handbook for more information on using virtual environments.</p>
 </section>
-<section id="using-software-tools" class="level3">
-<h3 class="anchored" data-anchor-id="using-software-tools">Using Software Tools</h3>
-<p>For information about specific software, see the respective pages under the <code>Software</code> directory.</p>
-<p>Here are some specific software that this guide covers:</p>
-<ul>
-<li><a href="./software/git.html">Git</a></li>
-<li><a href="./software/github.html">Github</a></li>
-<li><a href="./software/vscode.html">VS Code</a></li>
-<li><a href="./software/quarto.html">Quarto</a></li>
-<li><a href="./software/python.html">Python</a></li>
-<li>and more!</li>
-</ul>
+<section id="additional-software" class="level3">
+<h3 class="anchored" data-anchor-id="additional-software">Additional Software</h3>
+<p>The preceding package manager examples can be used to install the majority of the software covered in this Handbook. Note that there are some exceptions to software available via a package manager. For example, <code>Stata</code> needs to be installed by first downloading the <code>.exe</code> for Windows, <code>.dmg</code> for MacOS, or <code>.tar.gz</code> for Linux.</p>
+<blockquote class="blockquote">
+<p>Get the required Stata version provided by IPA on the Box <a href="https://ipastorage.app.box.com/folder/129276324764?v=install-stata">installation packages</a>.</p>
+</blockquote>
 </section>
-<section id="acknowledgements" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
-<p>This handbook is a collaboration between multiple IPA Teams including <a href="./teams/dse.html">Data Science and Engineering (DSE)</a>, <a href="./teams/mist.html">Management and Information Systems Team (MIST)</a>, <a href="./teams/grds.html">Global Research and Data Support</a>, and <a href="./teams/ppi.html">Poverty Probability Index (PPI®)</a>.</p>
-<p>The handbook is inspired by the <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/">Gitlab Data Team Handbook</a>.</p>
+</section>
+<section id="terminal" class="level2">
+<h2 class="anchored" data-anchor-id="terminal">Terminal</h2>
+<p>In Windows, we recommend using the <a href="https://learn.microsoft.com/en-us/windows/terminal/">Windows Terminal</a>. However, there are several other options for terminals. Select what you feel most comfortable with. The same is true for MacOS and Linux where there are many Terminal options to select from.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows Terminal</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Microsoft.WindowsTerminal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="shell" class="level2">
+<h2 class="anchored" data-anchor-id="shell">Shell</h2>
+<p>You are free to choose whichever shell works best for your workflow and style. Here are the common shell options you may want to consider:</p>
+<section id="bash" class="level3">
+<h3 class="anchored" data-anchor-id="bash">Bash</h3>
+<p>Bash comes pre-installed with MacOS and Linux. Git Bash is included with the <a href="https://gitforwindows.org/">Git for Windows</a> installation.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install git for Windows</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Git.Git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="nushell" class="level3">
+<h3 class="anchored" data-anchor-id="nushell">Nushell</h3>
+<p><a href="https://www.nushell.sh/">Nushell</a> is a cross operating system shell with a data pipeline focus.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Nushell.Nushell</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MacOS/Linux</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install nu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="windows-powershell" class="level3">
+<h3 class="anchored" data-anchor-id="windows-powershell">Windows PowerShell</h3>
+<p><a href="https://learn.microsoft.com/en-us/powershell/scripting/overview">Windows PowerShell</a> is often the default shell on Windows.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows (install or upgrade)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Microsoft.PowerShell</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MacOS</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install powershell/tap/powershell</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Linux</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># docs: https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Optionally, you can install <a href="https://starship.rs/">Starship</a> for shell prompt customization.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Starship.Starship</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MacOS/Linux</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install starship</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Follow the starship <a href="https://starship.rs/#quick-install">installation instructions</a> for using starship with your preferred shell, for example, if using Nushell, run:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/.cache/starship</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">starship</span> init nu <span class="kw">|</span> <span class="ex">save</span> <span class="at">-f</span> ~/.cache/starship/init.nu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can set the Starship configuration to your liking in a <code>~/.config/starship.toml</code> file. For example you could use the <code>jetpack</code> preset configuration by running:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># starship configuration</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/.config</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">starship</span> preset jetpack <span class="at">-o</span> ~/.config/starship.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="gitgithub" class="level2">
+<h2 class="anchored" data-anchor-id="gitgithub">Git/GitHub</h2>
+<p>You will need to have git installed on computer if you want to edit, test, or review source code and documentation locally.</p>
+<p>We recommend installing GitHub Desktop if you are new to using git or prefer a GUI to the command line.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install GitHub.GithubDesktop</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MacOS</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install  <span class="at">--cask</span> github</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">## GitHub Desktop is not available on Linux</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See the <a href="../software/git.html">Git</a> section of the handbook for more information on using git and the <a href="../software/github.html">GitHub</a>section section for more information on using GitHub.</p>
+</section>
+<section id="visual-studio-code" class="level2">
+<h2 class="anchored" data-anchor-id="visual-studio-code">Visual Studio Code</h2>
+<p>You are free to chose the Integrated Development Environment (IDE) of your choice. However, we recommend <a href="https://code.visualstudio.com/">Visual Studio Code</a> because integration with GitHub is built in and it provides a rich set of extensions to improve code quality and review.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Microsoft.VisualStudioCode</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MacOS</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> visual-studio-code</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Linux</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> snap install code <span class="at">--classic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See the <a href="../software/vscode.html">Visual Studio Code</a> section of the handbook for more information on using Visual Studio Code.</p>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>For technical documentation and literate programming, we recommend using <a href="https://quarto.org/">Quarto</a> because of it’s rich suite of publishing tools that integrate notebooks (e.g.&nbsp;<code>ipynb</code>, <code>.Rmd</code>), and computer scripts (e.g.&nbsp;<code>.py</code>, <code>.r</code>, <code>.md</code>).</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Posit.Quarto</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MacOS</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> quarto</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Linux</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># download and install from https://quarto.org/docs/get-started/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See the <a href="../software/quarto.html">Quarto</a> section of the handbook for more information on using Quarto.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -768,10 +921,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="Home">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./guides/computer_setup.html" class="pagination-link" aria-label="Computer Setup">
-        <span class="nav-page-text">Computer Setup</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../guides/venv.html" class="pagination-link" aria-label="Virtual Environments">
+        <span class="nav-page-text">Virtual Environments</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -783,7 +939,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/edit/main/guides/computer_setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/PovertyAction/ipa-data-tech-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
