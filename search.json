@@ -1,21 +1,10 @@
 [
   {
-    "objectID": "methods/references.html",
-    "href": "methods/references.html",
-    "title": "Analytical and Computational Methods References",
-    "section": "",
-    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham",
-    "crumbs": [
-      "Methods",
-      "References"
-    ]
-  },
-  {
     "objectID": "methods/references.html#causal-inference",
     "href": "methods/references.html#causal-inference",
     "title": "Analytical and Computational Methods References",
-    "section": "",
-    "text": "The Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham",
+    "section": "Causal Inference",
+    "text": "Causal Inference\n\nThe Effect, by Nick Huntington-Klein\nCausal Inference: The Mixtape, by Scott Cunningham",
     "crumbs": [
       "Methods",
       "References"
@@ -44,21 +33,11 @@
     ]
   },
   {
-    "objectID": "contributing.html",
-    "href": "contributing.html",
-    "title": "Contributing to the Handbook",
-    "section": "",
-    "text": "This handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.\nWe use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.\nDocumentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to before they need to pursue information via email, chat, or other modes of communication.\nMost guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work today if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues.",
-    "crumbs": [
-      "Contributing"
-    ]
-  },
-  {
     "objectID": "contributing.html#how-to-use-the-handbook",
     "href": "contributing.html#how-to-use-the-handbook",
     "title": "Contributing to the Handbook",
-    "section": "",
-    "text": "This handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.\nWe use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.\nDocumentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to before they need to pursue information via email, chat, or other modes of communication.\nMost guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work today if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues.",
+    "section": "How to use the Handbook",
+    "text": "How to use the Handbook\nThis handbook serves as shared repository for common tools, methods, and examples of how IPA develops and implements solutions for data analysis and software development.\nWe use this handbook to document ways in which we work together on developing code. As such, this should be a living document that tracks best practices and advice for the ways in which we work more effectively, learn together, and find joy in our work.\nDocumentation can seem like a tedious requirement. However, when there is documentation it helps to reduce the need to start afresh every time something needs to be done. Moreover, documentation provides a reference point for people to go to before they need to pursue information via email, chat, or other modes of communication.\nMost guidelines in this handbook are intended as reference points. They are not absolute rules. Every person and team will have their own preferences and ways of working. The guide is meant to provide reference points for how we work today if someone has suggestions for improving our work processes, we should approach those suggestions with an open mind and willingness to understand the perspectives of our colleagues.",
     "crumbs": [
       "Contributing"
     ]
@@ -229,22 +208,11 @@
     "text": "To be launched…"
   },
   {
-    "objectID": "software/quarto.html",
-    "href": "software/quarto.html",
-    "title": "Quarto",
-    "section": "",
-    "text": "Quarto is a document authoring tool that allows you to create documents using markdown. Quarto is open source (MIT License) software developed and maintained by Posit. It is a powerful tool that allows you to create documents with a variety of formats such as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating documents that are easy to read and share.\nThe following video provides a quick introduction to Quarto:",
-    "crumbs": [
-      "Software",
-      "Quarto"
-    ]
-  },
-  {
     "objectID": "software/quarto.html#what-is-quarto",
     "href": "software/quarto.html#what-is-quarto",
     "title": "Quarto",
-    "section": "",
-    "text": "Quarto is a document authoring tool that allows you to create documents using markdown. Quarto is open source (MIT License) software developed and maintained by Posit. It is a powerful tool that allows you to create documents with a variety of formats such as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating documents that are easy to read and share.\nThe following video provides a quick introduction to Quarto:",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\nQuarto is a document authoring tool that allows you to create documents using markdown. Quarto is open source (MIT License) software developed and maintained by Posit. It is a powerful tool that allows you to create documents with a variety of formats such as HTML websites, PDF, PowerPoint, Word, and more. Quarto is a great tool for creating documents that are easy to read and share.\nThe following video provides a quick introduction to Quarto:",
     "crumbs": [
       "Software",
       "Quarto"
@@ -331,22 +299,11 @@
     "text": "To be launched…"
   },
   {
-    "objectID": "software/vscode.html",
-    "href": "software/vscode.html",
-    "title": "Visual Studio Code",
-    "section": "",
-    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions.",
-    "crumbs": [
-      "Software",
-      "VS Code"
-    ]
-  },
-  {
     "objectID": "software/vscode.html#what-is-visual-studio-code",
     "href": "software/vscode.html#what-is-visual-studio-code",
     "title": "Visual Studio Code",
-    "section": "",
-    "text": "Visual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions.",
+    "section": "What is Visual Studio Code?",
+    "text": "What is Visual Studio Code?\nVisual Studio Code, often referred to as “VS Code”, is a software tool for writing, editing, and developing text-based documents and programs. At IPA, we use a variety of tools for editing documents and writing code. However, we recommend using VS Code as a standard ecosystem for working on collaborative code-first data and technology projects. You may be more comfortable working with other tools like Stata Do File Editor, RStudio for R, or Jupyter Notebooks. We encourage you to work with the tools that you are most comfortable with. However, VS Code provides a common ecosystem for source-controlled, collaborative, polyglot development of data and technology solutions. We encourage IPA teams to contribute to this documentation in order to share best practices and useful settings or extensions.",
     "crumbs": [
       "Software",
       "VS Code"
@@ -386,22 +343,11 @@
     ]
   },
   {
-    "objectID": "software/git.html",
-    "href": "software/git.html",
-    "title": "Git",
-    "section": "",
-    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners",
-    "crumbs": [
-      "Software",
-      "Git"
-    ]
-  },
-  {
     "objectID": "software/git.html#what-is-git",
     "href": "software/git.html#what-is-git",
     "title": "Git",
-    "section": "",
-    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners",
+    "section": "What is Git?",
+    "text": "What is Git?\nGit is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners",
     "crumbs": [
       "Software",
       "Git"
@@ -529,22 +475,11 @@
     ]
   },
   {
-    "objectID": "software/github.html",
-    "href": "software/github.html",
-    "title": "GitHub",
-    "section": "",
-    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer.",
-    "crumbs": [
-      "Software",
-      "GitHub"
-    ]
-  },
-  {
     "objectID": "software/github.html#what-is-github",
     "href": "software/github.html#what-is-github",
     "title": "GitHub",
-    "section": "",
-    "text": "GitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer.",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\nGitHub is a platform for hosting and collaborating on computer code. It is a place where you can store your code, track changes, and collaborate with others. GitHub is built on top of Git, a version control system that allows you to track changes in your codebase over time. GitHub provides a web-based interface for interacting with Git repositories, as well as a desktop application (GitHub Desktop) and a command-line interface (CLI) for working with Git repositories on your local computer.",
     "crumbs": [
       "Software",
       "GitHub"
@@ -595,22 +530,11 @@
     ]
   },
   {
-    "objectID": "software/stata.html",
-    "href": "software/stata.html",
-    "title": "Stata",
-    "section": "",
-    "text": "Stata is a statistical software package that is commonly used in the social sciences and economics. It is widely used at IPA for data analysis and management. It offers a comprehensive library of methods for data cleaning, descriptive statistics, and econometric analysis. Stata is very well suited for research data workflows and research design tasks, including power calculations, sample design adjustments, panel data analysis, time series analysis, etc. See Stata Features for a full list of what Stata makes available.",
-    "crumbs": [
-      "Software",
-      "Stata"
-    ]
-  },
-  {
     "objectID": "software/stata.html#what-is-stata",
     "href": "software/stata.html#what-is-stata",
     "title": "Stata",
-    "section": "",
-    "text": "Stata is a statistical software package that is commonly used in the social sciences and economics. It is widely used at IPA for data analysis and management. It offers a comprehensive library of methods for data cleaning, descriptive statistics, and econometric analysis. Stata is very well suited for research data workflows and research design tasks, including power calculations, sample design adjustments, panel data analysis, time series analysis, etc. See Stata Features for a full list of what Stata makes available.",
+    "section": "What is Stata?",
+    "text": "What is Stata?\nStata is a statistical software package that is commonly used in the social sciences and economics. It is widely used at IPA for data analysis and management. It offers a comprehensive library of methods for data cleaning, descriptive statistics, and econometric analysis. Stata is very well suited for research data workflows and research design tasks, including power calculations, sample design adjustments, panel data analysis, time series analysis, etc. See Stata Features for a full list of what Stata makes available.",
     "crumbs": [
       "Software",
       "Stata"
@@ -672,18 +596,11 @@
     ]
   },
   {
-    "objectID": "software/justfile.html",
-    "href": "software/justfile.html",
-    "title": "Justfile",
-    "section": "",
-    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
-  },
-  {
     "objectID": "software/justfile.html#what-is-a-justfile",
     "href": "software/justfile.html#what-is-a-justfile",
     "title": "Justfile",
-    "section": "",
-    "text": "Just is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
+    "section": "What is a Justfile?",
+    "text": "What is a Justfile?\nJust is a command runner that can be used to define and run common command line actions that we run to set up the computing environment and build the assets of a project.\nThe Justfile is how we write “recipes” of commands that we plan to run repetitively. You are encourage to set up, use, and add to the Justfile to make your work more efficient. This will help yourself and your colleagues know how to run common tasks that are needed to work within a project’s codebase."
   },
   {
     "objectID": "software/justfile.html#how-to-install-just",
@@ -700,22 +617,11 @@
     "text": "Learning Resources\n\nJust Documentation\nUsing the just Task Runner"
   },
   {
-    "objectID": "software/python.html",
-    "href": "software/python.html",
-    "title": "Python",
-    "section": "",
-    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications.",
-    "crumbs": [
-      "Software",
-      "Python"
-    ]
-  },
-  {
     "objectID": "software/python.html#what-is-python",
     "href": "software/python.html#what-is-python",
     "title": "Python",
-    "section": "",
-    "text": "Python is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications.",
+    "section": "What is Python?",
+    "text": "What is Python?\nPython is a high-level, general-purpose programming language that is widely used in data science, machine learning, and web development. It has a large standard library and a vibrant community that provides a wide range of libraries and tools for various applications. As such, Python provides a general-purpose ecosystem that can be used for a wide range of applications.",
     "crumbs": [
       "Software",
       "Python"
@@ -780,18 +686,11 @@
     "text": "To be launched…"
   },
   {
-    "objectID": "software/surveycto.html",
-    "href": "software/surveycto.html",
-    "title": "Git",
-    "section": "",
-    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners"
-  },
-  {
     "objectID": "software/surveycto.html#what-is-git",
     "href": "software/surveycto.html#what-is-git",
     "title": "Git",
-    "section": "",
-    "text": "Git is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners"
+    "section": "What is Git?",
+    "text": "What is Git?\nGit is a distributed version control system that allows you to track changes in your codebase. It is widely used in software development to manage code changes and collaborate with other people working on or learning from the shared codebase.\nClick on the image below to watch a video with an introduction to Git for beginners:\n\n\n\nA brief introduction to Git for beginners"
   },
   {
     "objectID": "software/surveycto.html#how-to-install-git",
@@ -836,22 +735,11 @@
     "text": "To be launched…"
   },
   {
-    "objectID": "guides/pre_commit_hooks.html",
-    "href": "guides/pre_commit_hooks.html",
-    "title": "Pre-commit hooks",
-    "section": "",
-    "text": "Pre-commit hooks are scripts that run before a commit is made to a repository. They can be used to check for common issues in code, such as syntax errors, formatting issues, or security vulnerabilities. Pre-commit hooks can help ensure that code is clean, consistent, and secure before it is committed to a repository.",
-    "crumbs": [
-      "Guides",
-      "pre-commit"
-    ]
-  },
-  {
     "objectID": "guides/pre_commit_hooks.html#what-are-pre-commit-hooks",
     "href": "guides/pre_commit_hooks.html#what-are-pre-commit-hooks",
     "title": "Pre-commit hooks",
-    "section": "",
-    "text": "Pre-commit hooks are scripts that run before a commit is made to a repository. They can be used to check for common issues in code, such as syntax errors, formatting issues, or security vulnerabilities. Pre-commit hooks can help ensure that code is clean, consistent, and secure before it is committed to a repository.",
+    "section": "What are pre-commit hooks?",
+    "text": "What are pre-commit hooks?\nPre-commit hooks are scripts that run before a commit is made to a repository. They can be used to check for common issues in code, such as syntax errors, formatting issues, or security vulnerabilities. Pre-commit hooks can help ensure that code is clean, consistent, and secure before it is committed to a repository.",
     "crumbs": [
       "Guides",
       "pre-commit"
@@ -979,21 +867,11 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "IPA Data Science, Engineering, and Technology Handbook",
-    "section": "",
-    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
     "objectID": "index.html#about-the-handbook",
     "href": "index.html#about-the-handbook",
     "title": "IPA Data Science, Engineering, and Technology Handbook",
-    "section": "",
-    "text": "Welcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\n\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\n\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\n\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\n\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook.",
+    "section": "About the Handbook",
+    "text": "About the Handbook\nWelcome to IPA’s Handbook for Data Science, Engineering, and Technology!\nThis handbook is intended as a living document to assist IPA staff and collaborators with common practices for writing code and working with data. The handbook will never be comprehensive of every possible software, data object, or shared practice. However, IPA staff working with data and technology are encouraged to use this handbook as a reference and a shared project to give tips and advice for working collaboratively with data analysis and software development.\n\nGetting Started\nTo get started with software covered in this handbook, read Computer Setup to learn how to set up your computer for data analysis and software development.\n\n\nContributing\nFor instructions on how to contribute to this handbook, see Contributing to the Handbook.\nAlso, see the Code Review guide for information on how to conduct code reviews.\n\n\nUsing Software Tools\nFor information about specific software, see the respective pages under the Software directory.\nHere are some specific software that this guide covers:\n\nGit\nGithub\nVS Code\nQuarto\nPython\nand more!\n\n\n\nAcknowledgements\nThis handbook is a collaboration between multiple IPA Teams including Data Science and Engineering (DSE), Management and Information Systems Team (MIST), Global Research and Data Support, and Poverty Probability Index (PPI®).\nThe handbook is inspired by the Gitlab Data Team Handbook.",
     "crumbs": [
       "Home"
     ]
