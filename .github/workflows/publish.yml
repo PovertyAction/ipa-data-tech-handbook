@@ -4,26 +4,15 @@ on:
     branches: main
 
 name: Publish Quarto Site
-#docs: https://github.com/quarto-dev/quarto-actions/blob/main/examples/quarto-publish-example.yml
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    strategy:
-      matrix:
-        python-version: ["3.12.3"]
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
-
-      - uses: extractions/setup-just@v3
-
-      - uses: prefix-dev/setup-pixi@v0.8.3
-        with:
-          cache: true
-          run-install: true
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -36,5 +25,3 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          QUARTO_PYTHON: ".pixi/envs/default/bin/python3"
-          QUARTO_R: ".pixi/envs/default/bin/Rscript"

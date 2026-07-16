@@ -1,0 +1,13 @@
+---
+title: "Page moved"
+include-in-header:
+  - text: |
+      <meta http-equiv="refresh" content="0; url=https://data.poverty-action.org">
+      <script>window.location.replace("https://data.poverty-action.org");</script>
+---
+
+The IPA Data and Tech Handbook has moved to the
+[IPA Research and Data Science Hub](https://data.poverty-action.org).
+
+If you are not redirected automatically, visit
+<https://data.poverty-action.org>.
