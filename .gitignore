@@ -16,3 +16,5 @@ README.html
 # pixi environments
 .pixi
 *.egg-info
+
+**/*.quarto_ipynb

@@ -1,23 +1,22 @@
-# IPA Data Science, Engineering, and Technology Handbook
+# IPA Data Science, Engineering, and Technology Handbook (Archived)
 
-Welcome to IPA's Handbook for Data Science, Engineering, and Technology!
+> [!IMPORTANT]
+> This handbook has been decommissioned and replaced by the
+> **IPA Research and Data Science Hub**: <https://data.poverty-action.org>
 
-> [!WARNING]
-> This handbook is an early work in progress. Feedback, suggestions and
-> contributions are appreciated! Please create an Issue or submit a pull request if
-> there is anything you'd like to see changed or added.
+## Where to go
 
-## About the Handbook
+- **Read the content**: <https://data.poverty-action.org>
+- **Contribute**: see the
+  [contributing guide](https://github.com/PovertyAction/ipa-research-data-science-hub/blob/main/CONTRIBUTING.md)
+  in the [ipa-research-data-science-hub](https://github.com/PovertyAction/ipa-research-data-science-hub)
+  repository.
 
-This handbook is intended as a living document to assist IPA staff and collaborators
-with common practices for writing code and working with data. The handbook will never be
-comprehensive of every possible software, data object, or shared practice. However, IPA
-staff working with data and technology are encouraged to use this handbook as a
-reference and a shared project to give tips and advice for working collaboratively with
-data analysis and software development.
+## About this repository
 
-This repository is also intended as a reference for how to develop code that aligns with
-best practices for software development. While the repository does not cover all
-possible applications, software, or scenarios, the nature of this repository is such
-that it should grow and improve to address the common work patterns that IPA uses for
-writing source code for data science, engineering, and infrastructure management.
+This repository now only serves a redirect page from the old site
+(<https://povertyaction.github.io/ipa-data-tech-handbook/>) to the new hub.
+
+The historical content of the handbook is preserved on the
+[`_archive-site`](https://github.com/PovertyAction/ipa-data-tech-handbook/tree/_archive-site)
+branch.
